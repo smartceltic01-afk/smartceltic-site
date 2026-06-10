@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Actu RPG — Smartceltic</title>
+<meta name="description" content="Toute l'actu RPG vérifiée et sourcée par Smartceltic : chaque news est classée Confirmé, Rumeur ou Démenti, sources à l'appui.">
+<link rel="icon" type="image/svg+xml" href="../assets/favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Oswald:wght@400;500&family=Alegreya+Sans:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body data-racine="../">
+
+<nav class="nav" aria-label="Navigation principale">
+  <div class="nav__inner">
+    <a class="nav__brand" href="../">
+      <span class="tri" aria-hidden="true"></span>SMARTCELTIC
+    </a>
+    <div class="nav__links">
+      <a href="../#videos">Vidéos</a>
+      <a href="./" aria-current="page">Actu RPG</a>
+      <a href="../#soutenir">Soutenir</a>
+    </div>
+    <a class="live" id="live-nav" href="https://www.twitch.tv/smartceltic" target="_blank" rel="noopener">
+      <span class="live__dot" aria-hidden="true"></span><span class="live__txt">Twitch</span>
+    </a>
+  </div>
+</nav>
+
+<main class="section">
+  <div class="wrap">
+    <div class="section__head">
+      <span class="tri" aria-hidden="true"></span>
+      <h2>Actu RPG — l'archive du Clan</h2>
+    </div>
+
+    <p style="color:var(--brume); max-width:46rem; margin-bottom:2rem;">
+      Chaque news est classée avant publication : <span class="statut statut--confirme"><span class="tri tri--confirme"></span>Confirmé</span> (source officielle ou deux médias fiables),
+      <span class="statut statut--rumeur"><span class="tri tri--rumeur"></span>Rumeur</span> (source unique non officielle — à prendre avec des pincettes),
+      <span class="statut statut--dementi"><span class="tri tri--dementi"></span>Démenti</span> (correction d'une rumeur). Les sources sont en bas de chaque news.
+    </p>
+
+    <div class="filtres" role="group" aria-label="Filtrer par statut">
+      <button class="filtre" data-statut="tous" aria-pressed="true"><span class="tri"></span>Tout</button>
+      <button class="filtre" data-statut="confirme" aria-pressed="false"><span class="tri tri--confirme"></span>Confirmé</button>
+      <button class="filtre" data-statut="rumeur" aria-pressed="false"><span class="tri tri--rumeur"></span>Rumeur</button>
+      <button class="filtre" data-statut="dementi" aria-pressed="false"><span class="tri tri--dementi"></span>Démenti</button>
+    </div>
+
+    <div class="news-list" id="news-list" data-mode="archive">
+      <p class="videos__empty">Chargement des news…</p>
+    </div>
+  </div>
+</main>
+
+<footer class="footer">
+  <div class="footer__links">
+    <a href="https://www.youtube.com/@SmartCeltic01" target="_blank" rel="noopener">YouTube</a>
+    <a href="https://www.twitch.tv/smartceltic" target="_blank" rel="noopener">Twitch</a>
+    <a href="https://x.com/Smartceltic01" target="_blank" rel="noopener">X</a>
+    <a href="https://www.instagram.com/smartceltic01/" target="_blank" rel="noopener">Instagram</a>
+    <a href="https://www.tiktok.com/@smartceltic01" target="_blank" rel="noopener">TikTok</a>
+    <a href="https://discord.gg/5AqFmeEDhJ" target="_blank" rel="noopener">Discord</a>
+  </div>
+  <small>© 2026 Smartceltic — Ciao, bande de Celtes 🍀</small>
+</footer>
+
+<script src="../assets/app.js"></script>
+</body>
+</html>

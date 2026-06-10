@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<!-- GABARIT NEWS — ne pas publier tel quel.
+     Champs à remplacer : {{TITRE}} {{JEU}} {{DATE_ISO}} {{DATE_FR}} {{STATUT}} (confirme|rumeur|dementi)
+     {{STATUT_LIBELLE}} {{CORPS}} (paragraphes <p>) {{VERDICT_BLOC}} (vide ou bloc verdict)
+     {{SOURCES}} (liste <li><a ...>) {{SLUG}} -->
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>{{TITRE}} — Actu RPG Smartceltic</title>
+<meta name="description" content="{{TITRE}} — actu {{JEU}} vérifiée et sourcée par Smartceltic. Statut : {{STATUT_LIBELLE}}.">
+<meta property="og:title" content="{{TITRE}}">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://smartceltic.fr/news/{{SLUG}}.html">
+<link rel="icon" type="image/svg+xml" href="../assets/favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Oswald:wght@400;500&family=Alegreya+Sans:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body data-racine="../">
+
+<nav class="nav" aria-label="Navigation principale">
+  <div class="nav__inner">
+    <a class="nav__brand" href="../"><span class="tri" aria-hidden="true"></span>SMARTCELTIC</a>
+    <div class="nav__links">
+      <a href="../#videos">Vidéos</a>
+      <a href="./">Actu RPG</a>
+      <a href="../#soutenir">Soutenir</a>
+    </div>
+    <a class="live" id="live-nav" href="https://www.twitch.tv/smartceltic" target="_blank" rel="noopener">
+      <span class="live__dot" aria-hidden="true"></span><span class="live__txt">Twitch</span>
+    </a>
+  </div>
+</nav>
+
+<main class="article">
+  <a class="retour" href="./"><span class="tri" aria-hidden="true"></span>Toutes les news</a>
+
+  <div class="article__meta">
+    <span class="statut statut--{{STATUT}}"><span class="tri tri--{{STATUT}}" aria-hidden="true"></span>{{STATUT_LIBELLE}}</span>
+    <time datetime="{{DATE_ISO}}">{{DATE_FR}}</time>
+  </div>
+
+  <h1>{{TITRE}}</h1>
+  <span class="article__game">{{JEU}}</span>
+
+  <div class="article__body">
+{{CORPS}}
+  </div>
+
+{{VERDICT_BLOC}}
+
+  <div class="sources">
+    <h2>Sources</h2>
+    <ul>
+{{SOURCES}}
+    </ul>
+  </div>
+
+  <div class="reagir">
+    <p>💬 Réagis avec le Clan :</p>
+    <a class="btn btn--ligne" href="https://discord.gg/5AqFmeEDhJ" target="_blank" rel="noopener">Sur Discord</a>
+    <a class="btn btn--ligne" href="https://x.com/Smartceltic01" target="_blank" rel="noopener">Sur X</a>
+  </div>
+
+  <div class="commentaires">
+    <h2>Commentaires</h2>
+    <div id="cusdis_thread"
+      data-host="https://cusdis.com"
+      data-app-id="dc2efc68-e368-41bd-be24-38572c2889e0"
+      data-page-id="{{SLUG}}"
+      data-page-url="https://smartceltic.fr/news/{{SLUG}}.html"
+      data-page-title="{{TITRE}}">
+    </div>
+    <script async defer src="https://cusdis.com/js/cusdis.es.js"></script>
+  </div>
+</main>
+
+<footer class="footer">
+  <div class="footer__links">
+    <a href="https://www.youtube.com/@SmartCeltic01" target="_blank" rel="noopener">YouTube</a>
+    <a href="https://www.twitch.tv/smartceltic" target="_blank" rel="noopener">Twitch</a>
+    <a href="https://x.com/Smartceltic01" target="_blank" rel="noopener">X</a>
+    <a href="https://www.instagram.com/smartceltic01/" target="_blank" rel="noopener">Instagram</a>
+    <a href="https://www.tiktok.com/@smartceltic01" target="_blank" rel="noopener">TikTok</a>
+    <a href="https://discord.gg/5AqFmeEDhJ" target="_blank" rel="noopener">Discord</a>
+  </div>
+  <small>© 2026 Smartceltic — Ciao, bande de Celtes 🍀</small>
+</footer>
+
+<script src="../assets/app.js"></script>
+</body>
+</html>

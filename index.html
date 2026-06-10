@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Smartceltic — Guides & actu RPG, sans hype, sans langue de bois</title>
+<meta name="description" content="Le QG du Clan Celte : guides RPG, actu jeux vidéo vérifiée et sourcée (confirmé / rumeur / démenti), streams Twitch et dernières vidéos YouTube de Smartceltic.">
+<meta property="og:title" content="Smartceltic — Le QG du Clan Celte">
+<meta property="og:description" content="Guides & actu RPG — sans hype, sans langue de bois. Chaque décision a des conséquences.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://smartceltic.fr/">
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Oswald:wght@400;500&family=Alegreya+Sans:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+
+<nav class="nav" aria-label="Navigation principale">
+  <div class="nav__inner">
+    <a class="nav__brand" href="/">
+      <span class="tri" aria-hidden="true"></span>SMARTCELTIC
+    </a>
+    <div class="nav__links">
+      <a href="#videos">Vidéos</a>
+      <a href="#actu">Actu RPG</a>
+      <a href="#soutenir">Soutenir</a>
+    </div>
+    <a class="live" id="live-nav" href="https://www.twitch.tv/smartceltic" target="_blank" rel="noopener">
+      <span class="live__dot" aria-hidden="true"></span><span class="live__txt">Twitch</span>
+    </a>
+  </div>
+</nav>
+
+<header class="hero">
+  <!-- Sceau du Clan : triskel dans le Triangle Inversé -->
+  <svg class="hero__sigil" viewBox="0 0 400 360" role="img" aria-label="Sceau de Smartceltic : un triskel inscrit dans un triangle inversé">
+    <polygon points="14,14 386,14 200,346" fill="none" stroke="#D4A574" stroke-width="2.5"/>
+    <polygon points="40,30 360,30 200,310" fill="none" stroke="#8A6A45" stroke-width="1" opacity=".5"/>
+    <g class="triskel-spin" stroke="#D4A574" stroke-width="9" fill="none" stroke-linecap="round">
+      <g id="bras">
+        <path d="M 200 133 C 200 90, 262 90, 262 133 C 262 165, 228 176, 207 158 C 196 148, 199 134, 211 132"/>
+      </g>
+      <use href="#bras" transform="rotate(120 200 133)"/>
+      <use href="#bras" transform="rotate(240 200 133)"/>
+      <circle cx="200" cy="133" r="6" fill="#D4A574" stroke="none"/>
+    </g>
+  </svg>
+
+  <h1>SMARTCELTIC</h1>
+  <p class="hero__tagline">Chaque décision a des conséquences</p>
+  <p class="hero__pitch">Guides &amp; actu RPG — sans hype, sans langue de bois.</p>
+
+  <div class="hero__cta">
+    <a class="btn btn--rouge" href="https://www.youtube.com/@SmartCeltic01?sub_confirmation=1" target="_blank" rel="noopener">▶ Rejoindre la chaîne</a>
+    <a class="btn btn--ligne" href="#actu">Lire l'actu RPG</a>
+  </div>
+
+  <div class="hero__live">
+    <a class="live" id="live-hero" href="https://www.twitch.tv/smartceltic" target="_blank" rel="noopener">
+      <span class="live__dot" aria-hidden="true"></span><span class="live__txt">Hors ligne</span>
+    </a>
+    <p class="hero__slots">Streams · Mer 20h30 — Ven 9h30 — Dim 10h00</p>
+  </div>
+</header>
+
+<main>
+  <section class="section" id="videos">
+    <div class="wrap">
+      <div class="section__head">
+        <span class="tri" aria-hidden="true"></span>
+        <h2>Dernières vidéos</h2>
+        <a class="section__more" href="https://www.youtube.com/@SmartCeltic01/videos" target="_blank" rel="noopener">Toute la chaîne →</a>
+      </div>
+      <div class="videos" id="videos-grid">
+        <p class="videos__empty">Chargement des vidéos…</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="actu">
+    <div class="wrap">
+      <div class="section__head">
+        <span class="tri" aria-hidden="true"></span>
+        <h2>Actu RPG</h2>
+        <a class="section__more" href="news/">Toutes les news →</a>
+      </div>
+      <div class="news-list" id="news-list">
+        <p class="videos__empty">Chargement des news…</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="soutenir">
+    <div class="wrap">
+      <div class="section__head">
+        <span class="tri" aria-hidden="true"></span>
+        <h2>Soutenir le Clan</h2>
+      </div>
+      <div class="soutien">
+        <a class="soutien__card soutien__card--rouge" href="https://fr.tipeee.com/smartceltic/" target="_blank" rel="noopener">
+          <h3>Tipeee</h3>
+          <p>Un pourboire, ponctuel ou mensuel, pour soutenir directement les guides, les streams et la veille RPG. Chaque tip compte.</p>
+          <span class="btn btn--rouge">Soutenir sur Tipeee</span>
+        </a>
+        <a class="soutien__card" href="https://smartceltic-shop.fourthwall.com" target="_blank" rel="noopener">
+          <h3>La Boutique</h3>
+          <p>Porte les couleurs du Clan Celte : le triskel et le Triangle Inversé sur des produits officiels.</p>
+          <span class="btn btn--ligne">Voir la boutique</span>
+        </a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <svg class="footer__sigil" viewBox="0 0 400 360" aria-hidden="true">
+    <polygon points="14,14 386,14 200,346" fill="none" stroke="#D4A574" stroke-width="6"/>
+  </svg>
+  <div class="footer__links">
+    <a href="https://www.youtube.com/@SmartCeltic01" target="_blank" rel="noopener">YouTube</a>
+    <a href="https://www.twitch.tv/smartceltic" target="_blank" rel="noopener">Twitch</a>
+    <a href="https://x.com/Smartceltic01" target="_blank" rel="noopener">X</a>
+    <a href="https://www.instagram.com/smartceltic01/" target="_blank" rel="noopener">Instagram</a>
+    <a href="https://www.tiktok.com/@smartceltic01" target="_blank" rel="noopener">TikTok</a>
+    <a href="https://discord.gg/5AqFmeEDhJ" target="_blank" rel="noopener">Discord</a>
+  </div>
+  <small>© 2026 Smartceltic — Ciao, bande de Celtes 🍀</small>
+</footer>
+
+<script src="assets/app.js"></script>
+</body>
+</html>

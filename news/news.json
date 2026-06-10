@@ -1,0 +1,25 @@
+{
+  "news": [
+    {
+      "slug": "exemple-dementi",
+      "titre": "EXEMPLE · Et voici le démenti, la marque de fabrique du site",
+      "jeu": "Jeu mystère",
+      "date": "2026-06-08",
+      "statut": "dementi"
+    },
+    {
+      "slug": "exemple-confirme",
+      "titre": "EXEMPLE · Voici à quoi ressemble une news confirmée",
+      "jeu": "Gothic 1 Remake",
+      "date": "2026-06-05",
+      "statut": "confirme"
+    },
+    {
+      "slug": "exemple-rumeur",
+      "titre": "EXEMPLE · Voici à quoi ressemble une rumeur, assumée comme telle",
+      "jeu": "Jeu mystère",
+      "date": "2026-06-03",
+      "statut": "rumeur"
+    }
+  ]
+}
