@@ -1,29 +1,19 @@
-"""Met à jour data/videos.json avec les dernières vidéos de la chaîne.
-Exécuté par GitHub Actions toutes les 6 heures. Zéro clé API :
-on résout l'ID de chaîne depuis le handle public, puis on lit le flux RSS officiel.
+"""Met à jour data/videos.json avec les dernières vidéos de la chaîne SmartCeltic.
+Exécuté par GitHub Actions toutes les 6 heures. Zéro clé API, zéro scraping :
+lecture directe du flux RSS officiel de la chaîne (identifiant gravé en dur).
 """
 import json
-import re
 import urllib.request
 import xml.etree.ElementTree as ET
 from datetime import datetime, timezone
 
-HANDLE_URL = "https://www.youtube.com/@SmartCeltic01"
+CHANNEL_ID = "UC8wnNfHi1TprmMfVUuWjYNg"  # @SmartCeltic01
 SORTIE = "data/videos.json"
 UA = {"User-Agent": "Mozilla/5.0 (site smartceltic.fr — mise à jour vidéos)"}
 
 
-def resoudre_channel_id() -> str:
-    req = urllib.request.Request(HANDLE_URL, headers=UA)
-    html = urllib.request.urlopen(req, timeout=30).read().decode("utf-8", "ignore")
-    m = re.search(r'"channelId":"(UC[\w-]{22})"', html) or re.search(r"channel_id=(UC[\w-]{22})", html)
-    if not m:
-        raise RuntimeError("ID de chaîne introuvable dans la page du handle")
-    return m.group(1)
-
-
-def lire_flux(channel_id: str):
-    url = f"https://www.youtube.com/feeds/videos.xml?channel_id={channel_id}"
+def lire_flux():
+    url = f"https://www.youtube.com/feeds/videos.xml?channel_id={CHANNEL_ID}"
     req = urllib.request.Request(url, headers=UA)
     xml = urllib.request.urlopen(req, timeout=30).read()
     ns = {"a": "http://www.w3.org/2005/Atom", "yt": "http://www.youtube.com/xml/schemas/2015"}
@@ -39,11 +29,12 @@ def lire_flux(channel_id: str):
 
 
 def main():
-    channel_id = resoudre_channel_id()
-    videos = lire_flux(channel_id)
+    videos = lire_flux()
+    if not videos:
+        raise RuntimeError("Flux RSS vide — on ne remplace pas le fichier par du vide.")
     data = {
         "updated": datetime.now(timezone.utc).isoformat(timespec="seconds"),
-        "channel_id": channel_id,
+        "channel_id": CHANNEL_ID,
         "videos": videos,
     }
     with open(SORTIE, "w", encoding="utf-8") as f:
