@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Quiz — Quel camp de Gothic est fait pour toi ? | Smartceltic</title>
+<meta name="description" content="Vieux Camp, Nouveau Camp ou Camp du Marais ? 7 questions pour découvrir quel camp de Gothic 1 Remake est fait pour toi. Chaque décision a des conséquences.">
+<meta property="og:title" content="Quel camp de Gothic est fait pour toi ?">
+<meta property="og:description" content="Vieux Camp, Nouveau Camp ou Camp du Marais ? Fais le test — chaque décision a des conséquences. 🍀">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://smartceltic.fr/quiz/gothic-quel-camp.html">
+<meta property="og:image" content="https://smartceltic.fr/assets/og-quiz-gothic.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" type="image/svg+xml" href="../assets/favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Oswald:wght@400;500&family=Alegreya+Sans:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/style.css">
+<style>
+.quiz { max-width: 680px; margin: 0 auto; padding: 3.5rem 1.25rem 5rem; }
+.quiz__progress { display: flex; gap: .55rem; justify-content: center; margin-bottom: 2.2rem; }
+.quiz__progress .tri { width: 16px; height: 15px; background: #2a241c; transition: background .25s; }
+.quiz__progress .tri.is-done { background: var(--or); }
+.quiz h1 {
+  font-family: var(--display); font-weight: 700; text-align: center;
+  font-size: clamp(1.5rem, 4.5vw, 2.1rem); letter-spacing: .06em; margin-bottom: .6rem;
+}
+.quiz__sub { text-align: center; color: var(--brume); margin-bottom: 2.5rem; }
+.quiz__q {
+  font-family: var(--display); font-size: clamp(1.1rem, 3vw, 1.35rem);
+  line-height: 1.45; margin-bottom: 1.6rem; min-height: 3.2em;
+}
+.quiz__answers { display: flex; flex-direction: column; gap: .8rem; }
+.quiz__answer {
+  text-align: left; font-family: var(--body); font-size: 1.05rem; line-height: 1.5;
+  background: var(--pierre); color: var(--parchemin);
+  border: 1px solid rgba(138,106,69,.35); border-radius: 3px;
+  padding: 1rem 1.2rem; cursor: pointer;
+  display: flex; gap: .9rem; align-items: baseline;
+  transition: background .15s, border-color .15s, transform .12s;
+}
+.quiz__answer:hover { background: var(--braise); border-color: var(--or); transform: translateX(4px); }
+.quiz__answer .tri { transform: translateY(1px); flex: none; }
+.resultat { display: none; text-align: center; }
+.resultat__label {
+  font-family: var(--label); font-size: .82rem; letter-spacing: .22em;
+  text-transform: uppercase; color: var(--brume); margin-bottom: .8rem;
+}
+.resultat h2 {
+  font-family: var(--display); font-weight: 700;
+  font-size: clamp(1.7rem, 5.5vw, 2.6rem); letter-spacing: .06em;
+  margin-bottom: 1.4rem;
+}
+.resultat__desc { max-width: 32rem; margin: 0 auto 1rem; font-size: 1.12rem; }
+.resultat__devise {
+  font-family: var(--display); color: var(--or); letter-spacing: .12em;
+  margin: 1.6rem 0 2.2rem; font-size: 1rem;
+}
+.resultat__actions { display: flex; flex-direction: column; gap: .9rem; align-items: center; }
+.video-cta {
+  margin-top: 3rem; border: 1px solid var(--or-sombre); border-radius: 3px;
+  padding: 1.6rem; text-align: center;
+}
+.video-cta p { margin-bottom: 1rem; }
+.refaire { margin-top: 2.5rem; }
+.refaire button {
+  background: none; border: none; color: var(--brume); cursor: pointer;
+  font-family: var(--label); font-size: .8rem; letter-spacing: .14em; text-transform: uppercase;
+}
+.refaire button:hover { color: var(--or); }
+@media (prefers-reduced-motion: reduce) { .quiz__answer:hover { transform: none; } }
+</style>
+</head>
+<body data-racine="../">
+
+<nav class="nav" aria-label="Navigation principale">
+  <div class="nav__inner">
+    <a class="nav__brand" href="../"><span class="tri" aria-hidden="true"></span>SMARTCELTIC</a>
+    <div class="nav__links">
+      <a href="../#videos">Vidéos</a>
+      <a href="../news/">Actu RPG</a>
+      <a href="./gothic-quel-camp.html" aria-current="page">Quiz</a>
+      <a href="../#soutenir">Soutenir</a>
+    </div>
+    <a class="live" id="live-nav" href="https://www.twitch.tv/smartceltic" target="_blank" rel="noopener">
+      <span class="live__dot" aria-hidden="true"></span><span class="live__txt">Twitch</span>
+    </a>
+  </div>
+</nav>
+
+<main class="quiz">
+  <div id="ecran-quiz">
+    <div class="quiz__progress" id="progress" aria-hidden="true"></div>
+    <h1>Quel camp est fait pour toi ?</h1>
+    <p class="quiz__sub">Gothic 1 Remake · 7 questions · Chaque décision a des conséquences.</p>
+    <p class="quiz__q" id="question"></p>
+    <div class="quiz__answers" id="answers"></div>
+  </div>
+
+  <div class="resultat" id="ecran-resultat">
+    <p class="resultat__label">Ton destin dans la Colonie</p>
+    <h2 id="res-titre"></h2>
+    <p class="resultat__desc" id="res-desc"></p>
+    <p class="resultat__devise" id="res-devise"></p>
+    <div class="resultat__actions">
+      <a class="btn btn--rouge" id="btn-partage" href="#" target="_blank" rel="noopener">Partager mon camp sur X</a>
+      <a class="btn btn--ligne" href="https://discord.gg/5AqFmeEDhJ" target="_blank" rel="noopener">Défendre mon camp sur le Discord</a>
+    </div>
+
+    <div class="video-cta" id="video-zone">
+      <p>🎬 <strong>« Quel camp choisir ? » — le guide complet sans spoiler sort demain sur la chaîne.</strong><br>
+      Abonne-toi pour ne pas le manquer :</p>
+      <a class="btn btn--rouge" href="https://www.youtube.com/@SmartCeltic01?sub_confirmation=1" target="_blank" rel="noopener">▶ Rejoindre la chaîne</a>
+    </div>
+
+    <div class="refaire"><button id="btn-refaire">↻ Refaire le test</button></div>
+  </div>
+</main>
+
+<footer class="footer">
+  <div class="footer__links">
+    <a href="https://www.youtube.com/@SmartCeltic01" target="_blank" rel="noopener">YouTube</a>
+    <a href="https://www.twitch.tv/smartceltic" target="_blank" rel="noopener">Twitch</a>
+    <a href="https://x.com/Smartceltic01" target="_blank" rel="noopener">X</a>
+    <a href="https://www.instagram.com/smartceltic01/" target="_blank" rel="noopener">Instagram</a>
+    <a href="https://www.tiktok.com/@smartceltic01" target="_blank" rel="noopener">TikTok</a>
+    <a href="https://discord.gg/5AqFmeEDhJ" target="_blank" rel="noopener">Discord</a>
+  </div>
+  <small>© 2026 Smartceltic — Ciao, bande de Celtes 🍀</small>
+</footer>
+
+<script>
+const QUESTIONS = [
+  { q: "On vient de te jeter dans la Colonie, du haut de la falaise. Ton premier réflexe ?",
+    a: [["vc", "Trouver qui commande ici et me rendre utile. La protection, ça se mérite."],
+        ["nc", "Repérer les failles. Je ne resterai pas prisonnier une minute de plus que nécessaire."],
+        ["cm", "Observer, respirer. Ce monde a un sens caché, et je compte bien le trouver."]] },
+  { q: "Le minerai magique, pour toi, c'est…",
+    a: [["vc", "Une monnaie. On l'échange au monde extérieur contre tout ce qui rend la vie supportable."],
+        ["nc", "Une bombe. On l'entasse en un tas géant et on fait sauter cette maudite Barrière."],
+        ["cm", "Une distraction de mineurs. La vraie richesse ne se creuse pas, elle se rêve."]] },
+  { q: "Un garde te bouscule et te cherche des noises. Tu fais quoi ?",
+    a: [["vc", "Je cite le nom de mon protecteur. Ici, tout est hiérarchie — apprends la tienne."],
+        ["nc", "Je le fixe et je ne recule pas. Personne ne me dicte ma conduite."],
+        ["cm", "Je lui tends une pipe d'herbe des marais. La paix, frère."]] },
+  { q: "Ton logement idéal dans la Colonie ?",
+    a: [["vc", "Le château au cœur du Vieux Camp — là où dorment le pouvoir et le minerai."],
+        ["nc", "Une cahute près des rizières, spartiate mais libre, avec vue sur l'évasion."],
+        ["cm", "Le temple au milieu du marais, bercé par les chants des novices."]] },
+  { q: "Ce qui te fait lever le matin ?",
+    a: [["vc", "Monter en grade. Un jour, c'est moi qui fixerai les règles du jeu."],
+        ["nc", "La liberté. La vraie. Celle qui commence là où finit la Barrière."],
+        ["cm", "L'éveil. Le Dormeur murmure à ceux qui savent écouter."]] },
+  { q: "Ton genre de chef ?",
+    a: [["vc", "Gomez : brutal mais efficace. Au moins, avec lui, on sait où on va."],
+        ["nc", "Lee : un meneur qui promet l'évasion, pas la soumission."],
+        ["cm", "Y'Berion : un guide qui éclaire, pas un tyran qui écrase."]] },
+  { q: "Un grondement inconnu monte des profondeurs de la mine…",
+    a: [["vc", "J'alerte les gardes. C'est précisément pour ça qu'on leur verse le minerai."],
+        ["nc", "J'y descends. Le risque a toujours été le prix de la liberté."],
+        ["cm", "Un signe… Le Dormeur éprouve la foi des siens."]] },
+];
+
+const RESULTATS = {
+  vc: { titre: "L'OMBRE DU VIEUX CAMP", couleur: "#C8102E",
+        desc: "L'ordre, la protection, le pouvoir. Tu as compris la règle d'or de la Colonie : la liberté est un luxe, la sécurité une monnaie. Pragmatique, ambitieux et redoutable, tu graviras les échelons jusqu'au château de Gomez — ou tu y laisseras ton ombre.",
+        devise: "« La protection a un prix. Paie-le, ou deviens celui qu'on paie. »",
+        partage: "Le test est sans appel : je suis du VIEUX CAMP ⚔️ L'ordre, le pouvoir, le minerai." },
+  nc: { titre: "MERCENAIRE DU NOUVEAU CAMP", couleur: "#D4A574",
+        desc: "La Barrière est une insulte personnelle. Pendant que d'autres s'installent dans leur cage, toi tu prépares l'évasion. Frondeur, indomptable, prêt à tout risquer — les rizières et le tas de minerai n'attendent que ton coup de main pour faire sauter le ciel.",
+        devise: "« On ne s'habitue pas à une prison. On la fait exploser. »",
+        partage: "Le test est sans appel : je suis du NOUVEAU CAMP 🔥 La liberté ou rien." },
+  cm: { titre: "FRÈRE DU CAMP DU MARAIS", couleur: "#5BA873",
+        desc: "Pendant que les autres s'entretuent pour du minerai, toi tu as trouvé la paix — et peut-être davantage. La communauté, la foi, l'herbe des marais… Le Dormeur t'appelle, frère, et son rêve est plus vaste que toutes les barrières.",
+        devise: "« Dors, frère. Le Dormeur veille. »",
+        partage: "Le test est sans appel : je suis du CAMP DU MARAIS 🌿 La paix, frère." },
+};
+
+const URL_QUIZ = "https://smartceltic.fr/quiz/gothic-quel-camp.html";
+let etape = 0;
+const scores = { vc: 0, nc: 0, cm: 0 };
+
+const elQ = document.getElementById("question");
+const elA = document.getElementById("answers");
+const elP = document.getElementById("progress");
+
+function rendreProgress() {
+  elP.innerHTML = QUESTIONS.map((_, i) =>
+    `<span class="tri ${i < etape ? "is-done" : ""}"></span>`).join("");
+}
+
+function melanger(arr) {
+  const a = [...arr];
+  for (let i = a.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [a[i], a[j]] = [a[j], a[i]];
+  }
+  return a;
+}
+
+function rendreQuestion() {
+  rendreProgress();
+  const { q, a } = QUESTIONS[etape];
+  elQ.textContent = (etape + 1) + ". " + q;
+  elA.innerHTML = "";
+  melanger(a).forEach(([camp, texte]) => {
+    const btn = document.createElement("button");
+    btn.className = "quiz__answer";
+    btn.innerHTML = `<span class="tri" aria-hidden="true"></span><span>${texte}</span>`;
+    btn.addEventListener("click", () => {
+      scores[camp]++;
+      etape++;
+      etape < QUESTIONS.length ? rendreQuestion() : rendreResultat();
+    });
+    elA.appendChild(btn);
+  });
+}
+
+function rendreResultat() {
+  const camp = Object.keys(scores).reduce((a, b) => scores[a] >= scores[b] ? a : b);
+  const r = RESULTATS[camp];
+  document.getElementById("ecran-quiz").style.display = "none";
+  const ecran = document.getElementById("ecran-resultat");
+  ecran.style.display = "block";
+  const titre = document.getElementById("res-titre");
+  titre.textContent = r.titre;
+  titre.style.color = r.couleur;
+  document.getElementById("res-desc").textContent = r.desc;
+  document.getElementById("res-devise").textContent = r.devise;
+  const texte = r.partage + "\n\nEt toi, quel camp es-tu ? Fais le test →\n" + URL_QUIZ + "\n\n#Gothic1Remake";
+  document.getElementById("btn-partage").href =
+    "https://twitter.com/intent/tweet?text=" + encodeURIComponent(texte);
+  window.scrollTo({ top: 0 });
+}
+
+document.getElementById("btn-refaire").addEventListener("click", () => {
+  etape = 0;
+  for (const k in scores) scores[k] = 0;
+  document.getElementById("ecran-resultat").style.display = "none";
+  document.getElementById("ecran-quiz").style.display = "block";
+  rendreQuestion();
+});
+
+rendreQuestion();
+</script>
+<script src="../assets/app.js"></script>
+</body>
+</html>
