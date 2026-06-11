@@ -1,24 +1,45 @@
 {
   "news": [
     {
-      "slug": "exemple-dementi",
-      "titre": "EXEMPLE · Et voici le démenti, la marque de fabrique du site",
-      "jeu": "Jeu mystère",
-      "date": "2026-06-08",
-      "statut": "dementi"
-    },
-    {
-      "slug": "exemple-confirme",
-      "titre": "EXEMPLE · Voici à quoi ressemble une news confirmée",
-      "jeu": "Gothic 1 Remake",
+      "slug": "ff7-revelation-annonce",
+      "titre": "Final Fantasy VII Revelation : la fin de la trilogie est officielle",
+      "jeu": "Final Fantasy VII",
       "date": "2026-06-05",
       "statut": "confirme"
     },
     {
-      "slug": "exemple-rumeur",
-      "titre": "EXEMPLE · Voici à quoi ressemble une rumeur, assumée comme telle",
-      "jeu": "Jeu mystère",
-      "date": "2026-06-03",
+      "slug": "elden-ring-tarnished-pack-28-aout",
+      "titre": "Elden Ring : le Tarnished Pack daté au 28 août — sur toutes les plateformes",
+      "jeu": "Elden Ring",
+      "date": "2026-06-04",
+      "statut": "confirme"
+    },
+    {
+      "slug": "duskbloods-test-reseau-ete-2026",
+      "titre": "The Duskbloods : test réseau cet été, mais toujours pas de date de sortie",
+      "jeu": "The Duskbloods",
+      "date": "2026-06-09",
+      "statut": "confirme"
+    },
+    {
+      "slug": "blood-of-dawnwalker-gameplay-saga",
+      "titre": "The Blood of Dawnwalker dévoile son gameplay — et les ambitions de toute une saga",
+      "jeu": "The Blood of Dawnwalker",
+      "date": "2026-06-05",
+      "statut": "confirme"
+    },
+    {
+      "slug": "gothic-1-remake-patchs-fps",
+      "titre": "Gothic 1 Remake : deux patchs en deux jours, et le FPS débloqué sur consoles",
+      "jeu": "Gothic 1 Remake",
+      "date": "2026-06-10",
+      "statut": "confirme"
+    },
+    {
+      "slug": "baldurs-gate-remakes-rumeur",
+      "titre": "Baldur's Gate 1 et 2 : des remakes en préparation chez Wizards of the Coast ?",
+      "jeu": "Baldur's Gate",
+      "date": "2026-06-02",
       "statut": "rumeur"
     }
   ]
