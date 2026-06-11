@@ -9,8 +9,7 @@ from datetime import datetime, timezone
 
 CHANNEL_ID = "UC8wnNfHi1TprmMfVUuWjYNg"  # @SmartCeltic01
 SORTIE = "data/videos.json"
-UA = {"User-Agent": "Mozilla/5.0 (site smartceltic.fr — mise à jour vidéos)"}
-
+UA = {"User-Agent": "Mozilla/5.0 (smartceltic.fr video updater)"}
 
 def lire_flux():
     url = f"https://www.youtube.com/feeds/videos.xml?channel_id={CHANNEL_ID}"
