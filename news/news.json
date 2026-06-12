@@ -1,6 +1,34 @@
 {
   "news": [
     {
+      "slug": "poe2-patch-0-5-2",
+      "titre": "Path of Exile 2 : le patch 0.5.2 muscle l'endgame et apprivoise les boss",
+      "jeu": "Path of Exile 2",
+      "date": "2026-06-12",
+      "statut": "confirme"
+    },
+    {
+      "slug": "rogue-trader-infinite-museion",
+      "titre": "Rogue Trader : le DLC « The Infinite Museion » est disponible — et Owlcat fête ses 10 ans",
+      "jeu": "Warhammer 40K: Rogue Trader",
+      "date": "2026-06-11",
+      "statut": "confirme"
+    },
+    {
+      "slug": "sorties-rpg-11-juin",
+      "titre": "Atelier Yumia débarque sur Switch 2 — et Gust annonce déjà Atelier Karia pour 2027",
+      "jeu": "Atelier",
+      "date": "2026-06-11",
+      "statut": "confirme"
+    },
+    {
+      "slug": "diablo-4-ssf-saison-14",
+      "titre": "Diablo IV : le mode Solo Self-Found arrive enfin avec la saison 14",
+      "jeu": "Diablo IV",
+      "date": "2026-06-10",
+      "statut": "confirme"
+    },
+    {
       "slug": "ff7-revelation-dlc-possible",
       "titre": "FF7 Revelation : le réalisateur n'exclut pas de DLC après la fin de la trilogie",
       "jeu": "Final Fantasy VII",
