@@ -1,6 +1,27 @@
 {
   "news": [
     {
+      "slug": "final-fantasy-resonance-details",
+      "titre": "Final Fantasy Resonance : Square Enix détaille son premier Final Fantasy en HD-2D",
+      "jeu": "Final Fantasy Resonance",
+      "date": "2026-06-13",
+      "statut": "confirme"
+    },
+    {
+      "slug": "xenoblade-genesis-2027",
+      "titre": "Xenoblade Genesis : un « nouveau départ » pour la série, exclusif Switch 2 en 2027",
+      "jeu": "Xenoblade Chronicles",
+      "date": "2026-06-09",
+      "statut": "confirme"
+    },
+    {
+      "slug": "persona-6-persona-4-revival",
+      "titre": "Persona 6 officialisé, et Persona 4 Revival daté au 18 février 2027",
+      "jeu": "Persona",
+      "date": "2026-06-07",
+      "statut": "confirme"
+    },
+    {
       "slug": "poe2-patch-0-5-2",
       "titre": "Path of Exile 2 : le patch 0.5.2 muscle l'endgame et apprivoise les boss",
       "jeu": "Path of Exile 2",
