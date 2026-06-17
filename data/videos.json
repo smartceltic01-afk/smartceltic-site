@@ -1,7 +1,12 @@
 {
-  "updated": "2026-06-17T13:03:59+00:00",
+  "updated": "2026-06-17T23:11:48+00:00",
   "channel_id": "UC8wnNfHi1TprmMfVUuWjYNg",
   "videos": [
+    {
+      "id": "qRSJ7zDJygU",
+      "title": "Le Pogo Médiéval Fantastique ! #shorts",
+      "published": "2026-06-17T16:30:27+00:00"
+    },
     {
       "id": "b9FK2GngwDc",
       "title": "Nouvelle MISE À JOUR Warframe — tout ce qu'il faut savoir | Jade Shadows: Constellations",
@@ -26,11 +31,6 @@
       "id": "Yl22-heHpHA",
       "title": "Gothic 1 Remake : Quel camp est le meilleur ?",
       "published": "2026-06-12T14:00:25+00:00"
-    },
-    {
-      "id": "iZ-lsuao6vk",
-      "title": "Vous êtes bloqué au Vieux Camp ? Voici la solution  !",
-      "published": "2026-06-10T14:00:25+00:00"
     }
   ]
 }
