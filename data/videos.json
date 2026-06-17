@@ -1,7 +1,12 @@
 {
-  "updated": "2026-06-16T18:21:44+00:00",
+  "updated": "2026-06-17T13:03:59+00:00",
   "channel_id": "UC8wnNfHi1TprmMfVUuWjYNg",
   "videos": [
+    {
+      "id": "b9FK2GngwDc",
+      "title": "Nouvelle MISE À JOUR Warframe — tout ce qu'il faut savoir | Jade Shadows: Constellations",
+      "published": "2026-06-17T10:33:59+00:00"
+    },
     {
       "id": "mvGthaLlq3A",
       "title": "Ne mourez plus ! Le build Battlemage pour bien débuter Gothic 1 Remake",
@@ -26,11 +31,6 @@
       "id": "iZ-lsuao6vk",
       "title": "Vous êtes bloqué au Vieux Camp ? Voici la solution  !",
       "published": "2026-06-10T14:00:25+00:00"
-    },
-    {
-      "id": "5oCnbqCp8RM",
-      "title": "7 astuces essentielles pour bien débuter sur Gothic 1 Remake",
-      "published": "2026-06-09T14:00:17+00:00"
     }
   ]
 }
