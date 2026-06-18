@@ -1,6 +1,20 @@
 {
   "news": [
     {
+      "slug": "adventures-of-elliot-sortie",
+      "titre": "The Adventures of Elliot : le nouvel action-RPG HD-2D de Square Enix est dispo, la presse le juge « bon, sans plus »",
+      "jeu": "The Adventures of Elliot",
+      "date": "2026-06-18",
+      "statut": "confirme"
+    },
+    {
+      "slug": "deltarune-chapitre-5-24-juin",
+      "titre": "Deltarune : le Chapitre 5 « The Field of Pink and Gold » sort le 24 juin, en mise à jour gratuite",
+      "jeu": "Deltarune",
+      "date": "2026-06-17",
+      "statut": "confirme"
+    },
+    {
       "slug": "steam-next-fest-juin-2026-rpg",
       "titre": "Steam Next Fest : les démos RPG à ne pas rater avant le 22 juin",
       "jeu": "Multi",
