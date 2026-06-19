@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gothic 1 Remake : farm de minerai (pépites) — guide débutant | Smartceltic</title>
+<meta name="description" content="Comment se faire des pépites de minerai facilement en début de partie sur Gothic 1 Remake : 5 méthodes classées de la plus accessible à la plus rentable, et la règle d'or pour ne jamais être fauché.">
+<meta name="keywords" content="gothic 1 remake, gothic remake guide, gothic 1 remake astuces, gothic remake minerai, gothic 1 remake farm, gothic remake débuter">
+<meta property="og:title" content="Gothic 1 Remake : 5 méthodes pour se faire des pépites facilement">
+<meta property="og:description" content="Le guide complet du farm de minerai en early game sur Gothic 1 Remake — accessible, sourcé, sans blabla. 🍀">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://smartceltic.fr/guides/gothic-1-remake-farm-pepites-minerai.html">
+<meta property="og:image" content="https://smartceltic.fr/assets/og-guide-gothic-pepites.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" type="image/svg+xml" href="../assets/favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Oswald:wght@400;500&family=Alegreya+Sans:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/style.css">
+<style>
+.guide-video { margin: 1.5rem 0 2.5rem; }
+.guide-video__frame { position: relative; width: 100%; aspect-ratio: 16/9; border: 1px solid var(--or-sombre); border-radius: 4px; overflow: hidden; background: #000; }
+.guide-video__frame iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+.guide-video__cta { margin-top: .8rem; text-align: center; }
+.guide-video__attente { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: .5rem; width: 100%; aspect-ratio: 16/9; border: 1px solid var(--or); border-radius: 4px; background: linear-gradient(135deg, #0D0D0D 0%, #1a1410 100%); text-decoration: none; text-align: center; padding: 1.5rem; transition: border-color .2s, transform .12s; }
+.guide-video__attente:hover { border-color: var(--rouge); transform: translateY(-2px); }
+.guide-video__tri { width: 0; height: 0; border-left: 26px solid transparent; border-right: 26px solid transparent; border-top: 44px solid var(--or); margin-bottom: .6rem; }
+.guide-video__titre { font-family: var(--display); font-size: clamp(1.15rem, 3vw, 1.5rem); color: var(--parchemin); letter-spacing: .04em; }
+.guide-video__sous { font-family: var(--body); font-size: .95rem; color: var(--brume); }
+.methode { margin: 2.4rem 0; padding-top: 1.6rem; border-top: 1px solid rgba(138,106,69,.25); }
+.methode__num { font-family: var(--label); font-size: .8rem; letter-spacing: .2em; text-transform: uppercase; color: var(--or); }
+.methode h2 { font-family: var(--display); font-size: clamp(1.25rem, 3vw, 1.6rem); margin: .3rem 0 .9rem; }
+.gain { display: inline-block; font-family: var(--label); font-size: .82rem; letter-spacing: .08em; background: var(--braise); color: var(--or); padding: .25rem .7rem; border-radius: 3px; margin-bottom: .9rem; }
+.reconfirmer { margin: 1rem 0; padding: .9rem 1.1rem; border-left: 3px solid var(--rumeur, #E0A93C); background: rgba(224,169,60,.07); border-radius: 0 4px 4px 0; }
+.reconfirmer p { margin: 0; font-size: .95rem; color: var(--brume); }
+.reconfirmer strong { color: var(--rumeur, #E0A93C); }
+.regle-or { margin: 2.6rem 0 1rem; padding: 1.4rem 1.5rem; border: 1px solid var(--or); border-radius: 4px; background: rgba(212,165,116,.06); }
+.regle-or h2 { font-family: var(--display); color: var(--or); margin-top: 0; }
+.sommaire { margin: 1.5rem 0 2rem; padding: 1.1rem 1.3rem; background: var(--pierre); border-radius: 4px; }
+.sommaire p { font-family: var(--label); font-size: .78rem; letter-spacing: .16em; text-transform: uppercase; color: var(--brume); margin: 0 0 .6rem; }
+.sommaire ol { margin: 0; padding-left: 1.3rem; }
+.sommaire li { margin: .3rem 0; }
+.sommaire a { color: var(--parchemin); text-decoration: none; }
+.sommaire a:hover { color: var(--or); }
+</style>
+</head>
+<body data-racine="../">
+
+<nav class="nav" aria-label="Navigation principale">
+  <div class="nav__inner">
+    <a class="nav__brand" href="../"><span class="tri" aria-hidden="true"></span>SMARTCELTIC</a>
+    <div class="nav__links">
+      <a href="../#videos">Vidéos</a>
+      <a href="../news/">Actu RPG</a>
+      <a href="../quiz/gothic-quel-camp.html">Quiz</a>
+      <a href="../#soutenir">Soutenir</a>
+    </div>
+    <a class="live" id="live-nav" href="https://www.twitch.tv/smartceltic" target="_blank" rel="noopener">
+      <span class="live__dot" aria-hidden="true"></span><span class="live__txt">Twitch</span>
+    </a>
+  </div>
+</nav>
+
+<main class="article">
+  <a class="retour" href="../#videos"><span class="tri" aria-hidden="true"></span>Toutes les vidéos</a>
+
+  <div class="article__meta">
+    <span class="statut statut--confirme"><span class="tri tri--confirme" aria-hidden="true"></span>Guide</span>
+    <time datetime="2026-06-19">19 juin 2026</time>
+  </div>
+
+  <h1>Gothic 1 Remake : comment se faire des pépites de minerai facilement (début de partie)</h1>
+  <span class="article__game">Gothic 1 Remake</span>
+
+  <div class="guide-video">
+    <a class="guide-video__attente" href="https://www.youtube.com/@SmartCeltic01?sub_confirmation=1" target="_blank" rel="noopener">
+      <span class="guide-video__tri" aria-hidden="true"></span>
+      <span class="guide-video__titre">La vidéo sort aujourd'hui à 16h</span>
+      <span class="guide-video__sous">Clique pour la retrouver sur la chaîne — abonne-toi pour ne pas la manquer</span>
+    </a>
+  </div>
+
+  <div class="article__body">
+    <p>Dans <strong>Gothic 1 Remake</strong>, vous n'avez jamais assez de pépites de minerai. Tout en coûte : les entraîneurs, les armes, l'armure, les crochets, même les cartes. Et le jeu est volontairement radin — rien ne réapparaît, les marchands ont des stocks limités. Voici les <strong>5 meilleures méthodes pour vous faire des pépites vite en début de partie</strong>, classées de la plus accessible à la plus rentable, et la règle d'or qui change tout.</p>
+
+    <div class="sommaire">
+      <p>Au programme</p>
+      <ol>
+        <li><a href="#m1">Tout ramasser, et cuisiner sa viande</a></li>
+        <li><a href="#m2">Le crochetage chez Fingers</a></li>
+        <li><a href="#m3">Les filons de la Vieille Mine</a></li>
+        <li><a href="#m4">La quête d'herbe de Baal Kagan (Nouveau Camp)</a></li>
+        <li><a href="#m5">La chasse chez Drax : la vraie machine à pépites</a></li>
+        <li><a href="#regle">La règle d'or</a></li>
+      </ol>
+    </div>
+
+    <div class="methode" id="m1">
+      <span class="methode__num">Méthode 1 — Accessible</span>
+      <h2>Ramassez tout, et cuisinez votre viande</h2>
+      <span class="gain">Gratuit · dès la 1re minute</span>
+      <p>La base, gratuite, dès la première minute : ramassez absolument tout. L'inventaire n'est pas un problème dans ce jeu, donc vous prenez tout — plantes, bouffe, bric-à-brac, ça se revend.</p>
+      <p>Le piège que tout le monde rate : <strong>la viande crue se vend une misère.</strong> Mais si vous la faites cuire à un feu — il y en a un près de Diego au Vieux Camp — elle devient un objet de soin que les marchands achètent bien plus cher. Donc vous cuisinez <em>avant</em> de vendre. Pensez aussi à fouiller autour de la caravane près du pont à la sortie du Vieux Camp : il y traîne souvent des pépites au sol.</p>
+    </div>
+
+    <div class="methode" id="m2">
+      <span class="methode__num">Méthode 2 — Investissement malin</span>
+      <h2>Le crochetage chez Fingers</h2>
+      <span class="gain">~81 pépites de coffres au Vieux Camp</span>
+      <p>Premier vrai investissement : allez voir <strong>Fingers</strong> au Vieux Camp (sa cabane est près de l'Arène ; il faut souvent parler à Diego d'abord, et parfois accomplir une petite quête de vol pour débloquer son entraînement). Il vous apprend le crochetage pour <strong>100 pépites et 10 points d'apprentissage</strong>. Ça paraît cher quand vous n'avez rien, mais sans cette compétence vous cassez vos crochets en boucle, et le crochetage vous coûte alors plus qu'il ne rapporte.</p>
+      <p>Une fois formé, les coffres du Vieux Camp deviennent votre petite mine perso : ceux de Scatty, Mud, l'arène, Diego et Gravo rapportent autour de <strong>80 pépites</strong> en tout, plus la bouffe et le bric-à-brac à revendre. L'astuce : les PNJ quittent leurs cabanes à heures fixes — repérez leurs rondes et crochetez quand c'est vide, sinon ils deviennent hostiles.</p>
+    </div>
+
+    <div class="methode" id="m3">
+      <span class="methode__num">Méthode 3 — Minage</span>
+      <h2>Les filons de la Vieille Mine</h2>
+      <span class="gain">~15 pépites par filon · 2 filons</span>
+      <p>Vous voulez miner vous-même ? Direction la <strong>Vieille Mine</strong>, au nord-ouest du Vieux Camp. Près de l'entrée, il y a <strong>2 filons libres</strong> que vous pouvez miner à la pioche. Chaque filon donne une quinzaine de pépites avant de s'épuiser (en gros, 3 pépites par coup sur les premiers coups, puis 1 sur les derniers).</p>
+      <p>Petit bémol honnête : le trajet jusqu'à la mine est dangereux en early, donc gardez cette méthode pour quand votre perso encaisse un minimum. Vous faire tuer en route pour 30 pépites, ça ne vaut pas le coup.</p>
+    </div>
+
+    <div class="methode" id="m4">
+      <span class="methode__num">Méthode 4 — Quête sans risque</span>
+      <h2>La quête d'herbe de Baal Kagan, au Nouveau Camp</h2>
+      <span class="gain">~200 pépites au total</span>
+      <p>Si vous poussez jusqu'au <strong>Nouveau Camp</strong> tôt, il y a une quête propre, rapide et sans le moindre risque pour remplir votre bourse. Cherchez <strong>Baal Kagan</strong> — un Baal du Camp des Marais installé au Nouveau Camp, assis près d'un feu, vers le pied de la montée qui mène chez Lares (près du grand tas de minerai au centre de la grotte). Proposez-lui de l'aider à écouler son herbe : ça lance la quête <strong>« Démarchage de clients »</strong> (Canvassing Customers). Il vous remet alors <strong>10 rouleaux d'herbe des marais</strong>, gratuitement.</p>
+      <p>Votre boulot : vendre les <strong>10 rouleaux</strong> à des <strong>bandits ou mercenaires différents</strong> dans le camp — vous les trouvez dans la taverne et près de l'entrée. Chacun vous en prend un pour <strong>10 pépites</strong>, soit 100 pépites rien que sur la vente. Pas besoin de vous battre : vous épuisez les dialogues jusqu'à voir l'option d'échange. Attention : ce sont les <strong>PNJ anonymes</strong> (Bandit, Mercenaire) qui achètent, pas les personnages nommés.</p>
+      <p>Une fois les 10 rouleaux écoulés, retournez voir Baal Kagan : il vous laisse choisir votre récompense parmi trois — <strong>100 pépites de minerai</strong>, des parchemins de magie, ou un objet (Dreamcall) qui aide à rejoindre la Fraternité. Prenez le minerai : la quête rapporte alors <strong>environ 200 pépites au total</strong> (les 100 de la vente + les 100 de la prime). C'est propre, c'est sûr, et c'est calé pile sur vos premières heures au Nouveau Camp. Seul bémol : c'est un one-shot, ça ne se répète pas.</p>
+      <div class="reconfirmer">
+        <p><strong>Ne pas confondre :</strong> cette quête « Démarchage de clients » (Baal Kagan) est distincte de la quête « A Piece of the Pie » donnée par Baal Isidro, qui consiste aussi à vendre de l'herbe mais sert à rejoindre le Nouveau Camp. Deux quêtes différentes, deux donneurs différents.</p>
+      </div>
+    </div>
+
+    <div class="methode" id="m5">
+      <span class="methode__num">Méthode 5 — La plus rentable sur la durée</span>
+      <h2>La vraie machine à pépites : la chasse chez Drax</h2>
+      <span class="gain">725 pépites d'investissement, rentables à vie</span>
+      <p>La méthode qui rapporte le plus sur la durée : les <strong>compétences de chasse</strong>, chez <strong>Drax</strong>, le chasseur que vous croisez sur la route avant le Vieux Camp (donnez-lui une bière pour débloquer son entraînement). Les quatre compétences — retirer les dents, dépecer les fourrures, retirer les griffes, dépecer les reptiles — coûtent <strong>725 pépites et 4 points d'apprentissage</strong> en tout. Oui, c'est un gros investissement. Mais c'est <strong>celui qui se rembourse</strong>.</p>
+      <p>Pourquoi l'apprendre tôt ? Parce que <strong>les ennemis ne réapparaissent pas</strong> : un cadavre que vous ne pouvez pas dépecer, c'est de l'argent perdu pour toujours. Priorisez les <strong>Dents</strong> ou la <strong>Fourrure</strong> (les plus polyvalentes sur les ennemis communs), puis réinvestissez vos gains dans les compétences suivantes. C'est votre vraie machine à pépites pour tout le reste de la partie.</p>
+    </div>
+
+    <div class="regle-or" id="regle">
+      <h2>La règle d'or</h2>
+      <p><strong>Ne balancez jamais un gros stack chez un seul marchand.</strong> Les prix s'effondrent quand vous vendez en masse au même PNJ. Étalez vos ventes entre plusieurs marchands à grosse bourse — Fisk (qui paie souvent le double pour les armes), Dexter — et gardez vos pépites pour ce qui rend l'heure suivante plus facile : survie, entraînement, combat. Dépenser juste parce que vous avez des pépites, c'est le meilleur moyen de vous retrouver fauché au mauvais moment.</p>
+    </div>
+
+    <p>Voilà de quoi remplir votre bourse sans galérer. La vidéo complète, avec les emplacements montrés à l'écran, est en haut de cette page. Et si vous débutez, jetez un œil à mes autres guides Gothic pour bien commencer dans la Colonie.</p>
+  </div>
+
+  <div class="reagir">
+    <p>💬 Votre méthode préférée pour farmer les pépites ? Dites-le au Clan :</p>
+    <a class="btn btn--ligne" href="https://discord.gg/5AqFmeEDhJ" target="_blank" rel="noopener">Sur Discord</a>
+    <a class="btn btn--ligne" href="https://x.com/Smartceltic01" target="_blank" rel="noopener">Sur X</a>
+  </div>
+
+  <div class="commentaires">
+    <h2>Commentaires</h2>
+    <div id="cusdis_thread"
+      data-host="https://cusdis.com"
+      data-app-id="dc2efc68-e368-41bd-be24-38572c2889e0"
+      data-page-id="guide-gothic-pepites"
+      data-page-url="https://smartceltic.fr/guides/gothic-1-remake-farm-pepites-minerai.html"
+      data-page-title="Gothic 1 Remake : farm de pépites">
+    </div>
+    <script async defer src="https://cusdis.com/js/cusdis.es.js"></script>
+  </div>
+</main>
+
+<footer class="footer">
+  <div class="footer__links">
+    <a href="https://www.youtube.com/@SmartCeltic01" target="_blank" rel="noopener">YouTube</a>
+    <a href="https://www.twitch.tv/smartceltic" target="_blank" rel="noopener">Twitch</a>
+    <a href="https://x.com/Smartceltic01" target="_blank" rel="noopener">X</a>
+    <a href="https://www.instagram.com/smartceltic01/" target="_blank" rel="noopener">Instagram</a>
+    <a href="https://www.tiktok.com/@smartceltic01" target="_blank" rel="noopener">TikTok</a>
+    <a href="https://discord.gg/5AqFmeEDhJ" target="_blank" rel="noopener">Discord</a>
+  </div>
+  <small>© 2026 Smartceltic — Ciao, bande de Celtes 🍀</small>
+</footer>
+
+<script src="../assets/app.js"></script>
+</body>
+</html>
