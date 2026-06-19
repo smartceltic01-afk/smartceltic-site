@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gothic 1 Remake : build Mage du Feu early game (Force/Feu) — guide débutant | Smartceltic</title>
+<meta name="description" content="Le build battlemage Force / Mage du Feu sur Gothic 1 Remake, partie 1 (early game) : stats de départ, devenir une Ombre du Vieux Camp, et débloquer votre premier Trait de feu chez Torrez. Le build le plus pardonnant du jeu.">
+<meta name="keywords" content="gothic 1 remake, gothic 1 remake build, gothic remake mage du feu, gothic 1 remake battlemage, gothic remake build force, gothic 1 remake débuter mage, gothic remake torrez">
+<meta property="og:title" content="Gothic 1 Remake : build Mage du Feu early game (Force/Feu)">
+<meta property="og:description" content="Le build le plus pardonnant du jeu, partie 1 : fondations early game pour ne pas mourir toutes les deux minutes. 🍀">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://smartceltic.fr/guides/gothic-1-remake-build-mage-feu-early.html">
+<meta property="og:image" content="https://smartceltic.fr/assets/og-guide-gothic-mage.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" type="image/svg+xml" href="../assets/favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Oswald:wght@400;500&family=Alegreya+Sans:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/style.css">
+<style>
+.guide-video { margin: 1.5rem 0 2.5rem; }
+.guide-video__frame { position: relative; width: 100%; aspect-ratio: 16/9; border: 1px solid var(--or-sombre); border-radius: 4px; overflow: hidden; background: #000; }
+.guide-video__frame iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+.guide-video__cta { margin-top: .8rem; text-align: center; }
+.methode { margin: 2.4rem 0; padding-top: 1.6rem; border-top: 1px solid rgba(138,106,69,.25); }
+.methode__num { font-family: var(--label); font-size: .8rem; letter-spacing: .2em; text-transform: uppercase; color: var(--or); }
+.methode h2 { font-family: var(--display); font-size: clamp(1.25rem, 3vw, 1.6rem); margin: .3rem 0 .9rem; }
+.gain { display: inline-block; font-family: var(--label); font-size: .82rem; letter-spacing: .08em; background: var(--braise); color: var(--or); padding: .25rem .7rem; border-radius: 3px; margin-bottom: .9rem; }
+.reconfirmer { margin: 1rem 0; padding: .9rem 1.1rem; border-left: 3px solid var(--rumeur, #E0A93C); background: rgba(224,169,60,.07); border-radius: 0 4px 4px 0; }
+.reconfirmer p { margin: 0; font-size: .95rem; color: var(--brume); }
+.reconfirmer strong { color: var(--rumeur, #E0A93C); }
+.danger { margin: 1.2rem 0; padding: 1rem 1.2rem; border-left: 3px solid var(--rouge); background: rgba(200,16,46,.08); border-radius: 0 4px 4px 0; }
+.danger p { margin: 0; }
+.danger strong { color: var(--rouge); }
+.regle-or { margin: 2.6rem 0 1rem; padding: 1.4rem 1.5rem; border: 1px solid var(--or); border-radius: 4px; background: rgba(212,165,116,.06); }
+.regle-or h2 { font-family: var(--display); color: var(--or); margin-top: 0; }
+.regle-or ul { margin: .6rem 0 0; padding-left: 1.2rem; }
+.regle-or li { margin: .4rem 0; }
+.sommaire { margin: 1.5rem 0 2rem; padding: 1.1rem 1.3rem; background: var(--pierre); border-radius: 4px; }
+.sommaire p { font-family: var(--label); font-size: .78rem; letter-spacing: .16em; text-transform: uppercase; color: var(--brume); margin: 0 0 .6rem; }
+.sommaire ol { margin: 0; padding-left: 1.3rem; }
+.sommaire li { margin: .3rem 0; }
+.sommaire a { color: var(--parchemin); text-decoration: none; }
+.sommaire a:hover { color: var(--or); }
+.serie { margin: 2rem 0; padding: 1rem 1.2rem; background: var(--pierre); border-radius: 4px; font-size: .98rem; }
+.serie strong { color: var(--or); }
+</style>
+</head>
+<body data-racine="../">
+
+<nav class="nav" aria-label="Navigation principale">
+  <div class="nav__inner">
+    <a class="nav__brand" href="../"><span class="tri" aria-hidden="true"></span>SMARTCELTIC</a>
+    <div class="nav__links">
+      <a href="../#videos">Vidéos</a>
+      <a href="../#guides">Guides</a>
+      <a href="../news/">Actu RPG</a>
+      <a href="../quiz/gothic-quel-camp.html">Quiz</a>
+      <a href="../#soutenir">Soutenir</a>
+    </div>
+    <a class="live" id="live-nav" href="https://www.twitch.tv/smartceltic" target="_blank" rel="noopener">
+      <span class="live__dot" aria-hidden="true"></span><span class="live__txt">Twitch</span>
+    </a>
+  </div>
+</nav>
+
+<main class="article">
+  <a class="retour" href="../#guides"><span class="tri" aria-hidden="true"></span>Tous les guides</a>
+
+  <div class="article__meta">
+    <span class="statut statut--confirme"><span class="tri tri--confirme" aria-hidden="true"></span>Guide</span>
+    <time datetime="2026-06-16">16 juin 2026</time>
+  </div>
+
+  <h1>Gothic 1 Remake : le build Mage du Feu (Force/Feu) — Partie 1 : early game</h1>
+  <span class="article__game">Gothic 1 Remake</span>
+
+  <div class="guide-video">
+    <div class="guide-video__frame">
+      <iframe src="https://www.youtube.com/embed/mvGthaLlq3A" title="Gothic 1 Remake : build Mage du Feu early game — Smartceltic" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    </div>
+    <div class="guide-video__cta">
+      <a class="btn btn--rouge" href="https://youtu.be/mvGthaLlq3A" target="_blank" rel="noopener">▶ Voir sur YouTube</a>
+    </div>
+  </div>
+
+  <div class="article__body">
+    <p>Vous avez choisi le <strong>Vieux Camp</strong> et vous voulez le build le plus pardonnant de <strong>Gothic 1 Remake</strong> ? Le <strong>Force / Mage du Feu</strong>, c'est exactement ça : votre épée vous sauve quand vous êtes faible, et votre magie de feu trivialise tout une fois lancée. Ce guide est la <strong>partie 1 d'une série en 3 volets</strong> — aujourd'hui, l'<strong>early game</strong> : comment poser des fondations solides pour ne pas mourir toutes les deux minutes.</p>
+
+    <div class="serie">
+      <strong>La série complète :</strong> Partie 1 — Early game (vous y êtes) · Partie 2 — Mid game : devenir un vrai Mage du Feu, l'initiation de Corristo · Partie 3 — End game. Les parties 2 et 3 arrivent au fil de la progression.
+    </div>
+
+    <h2>L'idée du build : le battlemage</h2>
+    <p>On appelle ça un <strong>battlemage</strong>. Votre Force et votre épée sont vos <strong>roues d'entraînement</strong> : elles vous portent pendant que le mage est faible, et vous économisent du mana sur les petits monstres. Votre magie de feu est votre <strong>condition de victoire</strong> : faible au début, mais une fois le palier du <strong>niveau 15</strong> franchi, les combats que vous fuyiez deviennent une formalité.</p>
+
+    <div class="regle-or">
+      <h2>Trois règles d'or pour toute la série</h2>
+      <ul>
+        <li><strong>La magie de feu, c'est le Vieux Camp. Uniquement.</strong> Rejoindre un autre camp ferme la voie à vie — il n'y a pas de respec dans ce jeu.</li>
+        <li><strong>Pas de réinitialisation.</strong> Chaque point d'apprentissage est permanent. On suit l'ordre.</li>
+        <li><strong>Sauvegardez souvent, manuellement.</strong> Vous allez vite comprendre pourquoi (un certain Gomez…).</li>
+      </ul>
+    </div>
+
+    <div class="sommaire">
+      <p>Le plan de l'early game</p>
+      <ol>
+        <li><a href="#e1">Vos stats de départ → Diego & Scatty</a></li>
+        <li><a href="#e2">Devenir une Ombre du Vieux Camp</a></li>
+        <li><a href="#e3">Votre premier Trait de feu → Torrez</a></li>
+        <li><a href="#e4">Survivre à l'early game</a></li>
+      </ol>
+    </div>
+
+    <div class="methode" id="e1">
+      <span class="methode__num">Étape 1 — Fondations</span>
+      <h2>Vos stats de départ : Diego et Scatty</h2>
+      <span class="gain">Vise ~30 Force · Une-main « Entraîné »</span>
+      <p>Pour la <strong>Force</strong> et la <strong>Dextérité</strong>, votre formateur, c'est <strong>Diego</strong> — le premier PNJ que vous croisez, celui qui vous donne la quête d'entrée au Vieux Camp. Mais ne comptez pas vous entraîner avec lui dès le début : Diego n'ouvre son entraînement qu'<strong>une fois revenu au camp et après avoir validé plusieurs quêtes du Vieux Camp</strong>. C'est normal s'il refuse au départ — faites avancer les quêtes d'admission d'abord (étape 2), et son option d'entraînement apparaîtra dans ses dialogues. Visez une <strong>trentaine de Force</strong> comme repère de départ, de quoi équiper de meilleures épées.</p>
+      <p>Pour la maîtrise de l'arme à une main, direction <strong>Scatty</strong>, à l'<strong>arène du Vieux Camp</strong>. Le système fonctionne par paliers, et c'est important pour gérer votre minerai :</p>
+      <ul>
+        <li><strong>Entraîné</strong> (palier 1) : environ <strong>10 PA + 50 minerai</strong> → combos, coups critiques et parades.</li>
+        <li><strong>Maître</strong> (palier 2) : environ <strong>20 PA + 200 minerai</strong> → finitions, recul, taux de critique, ripostes.</li>
+      </ul>
+      <p>Le palier Maître coûte cher. Pour un battlemage en early game : contentez-vous de l'<strong>Entraîné</strong> comme filet de sécurité, et <strong>gardez votre minerai pour l'alchimie et la magie</strong> qui arrivent juste après. Le Maître, c'est un luxe de mid-game, pas une priorité maintenant.</p>
+      <p><em>Bon à savoir : Scatty est le seul formateur d'arme à une main du Vieux Camp, pour les deux paliers. S'il n'est pas sur son banc devant l'arène, il peut être dans la hutte juste à côté — mais c'est toujours lui. Les autres formateurs une-main (Cord, Gor Na Toth) sont au Nouveau Camp et au Marais.</em></p>
+      <div class="danger">
+        <p><strong>L'erreur n°1 des débutants :</strong> tout balancer dans le Mana tout de suite. Ne faites PAS ça — sans mêlée, vous mourez partout et vous cramez votre mana sur des charognards.</p>
+      </div>
+      <p><em>Bonus optionnel : Huno, le forgeron du Vieux Camp, vous apprend la forge (10 PA + 50 minerai) pour fabriquer vos armes à une main.</em></p>
+      <div class="reconfirmer">
+        <p><strong>À reconfirmer en jeu :</strong> les coûts d'entraînement (Scatty, Huno) sont des repères communautaires (« vise environ ») ; les montants exacts en PA et minerai peuvent varier d'un palier ou d'une version à l'autre. Vérifiez à l'écran au moment de payer.</p>
+      </div>
+    </div>
+
+    <div class="methode" id="e2">
+      <span class="methode__num">Étape 2 — Faction</span>
+      <h2>Devenir une Ombre du Vieux Camp</h2>
+      <span class="gain">Armure des Ombres + gros bonus d'XP</span>
+      <p>Rejoindre le Vieux Camp, c'est devenir une <strong>Ombre</strong>, via deux quêtes liées : <strong>Admission au Vieux Camp</strong> et <strong>Casting Shadows</strong>. Le principe : gagner le soutien des Ombres en faisant leurs quêtes — l'<strong>Épée de Whistler</strong>, retrouver <strong>Nek</strong> (le garde disparu, pour Sly), l'<strong>Anneau de Fingers</strong> (voler la bague de Scatty), la <strong>Recette de la Secte</strong> (Dexter), <strong>Out of Sight</strong> (Thorus), et enfin le <strong>Test de Foi de Diego</strong>.</p>
+      <p>Vous n'avez pas besoin de TOUTES les faire, juste assez de soutiens — mais les enchaîner donne le plus d'XP. Il vous faut aussi le <strong>niveau 5</strong>. Une fois les soutiens réunis : Test de Foi de Diego → parlez à <strong>Thorus</strong> à la porte du château → puis <strong>Raven</strong> vous escorte → et enfin <strong>Gomez</strong> vous intronise.</p>
+      <div class="danger">
+        <p><strong>LE piège mortel, gravez-le dans votre tête :</strong> ne dites JAMAIS à Gomez que vous servez Y'Berion — il vous tue sur le coup, instantanément (il voit le mensonge). Évitez aussi l'option « dois-je te couper la tête pour prouver que je suis un bon combattant ? », fatale elle aussi. Toutes les autres réponses sont sûres. <strong>Sauvegardez avant de lui parler.</strong></p>
+      </div>
+      <p>À la clé : l'<strong>armure des Ombres</strong> (une vraie montée en gamme), 1000 XP et l'accès au château — donc à Torrez et, plus tard, à l'alchimie.</p>
+    </div>
+
+    <div class="methode" id="e3">
+      <span class="methode__num">Étape 3 — Première magie</span>
+      <h2>Votre premier Trait de feu : Torrez</h2>
+      <span class="gain">Trait de feu : 1 mana, spammable</span>
+      <p>Le gros avantage du remake, c'est la magie dès le chapitre 1. Allez voir <strong>Torrez</strong>, le mage du Vieux Camp, au <strong>marché sud-ouest, près du puits</strong> (en journée). Lancez la conversation en lui parlant de la lettre pour les Mages du Feu, puis demandez-lui de vous enseigner la magie : ça lance la quête <strong>« Le Prix de la Magie »</strong>. Il vous faut :</p>
+      <ul>
+        <li>un <strong>parchemin vierge</strong> → chez <strong>Graham</strong>, le cartographe près de la porte nord ;</li>
+        <li><strong>2 Griffes de Loup</strong> → chez <strong>Mordrag</strong> près du marché, ou en chassant les loups au nord.</li>
+      </ul>
+      <p>Rapportez le tout à Torrez, payez <strong>5 PA</strong>, et — crucial — choisissez le <strong>Trait de feu (Firebolt), PAS le Soin</strong>. Le Trait de feu coûte 1 seul mana, il est spammable, et vous allez kiter vos ennemis avec jusqu'en fin de partie (le soin, vous l'avez déjà via la nourriture). La quête débloque aussi l'accès à la <strong>boutique de Torrez</strong> pour acheter d'autres runes plus tard. Ensuite, commencez à monter doucement votre <strong>Mana vers 20-30</strong>.</p>
+      <div class="reconfirmer">
+        <p><strong>À reconfirmer en jeu :</strong> le prix du parchemin chez Graham et des griffes chez Mordrag varie selon les sources (parchemin ~13 à 16 pépites, griffe ~7 à 8 pépites pièce). Rien de bloquant, mais annoncez les montants que vous voyez à l'écran. Note : ce premier sort fait de vous un utilisateur de Rune Magic, pas encore un Mage du Feu officiel — la vraie promotion passe par l'initiation de Corristo (le « Trial of Fire »), au chapitre 3. C'est l'objet de la partie 2.</p>
+      </div>
+    </div>
+
+    <div class="methode" id="e4">
+      <span class="methode__num">Étape 4 — Survie</span>
+      <h2>Survivre à l'early game</h2>
+      <span class="gain">La routine qui ne pardonne pas</span>
+      <p>La routine gagnante : mêlée sur les ennemis faibles, <strong>Trait de feu pour kiter</strong> les dangereux, et vous n'attaquez jamais un groupe de face — isolez-les un par un. Pour les soins, nouveauté du remake : la <strong>nourriture régénère hors combat</strong> (votre soin principal entre les fights), les <strong>potions</strong> servent au soin instantané en plein combat.</p>
+      <p>Les erreurs early à éviter, en résumé : tout mettre dans le Mana trop tôt, dépenser 200 minerai dans le palier Maître de Scatty prématurément, et oublier de sauvegarder avant un dialogue (Gomez !) ou une zone risquée.</p>
+    </div>
+
+    <p>Vos fondations sont posées : une base de mêlée fiable, votre statut d'Ombre, et votre premier sort de feu, le tout au chapitre 1. Avec ça, vous survivez à la partie la plus dure du jeu. La <strong>partie 2</strong> attaque le mid game : devenir un vrai Mage du Feu, l'initiation de Corristo et ses pièges, et le pic du niveau 15 qui fait tout basculer. La vidéo complète est en haut de cette page — abonnez-vous pour ne pas rater la suite.</p>
+  </div>
+
+  <div class="reagir">
+    <p>💬 Vous partez sur ce build ? Dites-le au Clan :</p>
+    <a class="btn btn--ligne" href="https://discord.gg/5AqFmeEDhJ" target="_blank" rel="noopener">Sur Discord</a>
+    <a class="btn btn--ligne" href="https://x.com/Smartceltic01" target="_blank" rel="noopener">Sur X</a>
+  </div>
+
+  <div class="commentaires">
+    <h2>Commentaires</h2>
+    <div id="cusdis_thread"
+      data-host="https://cusdis.com"
+      data-app-id="dc2efc68-e368-41bd-be24-38572c2889e0"
+      data-page-id="guide-gothic-mage-feu-early"
+      data-page-url="https://smartceltic.fr/guides/gothic-1-remake-build-mage-feu-early.html"
+      data-page-title="Gothic 1 Remake : build Mage du Feu early game">
+    </div>
+    <script async defer src="https://cusdis.com/js/cusdis.es.js"></script>
+  </div>
+</main>
+
+<footer class="footer">
+  <div class="footer__links">
+    <a href="https://www.youtube.com/@SmartCeltic01" target="_blank" rel="noopener">YouTube</a>
+    <a href="https://www.twitch.tv/smartceltic" target="_blank" rel="noopener">Twitch</a>
+    <a href="https://x.com/Smartceltic01" target="_blank" rel="noopener">X</a>
+    <a href="https://www.instagram.com/smartceltic01/" target="_blank" rel="noopener">Instagram</a>
+    <a href="https://www.tiktok.com/@smartceltic01" target="_blank" rel="noopener">TikTok</a>
+    <a href="https://discord.gg/5AqFmeEDhJ" target="_blank" rel="noopener">Discord</a>
+  </div>
+  <small>© 2026 Smartceltic — Ciao, bande de Celtes 🍀</small>
+</footer>
+
+<script src="../assets/app.js"></script>
+</body>
+</html>
