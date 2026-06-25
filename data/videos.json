@@ -1,7 +1,12 @@
 {
-  "updated": "2026-06-25T09:44:45+00:00",
+  "updated": "2026-06-25T15:15:01+00:00",
   "channel_id": "UC8wnNfHi1TprmMfVUuWjYNg",
   "videos": [
+    {
+      "id": "VLOj6kY-GEc",
+      "title": "Monture Scavenger débloquée ! Voici tous les secrets",
+      "published": "2026-06-25T14:00:22+00:00"
+    },
     {
       "id": "O1Z7iu1ikHM",
       "title": "Chromanin expliqué : énigme des bibliothèques et coffre caché",
@@ -26,11 +31,6 @@
       "id": "kse3h_eRZ1M",
       "title": "GOTHIC 1 REMAKE : 5 astuces pour devenir RICHE rapidement !",
       "published": "2026-06-19T14:00:11+00:00"
-    },
-    {
-      "id": "qRSJ7zDJygU",
-      "title": "Le Pogo Médiéval Fantastique ! #shorts",
-      "published": "2026-06-17T16:30:27+00:00"
     }
   ]
 }
