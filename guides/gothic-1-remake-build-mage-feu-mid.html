@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gothic 1 Remake : build Mage du Feu mid game (initiation de Corristo) — guide | Smartceltic</title>
+<meta name="description" content="Partie 2 du build Mage du Feu sur Gothic 1 Remake : la quête de la Lettre, les prérequis (Alchimie, Inscription, niveau 10), et l'initiation de Corristo au chapitre 3 — avec les bonnes réponses pour ne pas fermer la voie à vie.">
+<meta name="keywords" content="gothic 1 remake, build mage du feu, gothic remake mage du feu, gothic 1 remake corristo, gothic remake épreuve du feu, gothic 1 remake initiation mage, gothic remake trial of fire, gothic 1 remake mid game">
+<meta property="og:title" content="Gothic 1 Remake : build Mage du Feu mid game (initiation de Corristo)">
+<meta property="og:description" content="Devenir un vrai Mage du Feu : la quête de la Lettre, les prérequis, et l'initiation de Corristo avec les bonnes réponses. 🍀">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://smartceltic.fr/guides/gothic-1-remake-build-mage-feu-mid.html">
+<meta property="og:image" content="https://smartceltic.fr/assets/og-guide-gothic-mage-mid.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" type="image/svg+xml" href="../assets/favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Oswald:wght@400;500&family=Alegreya+Sans:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/style.css">
+<style>
+.guide-video { margin: 1.5rem 0 2.5rem; }
+.guide-video__frame { position: relative; width: 100%; aspect-ratio: 16/9; border: 1px solid var(--or-sombre); border-radius: 4px; overflow: hidden; background: #000; }
+.guide-video__frame iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+.guide-video__cta { margin-top: .8rem; text-align: center; }
+.methode { margin: 2.4rem 0; padding-top: 1.6rem; border-top: 1px solid rgba(138,106,69,.25); }
+.methode__num { font-family: var(--label); font-size: .8rem; letter-spacing: .2em; text-transform: uppercase; color: var(--or); }
+.methode h2 { font-family: var(--display); font-size: clamp(1.25rem, 3vw, 1.6rem); margin: .3rem 0 .9rem; }
+.gain { display: inline-block; font-family: var(--label); font-size: .82rem; letter-spacing: .08em; background: var(--braise); color: var(--or); padding: .25rem .7rem; border-radius: 3px; margin-bottom: .9rem; }
+.reconfirmer { margin: 1rem 0; padding: .9rem 1.1rem; border-left: 3px solid var(--rumeur, #E0A93C); background: rgba(224,169,60,.07); border-radius: 0 4px 4px 0; }
+.reconfirmer p { margin: 0; font-size: .95rem; color: var(--brume); }
+.reconfirmer strong { color: var(--rumeur, #E0A93C); }
+.danger { margin: 1.2rem 0; padding: 1rem 1.2rem; border-left: 3px solid var(--rouge); background: rgba(200,16,46,.08); border-radius: 0 4px 4px 0; }
+.danger p { margin: 0; }
+.danger strong { color: var(--rouge); }
+.regle-or { margin: 2.6rem 0 1rem; padding: 1.4rem 1.5rem; border: 1px solid var(--or); border-radius: 4px; background: rgba(212,165,116,.06); }
+.regle-or h2 { font-family: var(--display); color: var(--or); margin-top: 0; }
+.regle-or ul { margin: .6rem 0 0; padding-left: 1.2rem; }
+.regle-or li { margin: .4rem 0; }
+.sommaire { margin: 1.5rem 0 2rem; padding: 1.1rem 1.3rem; background: var(--pierre); border-radius: 4px; }
+.sommaire p { font-family: var(--label); font-size: .78rem; letter-spacing: .16em; text-transform: uppercase; color: var(--brume); margin: 0 0 .6rem; }
+.sommaire ol { margin: 0; padding-left: 1.3rem; }
+.sommaire li { margin: .3rem 0; }
+.sommaire a { color: var(--parchemin); text-decoration: none; }
+.sommaire a:hover { color: var(--or); }
+.serie { margin: 2rem 0; padding: 1rem 1.2rem; background: var(--pierre); border-radius: 4px; font-size: .98rem; }
+.serie strong { color: var(--or); }
+.serie a { color: var(--parchemin); }
+.serie a:hover { color: var(--or); }
+.suite { margin: 2rem 0; padding: 1rem 1.2rem; background: var(--pierre); border-radius: 4px; font-size: .98rem; }
+.suite strong { color: var(--or); }
+.suite a { color: var(--parchemin); }
+.suite a:hover { color: var(--or); }
+.etapes-liste { counter-reset: etape; list-style: none; padding-left: 0; }
+.etapes-liste li { counter-increment: etape; position: relative; padding-left: 2.4rem; margin: .8rem 0; }
+.etapes-liste li::before { content: counter(etape); position: absolute; left: 0; top: -.1rem; width: 1.7rem; height: 1.7rem; background: var(--braise); color: var(--or); border-radius: 50%; display: grid; place-items: center; font-family: var(--label); font-size: .85rem; }
+</style>
+</head>
+<body data-racine="../">
+
+<nav class="nav" aria-label="Navigation principale">
+  <div class="nav__inner">
+    <a class="nav__brand" href="../"><span class="tri" aria-hidden="true"></span>SMARTCELTIC</a>
+    <div class="nav__links">
+      <a href="../#videos">Vidéos</a>
+      <a href="../#guides">Guides</a>
+      <a href="../news/">Actu RPG</a>
+      <a href="../quiz/gothic-quel-camp.html">Quiz</a>
+      <a href="../#soutenir">Soutenir</a>
+    </div>
+    <a class="live" id="live-nav" href="https://www.twitch.tv/smartceltic" target="_blank" rel="noopener">
+      <span class="live__dot" aria-hidden="true"></span><span class="live__txt">Twitch</span>
+    </a>
+  </div>
+</nav>
+
+<main class="article">
+  <a class="retour" href="../#guides"><span class="tri" aria-hidden="true"></span>Tous les guides</a>
+
+  <div class="article__meta">
+    <span class="statut statut--confirme"><span class="tri tri--confirme" aria-hidden="true"></span>Guide</span>
+    <time datetime="2026-06-22">22 juin 2026</time>
+  </div>
+
+  <h1>Gothic 1 Remake : le build Mage du Feu (Force/Feu) — Partie 2 : mid game &amp; l'initiation de Corristo</h1>
+  <span class="article__game">Gothic 1 Remake</span>
+
+  <div class="guide-video">
+    <div class="guide-video__frame">
+      <iframe src="https://www.youtube.com/embed/ylHhaeO257o" title="Gothic 1 Remake : devenir Mage du Feu, mid game — Smartceltic" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    </div>
+    <div class="guide-video__cta">
+      <a class="btn btn--rouge" href="https://youtu.be/ylHhaeO257o" target="_blank" rel="noopener">▶ Voir sur YouTube</a>
+    </div>
+  </div>
+
+  <div class="article__body">
+    <div class="serie">
+      <strong>Série en 3 volets :</strong> <a href="gothic-1-remake-build-mage-feu-early.html">Partie 1 — Early game</a> · Partie 2 — Mid game (vous y êtes) · Partie 3 — End game (à venir).
+    </div>
+
+    <p>Si vous avez suivi la <a href="gothic-1-remake-build-mage-feu-early.html">Partie 1</a>, vous avez votre base de mêlée, votre statut d'Ombre et votre premier Trait de feu. Objectif de cette partie : devenir un <strong>vrai Mage du Feu de l'Ordre</strong>. Mais attention — ça se débloque seulement au <strong>chapitre 3</strong>, et un piège de dialogue peut fermer la voie à vie. On déroule tout.</p>
+
+    <p><strong>« Je lance des sorts » ≠ « je suis Mage du Feu ».</strong> Lancer le Trait de feu (Partie 1) fait de vous un utilisateur de magie runique. Devenir Mage du Feu officiel, c'est l'initiation de Corristo — deux choses différentes, et c'est tout l'objet de cette partie.</p>
+
+    <div class="sommaire">
+      <p>Le plan du mid game</p>
+      <ol>
+        <li><a href="#e5">La quête de la Lettre (à faire tôt !)</a></li>
+        <li><a href="#e6">Préparer le terrain : les prérequis</a></li>
+        <li><a href="#e7">Le mur des Orcs</a></li>
+        <li><a href="#e8">L'initiation de Corristo (le piège)</a></li>
+        <li><a href="#e9">Le basculement &amp; les sorts mid</a></li>
+      </ol>
+    </div>
+
+    <div class="methode" id="e5">
+      <span class="methode__num">Étape 5</span>
+      <h2>La quête de la Lettre — à ne pas rater</h2>
+      <span class="gain">200 XP + Essence de l'Esprit (+2 Mana)</span>
+      <p>Avant l'initiation, une quête <strong>précoce</strong> : « Une Lettre pour les Mages du Feu », à faire vers la <strong>fin du chapitre 1 / début du chapitre 2</strong>. Trop tard, elle échoue automatiquement.</p>
+      <p>La règle d'or : remettez la <strong>lettre SCELLÉE directement à Milten</strong>. Vous obtenez <strong>200 XP</strong> et le choix entre plusieurs récompenses : Anneau de Pouvoir, Anneau de Moindre Dextérité, 3 parchemins magiques, ou l'<strong>Essence de l'Esprit (+2 Mana permanent)</strong> — c'est elle que je recommande pour un mage.</p>
+      <div class="danger">
+        <p><strong>Deux erreurs à éviter :</strong> ne l'ouvrez pas avant de la remettre (−100 XP), et ne la donnez pas à Torrez (récompense la plus faible, sans choix).</p>
+      </div>
+    </div>
+
+    <div class="methode" id="e6">
+      <span class="methode__num">Étape 6</span>
+      <h2>Préparer le terrain : les prérequis (chapitres 1-2)</h2>
+      <span class="gain">20 PA bloqués — planifiez</span>
+      <p>L'initiation arrive au chapitre 3, avec trois prérequis à mettre en place avant :</p>
+      <ul>
+        <li><strong>Niveau 10 minimum</strong> — Corristo n'examine votre candidature qu'à partir de là.</li>
+        <li><strong>Alchimie</strong> chez <strong>Damarok</strong> (Vieux Camp) : 100 minerai + 10 PA. Bonus : vous fabriquez vos potions de mana.</li>
+        <li><strong>Écriture de parchemins</strong> (Inscription) chez <strong>Torrez ou Milten</strong> : 10 PA.</li>
+      </ul>
+      <p>Soit <strong>20 PA bloqués rien qu'en prérequis</strong> : planifiez vos points. Côté stats, montez votre <strong>Mana vers 20-30</strong>, votre <strong>Force vers 50</strong> pour l'arme d'appoint, et <strong>gardez des PA de côté</strong> pour débloquer vite le Cercle 4 plus tard.</p>
+      <div class="danger">
+        <p><strong>L'erreur que j'ai faite :</strong> j'ai monté mon Mana à 44 trop vite, et il m'a manqué trois niveaux de PA pour apprendre le 4e cercle avant la fin du chapitre 3. Gardez de la marge en points d'apprentissage.</p>
+      </div>
+      <p><em>Rappel de la Partie 1 : pour l'arme à une main, l'« Entraîné » suffit. Le palier Maître (200 minerai) reste optionnel — votre minerai va à l'alchimie et la magie.</em></p>
+    </div>
+
+    <div class="methode" id="e7">
+      <span class="methode__num">Étape 7</span>
+      <h2>Le mur des Orcs</h2>
+      <p>Voici le piège que personne ne voit venir : pour progresser vers le chapitre 3, vous devez passer le <strong>Cimetière des Orcs</strong>. Et là, gros problème : <strong>votre Trait de feu est quasi inutile contre les Orcs</strong> — vous en balancez 20 pour en tuer un seul.</p>
+      <p>La parade : servez-vous du Trait de feu pour les <strong>attirer et les séparer</strong>, jouez la <strong>parade</strong>, et appuyez-vous sur vos compagnons ou les PNJ alliés à proximité. Ne les affrontez jamais en groupe de face.</p>
+    </div>
+
+    <div class="methode" id="e8">
+      <span class="methode__num">Étape 8</span>
+      <h2>L'initiation de Corristo (chapitre 3) — le piège mortel</h2>
+      <span class="gain">Robe de feu + 1000 XP + Corristo comme maître</span>
+      <p>On y est. Au <strong>chapitre 3</strong>, après les événements de l'histoire (Reine Minecrawler, Cimetière des Orcs, Camp du Marais), Thorus vous convoque. Le déroulé exact :</p>
+      <ol class="etapes-liste">
+        <li>Thorus vous oriente → <strong>refusez le poste de garde</strong> et demandez à devenir mage.</li>
+        <li>Parlez à <strong>Corristo</strong> dans le temple : il vous <strong>refuse</strong> une première fois. C'est normal.</li>
+        <li>Retournez voir <strong>Milten</strong> : il vous donne le livre <strong>« Rituels de l'Ordre du Feu »</strong> (ou volez-le dans le labo d'alchimie des mages). Lisez-le.</li>
+        <li>Avec l'Alchimie et l'Inscription déjà apprises, retournez voir Corristo et <strong>exigez l'Épreuve du Feu</strong>.</li>
+      </ol>
+      <div class="danger">
+        <p><strong>⚠️ SAUVEGARDEZ MAINTENANT.</strong> Corristo pose deux questions et vous n'avez <strong>qu'une seule chance</strong> — une mauvaise réponse ferme la voie du Mage du Feu <strong>définitivement</strong>. Les bonnes réponses :</p>
+        <p style="margin-top:.7rem">• « Pourquoi veux-tu devenir Mage du Feu ? » → <strong>« rendre la justice et aider les gens »</strong>.<br>
+        • L'énigme de la seconde flamme → <strong>« c'est notre foi en Innos »</strong>.</p>
+      </div>
+      <p>Une fois les réponses validées, Corristo vous confie l'Épreuve : <strong>rallumer deux sanctuaires d'Innos</strong> avec les parchemins « Prière à Innos » qu'il vous remet. Attention, un <strong>Lézard de feu</strong> garde l'un des deux sanctuaires — préparez-vous avant d'y aller. Les deux autels rallumés, revenez voir Corristo : vous êtes <strong>officiellement Mage du Feu</strong> (robe de feu, clé des appartements des mages, 1000 XP).</p>
+      <p>À partir de là, <strong>Corristo devient votre maître</strong> : il monte votre <strong>Mana jusqu'à 100</strong> (1 PA = 1 mana) et vous ouvre les cercles de magie.</p>
+      <div class="reconfirmer">
+        <p><strong>Astuce de sécurité :</strong> même avec les bonnes réponses ci-dessus, gardez le réflexe de sauvegarder juste avant le dialogue. C'est une quête sans filet, autant pouvoir recharger en cas de fausse manip.</p>
+      </div>
+    </div>
+
+    <div class="methode" id="e9">
+      <span class="methode__num">Étape 9</span>
+      <h2>Le basculement &amp; les sorts mid</h2>
+      <p>Maintenant, <strong>tout votre minerai et vos PA vont dans le Mana et les cercles</strong>. Plafonnez la Force à ~50. Le <strong>pic du niveau 15 / Cercle 4</strong> est le moment où votre magie prend les commandes et où votre mêlée devient un simple filet de sécurité.</p>
+      <p>Vos sorts à ce stade :</p>
+      <ul>
+        <li><strong>Soin</strong> — votre mana converti en points de vie.</li>
+        <li><strong>Boule de feu</strong> (cercles 3-4) — votre gros dégât, et votre anti-Orcs.</li>
+        <li>Parchemin de <strong>Trait de glace</strong> — pour les ennemis résistants au feu, sans avoir à emprunter la voie de l'eau.</li>
+        <li><strong>Lumière</strong> — mieux qu'une torche.</li>
+      </ul>
+      <div class="danger">
+        <p><strong>Gérez votre mana :</strong> les gros sorts le vident en 3 lancers. Restez sur le Trait de feu pour le tout-venant, et gardez la Boule de feu pour ce qui résiste.</p>
+      </div>
+      <p>Un sort indispensable à tout Mage du Feu — plus une amulette bien pratique — s'obtient dans une quête cachée que personne ne vous donne, avec un paquet d'XP et de loot à la clé. C'est la <a href="gothic-1-remake-chromanin-letranger.html">quête de l'Étranger (les 6 livres Chromanin)</a>, dont j'ai fait le guide complet.</p>
+    </div>
+
+    <p><strong>Le verdict du Celte :</strong> Mage du Feu officiel, Mana qui grimpe, cercles qui s'ouvrent — vous tenez enfin le build dans sa pleine puissance. Mais profitez-en, parce que dans la <strong>Partie 3</strong>, le chapitre 4 réserve une trahison qui change tout, et je vous montrerai comment maxer vos cercles malgré ça. La vidéo complète est en haut de cette page.</p>
+
+    <div class="suite">
+      <strong>Pour aller plus loin :</strong> revoyez les fondations dans la <a href="gothic-1-remake-build-mage-feu-early.html">Partie 1 (early game)</a>, récupérez la rune de zone et l'amulette via la <a href="gothic-1-remake-chromanin-letranger.html">quête de l'Étranger</a>, et financez vos prérequis grâce au <a href="gothic-1-remake-farm-pepites-minerai.html">farm de minerai</a>.
+    </div>
+  </div>
+
+  <div class="reagir">
+    <p>💬 Vous avez réussi l'Épreuve du Feu du premier coup ? Racontez au Clan :</p>
+    <a class="btn btn--ligne" href="https://discord.gg/5AqFmeEDhJ" target="_blank" rel="noopener">Sur Discord</a>
+    <a class="btn btn--ligne" href="https://x.com/Smartceltic01" target="_blank" rel="noopener">Sur X</a>
+  </div>
+
+  <div class="commentaires">
+    <h2>Commentaires</h2>
+    <div id="cusdis_thread"
+      data-host="https://cusdis.com"
+      data-app-id="dc2efc68-e368-41bd-be24-38572c2889e0"
+      data-page-id="guide-gothic-mage-feu-mid"
+      data-page-url="https://smartceltic.fr/guides/gothic-1-remake-build-mage-feu-mid.html"
+      data-page-title="Gothic 1 Remake : build Mage du Feu mid game">
+    </div>
+    <script async defer src="https://cusdis.com/js/cusdis.es.js"></script>
+  </div>
+</main>
+
+<footer class="footer">
+  <div class="footer__links">
+    <a href="https://www.youtube.com/@SmartCeltic01" target="_blank" rel="noopener">YouTube</a>
+    <a href="https://www.twitch.tv/smartceltic" target="_blank" rel="noopener">Twitch</a>
+    <a href="https://x.com/Smartceltic01" target="_blank" rel="noopener">X</a>
+    <a href="https://www.instagram.com/smartceltic01/" target="_blank" rel="noopener">Instagram</a>
+    <a href="https://www.tiktok.com/@smartceltic01" target="_blank" rel="noopener">TikTok</a>
+    <a href="https://discord.gg/5AqFmeEDhJ" target="_blank" rel="noopener">Discord</a>
+  </div>
+  <small>© 2026 Smartceltic — Ciao, bande de Celtes 🍀</small>
+</footer>
+
+<script src="../assets/app.js"></script>
+</body>
+</html>
