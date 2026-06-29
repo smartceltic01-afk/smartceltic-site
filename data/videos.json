@@ -1,7 +1,12 @@
 {
-  "updated": "2026-06-29T16:11:31+00:00",
+  "updated": "2026-06-29T20:15:57+00:00",
   "channel_id": "UC8wnNfHi1TprmMfVUuWjYNg",
   "videos": [
+    {
+      "id": "FC5Xgp4xryg",
+      "title": "Choisir le bon statut dans Gothic 1 : Conseils de build ! #shorts",
+      "published": "2026-06-29T16:31:04+00:00"
+    },
     {
       "id": "aJoCDZxzZZo",
       "title": "Gothic 1 Remake Chapitre 4 : Pourquoi tout le monde softlock ici?",
@@ -26,11 +31,6 @@
       "id": "VLOj6kY-GEc",
       "title": "Monture Scavenger débloquée ! Voici tous les secrets",
       "published": "2026-06-25T14:00:22+00:00"
-    },
-    {
-      "id": "O1Z7iu1ikHM",
-      "title": "Chromanin expliqué : énigme des bibliothèques et coffre caché",
-      "published": "2026-06-24T14:00:00+00:00"
     }
   ]
 }
