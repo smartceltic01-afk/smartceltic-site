@@ -1,7 +1,12 @@
 {
-  "updated": "2026-06-29T11:23:54+00:00",
+  "updated": "2026-06-29T16:11:31+00:00",
   "channel_id": "UC8wnNfHi1TprmMfVUuWjYNg",
   "videos": [
+    {
+      "id": "aJoCDZxzZZo",
+      "title": "Gothic 1 Remake Chapitre 4 : Pourquoi tout le monde softlock ici?",
+      "published": "2026-06-29T14:00:21+00:00"
+    },
     {
       "id": "IHdDNtgc30s",
       "title": "Dépasser le palier de 100 avec les essences ! #shorts",
@@ -26,11 +31,6 @@
       "id": "O1Z7iu1ikHM",
       "title": "Chromanin expliqué : énigme des bibliothèques et coffre caché",
       "published": "2026-06-24T14:00:00+00:00"
-    },
-    {
-      "id": "nFptKW17wt0",
-      "title": "Surmonter les défis dans Gothic 1 ! #shorts",
-      "published": "2026-06-23T16:30:34+00:00"
     }
   ]
 }
