@@ -1,7 +1,12 @@
 {
-  "updated": "2026-07-03T09:34:51+00:00",
+  "updated": "2026-07-03T14:32:26+00:00",
   "channel_id": "UC8wnNfHi1TprmMfVUuWjYNg",
   "videos": [
+    {
+      "id": "JCUjF7VEKmM",
+      "title": "Les meilleures armures de Gothic 1 Remake | Armure royale",
+      "published": "2026-07-03T14:00:14+00:00"
+    },
     {
       "id": "YvUzClCZ_m0",
       "title": "Witchfire Revelations change-t-il vraiment quelque chose ?",
@@ -26,11 +31,6 @@
       "id": "IHdDNtgc30s",
       "title": "Dépasser le palier de 100 avec les essences ! #shorts",
       "published": "2026-06-27T09:20:28+00:00"
-    },
-    {
-      "id": "JIAt4KGYgYQ",
-      "title": "Crochetage Gothic 1 Remake : Pourquoi vous cassez tous vos crochets ?",
-      "published": "2026-06-26T14:00:04+00:00"
     }
   ]
 }
