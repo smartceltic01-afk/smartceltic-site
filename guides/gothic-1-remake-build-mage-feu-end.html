@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gothic 1 Remake : build Mage du Feu end game (cercles 5-6, la trahison du chapitre 4) — guide | Smartceltic</title>
+<meta name="description" content="Partie 3 du build Mage du Feu sur Gothic 1 Remake : maxer ses cercles avant le chapitre 4, survivre à la trahison de Gomez et au bannissement, et débloquer les cercles 5 et 6 (Saturas, Xardas) sans se softlock.">
+<meta name="keywords" content="gothic 1 remake, build mage du feu, gothic remake cercle 5, gothic 1 remake cercle 6, gothic remake softlock chapitre 4, gothic 1 remake xardas, gothic remake saturas, gothic 1 remake mage de l'eau, gothic remake end game">
+<meta property="og:title" content="Gothic 1 Remake : build Mage du Feu end game (cercles 5-6 & la trahison du chapitre 4)">
+<meta property="og:description" content="Maxer ses cercles avant la trahison, survivre au bannissement, et pousser jusqu'aux cercles 5-6 sans se softlock. 🍀">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://smartceltic.fr/guides/gothic-1-remake-build-mage-feu-end.html">
+<meta property="og:image" content="https://smartceltic.fr/assets/og-guide-gothic-mage-end.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" type="image/svg+xml" href="../assets/favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Oswald:wght@400;500&family=Alegreya+Sans:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/style.css">
+<style>
+.guide-video { margin: 1.5rem 0 2.5rem; }
+.guide-video__frame { position: relative; width: 100%; aspect-ratio: 16/9; border: 1px solid var(--or-sombre); border-radius: 4px; overflow: hidden; background: #000; }
+.guide-video__frame iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+.guide-video__cta { margin-top: .8rem; text-align: center; }
+.methode { margin: 2.4rem 0; padding-top: 1.6rem; border-top: 1px solid rgba(138,106,69,.25); }
+.methode__num { font-family: var(--label); font-size: .8rem; letter-spacing: .2em; text-transform: uppercase; color: var(--or); }
+.methode h2 { font-family: var(--display); font-size: clamp(1.25rem, 3vw, 1.6rem); margin: .3rem 0 .9rem; }
+.gain { display: inline-block; font-family: var(--label); font-size: .82rem; letter-spacing: .08em; background: var(--braise); color: var(--or); padding: .25rem .7rem; border-radius: 3px; margin-bottom: .9rem; }
+.reconfirmer { margin: 1rem 0; padding: .9rem 1.1rem; border-left: 3px solid var(--rumeur, #E0A93C); background: rgba(224,169,60,.07); border-radius: 0 4px 4px 0; }
+.reconfirmer p { margin: 0; font-size: .95rem; color: var(--brume); }
+.reconfirmer strong { color: var(--rumeur, #E0A93C); }
+.danger { margin: 1.2rem 0; padding: 1rem 1.2rem; border-left: 3px solid var(--rouge); background: rgba(200,16,46,.08); border-radius: 0 4px 4px 0; }
+.danger p { margin: 0; }
+.danger strong { color: var(--rouge); }
+.regle-or { margin: 2.6rem 0 1rem; padding: 1.4rem 1.5rem; border: 1px solid var(--or); border-radius: 4px; background: rgba(212,165,116,.06); }
+.regle-or h2 { font-family: var(--display); color: var(--or); margin-top: 0; }
+.sommaire { margin: 1.5rem 0 2rem; padding: 1.1rem 1.3rem; background: var(--pierre); border-radius: 4px; }
+.sommaire p { font-family: var(--label); font-size: .78rem; letter-spacing: .16em; text-transform: uppercase; color: var(--brume); margin: 0 0 .6rem; }
+.sommaire ol { margin: 0; padding-left: 1.3rem; }
+.sommaire li { margin: .3rem 0; }
+.sommaire a { color: var(--parchemin); text-decoration: none; }
+.sommaire a:hover { color: var(--or); }
+.serie { margin: 2rem 0; padding: 1rem 1.2rem; background: var(--pierre); border-radius: 4px; font-size: .98rem; }
+.serie strong { color: var(--or); }
+.serie a { color: var(--parchemin); }
+.serie a:hover { color: var(--or); }
+.suite { margin: 2rem 0; padding: 1rem 1.2rem; background: var(--pierre); border-radius: 4px; font-size: .98rem; }
+.suite strong { color: var(--or); }
+.suite a { color: var(--parchemin); }
+.suite a:hover { color: var(--or); }
+.etapes-liste { counter-reset: etape; list-style: none; padding-left: 0; }
+.etapes-liste li { counter-increment: etape; position: relative; padding-left: 2.4rem; margin: .8rem 0; }
+.etapes-liste li::before { content: counter(etape); position: absolute; left: 0; top: -.1rem; width: 1.7rem; height: 1.7rem; background: var(--braise); color: var(--or); border-radius: 50%; display: grid; place-items: center; font-family: var(--label); font-size: .85rem; }
+.kit li { margin: .5rem 0; }
+</style>
+</head>
+<body data-racine="../">
+
+<nav class="nav" aria-label="Navigation principale">
+  <div class="nav__inner">
+    <a class="nav__brand" href="../"><span class="tri" aria-hidden="true"></span>SMARTCELTIC</a>
+    <div class="nav__links">
+      <a href="../#videos">Vidéos</a>
+      <a href="../#guides">Guides</a>
+      <a href="../news/">Actu RPG</a>
+      <a href="../quiz/gothic-quel-camp.html">Quiz</a>
+      <a href="../#soutenir">Soutenir</a>
+    </div>
+    <a class="live" id="live-nav" href="https://www.twitch.tv/smartceltic" target="_blank" rel="noopener">
+      <span class="live__dot" aria-hidden="true"></span><span class="live__txt">Twitch</span>
+    </a>
+  </div>
+</nav>
+
+<main class="article">
+  <a class="retour" href="../#guides"><span class="tri" aria-hidden="true"></span>Tous les guides</a>
+
+  <div class="article__meta">
+    <span class="statut statut--confirme"><span class="tri tri--confirme" aria-hidden="true"></span>Guide</span>
+    <time datetime="2026-07-01">1er juillet 2026</time>
+  </div>
+
+  <h1>Gothic 1 Remake : le build Mage du Feu (Force/Feu) — Partie 3 : end game, la trahison &amp; les cercles 5-6</h1>
+  <span class="article__game">Gothic 1 Remake</span>
+
+  <div class="guide-video">
+    <div class="guide-video__frame">
+      <iframe src="https://www.youtube.com/embed/Fdqbm6z67Qs" title="Gothic 1 Remake : build Mage du Feu end game, cercles 5-6 — Smartceltic" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    </div>
+    <div class="guide-video__cta">
+      <a class="btn btn--rouge" href="https://youtu.be/Fdqbm6z67Qs" target="_blank" rel="noopener">▶ Voir sur YouTube</a>
+    </div>
+  </div>
+
+  <div class="article__body">
+    <div class="serie">
+      <strong>Série en 3 volets :</strong> <a href="gothic-1-remake-build-mage-feu-early.html">Partie 1 — Early game</a> · <a href="gothic-1-remake-build-mage-feu-mid.html">Partie 2 — Mid game</a> · Partie 3 — End game (vous y êtes).
+    </div>
+
+    <p>Dernier volet de la série Force / Mage du Feu. Vous êtes Mage du Feu, vous commencez à tout cramer… et c'est là que <strong>Gothic 1 Remake</strong> vous tend un croc-en-jambe : au <strong>chapitre 4, tout le Vieux Camp s'effondre</strong>. Voici comment maxer vos cercles avant que ça arrive, survivre à la trahison, et pousser jusqu'aux cercles 5 et 6 — sans vous retrouver bloqué au 4e.</p>
+
+    <div class="sommaire">
+      <p>Le plan de l'end game</p>
+      <ol>
+        <li><a href="#e10">Sécuriser ses cercles avant le chapitre 4</a></li>
+        <li><a href="#e11">La trahison du chapitre 4</a></li>
+        <li><a href="#e12">La transition &amp; le piège à softlock</a></li>
+        <li><a href="#e13">Les cercles 5-6 &amp; le kit final</a></li>
+      </ol>
+    </div>
+
+    <div class="methode" id="e10">
+      <span class="methode__num">Étape 10</span>
+      <h2>Sécurisez vos cercles AVANT le chapitre 4</h2>
+      <span class="gain">Mana vers 100 · cercle 4 verrouillé</span>
+      <p>Le point le plus important de tout l'end game : tant que vous êtes au Vieux Camp, <strong>videz vos points d'apprentissage et votre minerai chez Corristo</strong>. Il monte votre <strong>Mana jusqu'à 100</strong> (1 PA = 1 mana) et vous forme jusqu'au <strong>4e cercle</strong>. Ne thésaurisez pas vos PA « pour plus tard » : Corristo ne sera bientôt plus là, et chaque chose prise maintenant, c'est une chose que vous n'aurez pas à rattraper par un chemin bien plus tordu.</p>
+      <div class="danger">
+        <p><strong>Il y a une horloge cachée :</strong> le chapitre 4 met fin à l'accès aux Mages du Feu. Ce que vous avez appris reste acquis à vie ; ce que vous n'avez pas pris à temps, vous devrez le récupérer autrement. Alors on ne traîne pas.</p>
+      </div>
+    </div>
+
+    <div class="methode" id="e11">
+      <span class="methode__num">Étape 11</span>
+      <h2>La trahison du chapitre 4</h2>
+      <p>Voilà ce que la plupart des joueurs ne voient pas venir. Au <strong>chapitre 4, Gomez s'empare de la Mine Libre et fait exécuter les Mages du Feu — Corristo compris.</strong> Vous êtes <strong>banni du Vieux Camp, et c'est scripté : quel que soit votre choix, ça arrive.</strong></p>
+      <p>Traduction pour votre build : votre formateur Mage du Feu disparaît, et la progression Mage du Feu se ferme de ce côté. Ce n'est pas un game over — vous pouvez rejoindre le <strong>Nouveau Camp</strong> pour garder votre contenu de milieu de partie intact (si vous étiez garde, vous devenez Mercenaire ; si vous étiez Mage du Feu, vous pouvez rejoindre les Mages de l'Eau). Mais pour continuer votre magie, il va falloir basculer côté <strong>Mages de l'Eau</strong>. C'est exactement pour ça que l'étape 10 était vitale.</p>
+    </div>
+
+    <div class="methode" id="e12">
+      <span class="methode__num">Étape 12</span>
+      <h2>La transition — et LE piège à softlock</h2>
+      <span class="gain">L'ordre exact à respecter</span>
+      <p>C'est ici que des dizaines de joueurs se retrouvent <strong>bloqués définitivement au 4e cercle</strong> : ils ratent l'enchaînement, Saturas refuse de leur parler, et Xardas n'enseigne alors jamais le 6e cercle. Pour éviter ça, respectez <strong>cet ordre précis</strong> :</p>
+      <ol class="etapes-liste">
+        <li>Parlez d'abord à <strong>Thorus</strong> (à la porte du Vieux Camp) : il vous annonce officiellement votre bannissement. <em>C'est le déclencheur — ne le sautez pas.</em></li>
+        <li>Téléportez-vous chez <strong>Saturas</strong> (Nouveau Camp) : il vous envoie devenir Mercenaire.</li>
+        <li>Allez voir <strong>Lee</strong> et accomplissez sa quête pour devenir <strong>Mercenaire</strong>.</li>
+        <li>Revenez voir <strong>Saturas</strong> : vous devenez <strong>Mage de l'Eau</strong>, et il vous enseigne le <strong>5e cercle</strong> (30 PA).</li>
+      </ol>
+      <div class="danger">
+        <p><strong>La règle d'or :</strong> sécurisez un maximum de choses (Mana, cercle 4) <em>avant</em> le chapitre 4, et soignez cette transition <em>après</em>. C'est l'ordre <strong>Thorus → Saturas → Lee → Saturas</strong> qui débloque tout. Le sauter, c'est le softlock assuré.</p>
+      </div>
+    </div>
+
+    <div class="methode" id="e13">
+      <span class="methode__num">Étape 13</span>
+      <h2>Les cercles 5-6 &amp; votre kit de fin de partie</h2>
+      <span class="gain">Glass cannon — tout cramer à distance</span>
+      <p>Le <strong>6e cercle</strong>, le dernier, ne s'apprend que chez <strong>Xardas</strong> (sa tour, en territoire orque). Condition : être <strong>Mage de l'Eau, avoir le 5e cercle</strong>, et avoir fait votre <strong>première visite au Temple du Dormeur</strong> (avec l'épée Uriziel, au chapitre 5). C'est le mentor final, indépendant des trois camps, quel que soit votre passé.</p>
+      <p>Votre kit d'ultime à ce stade :</p>
+      <ul class="kit">
+        <li><strong>Pluie de feu</strong> (cercle 5) — votre sort de zone, il nettoie un groupe entier. La rune se trouve au <strong>Temple d'Innos</strong>, dans les montagnes enneigées au-dessus de la Mine.</li>
+        <li><strong>Boule de feu</strong> — votre gros dégât mono-cible fiable, et votre anti-Orcs.</li>
+        <li><strong>Trait de glace</strong> — pour les ennemis résistants au feu ; il les gèle.</li>
+        <li><strong>Trait de feu</strong> — 1 mana, votre sort à tout faire, jusqu'au bout du jeu.</li>
+      </ul>
+      <div class="danger">
+        <p><strong>Gestion du mana :</strong> les gros sorts vident votre barre en 3 lancers. Trait de feu pour le tout-venant, gros sorts pour les vrais murs. Pour restaurer : les <strong>joints gratuits de Fortuno</strong> au Camp du Marais en début/milieu de partie, puis les <strong>potions de mana</strong> (fabriquées grâce à votre Alchimie) en fin de partie.</p>
+      </div>
+      <p>À ce stade, vous êtes un <strong>glass cannon</strong> : vous supprimez presque tout à distance, votre Force ne sert plus qu'en secours rapproché. Gardez vos potions de soin pour ces moments-là.</p>
+    </div>
+
+    <p><strong>Le verdict du Celte :</strong> du premier charognard à l'épée jusqu'aux cercles 5 et 6, en passant par la trahison de Gomez — la boucle est bouclée. Un build qui vous aura accompagné du début à la fin, à condition d'en connaître les pièges. Et maintenant, vous les connaissez. La vidéo complète est en haut de cette page.</p>
+
+    <div class="suite">
+      <strong>Toute la trilogie :</strong> repartez des bases avec la <a href="gothic-1-remake-build-mage-feu-early.html">Partie 1 (early game)</a> et la <a href="gothic-1-remake-build-mage-feu-mid.html">Partie 2 (mid game &amp; Corristo)</a>. Et pour la Tempête de feu et l'Anneau de Grande Invincibilité, ne manquez pas la <a href="gothic-1-remake-chromanin-letranger.html">quête cachée de l'Étranger</a>.
+    </div>
+  </div>
+
+  <div class="reagir">
+    <p>💬 Votre sort préféré en fin de partie ? Le mien, c'est la Tempête de feu. Dites le vôtre au Clan :</p>
+    <a class="btn btn--ligne" href="https://discord.gg/5AqFmeEDhJ" target="_blank" rel="noopener">Sur Discord</a>
+    <a class="btn btn--ligne" href="https://x.com/Smartceltic01" target="_blank" rel="noopener">Sur X</a>
+  </div>
+
+  <div class="commentaires">
+    <h2>Commentaires</h2>
+    <div id="cusdis_thread"
+      data-host="https://cusdis.com"
+      data-app-id="dc2efc68-e368-41bd-be24-38572c2889e0"
+      data-page-id="guide-gothic-mage-feu-end"
+      data-page-url="https://smartceltic.fr/guides/gothic-1-remake-build-mage-feu-end.html"
+      data-page-title="Gothic 1 Remake : build Mage du Feu end game">
+    </div>
+    <script async defer src="https://cusdis.com/js/cusdis.es.js"></script>
+  </div>
+</main>
+
+<footer class="footer">
+  <div class="footer__links">
+    <a href="https://www.youtube.com/@SmartCeltic01" target="_blank" rel="noopener">YouTube</a>
+    <a href="https://www.twitch.tv/smartceltic" target="_blank" rel="noopener">Twitch</a>
+    <a href="https://x.com/Smartceltic01" target="_blank" rel="noopener">X</a>
+    <a href="https://www.instagram.com/smartceltic01/" target="_blank" rel="noopener">Instagram</a>
+    <a href="https://www.tiktok.com/@smartceltic01" target="_blank" rel="noopener">TikTok</a>
+    <a href="https://discord.gg/5AqFmeEDhJ" target="_blank" rel="noopener">Discord</a>
+  </div>
+  <small>© 2026 Smartceltic — Ciao, bande de Celtes 🍀</small>
+</footer>
+
+<script src="../assets/app.js"></script>
+</body>
+</html>
