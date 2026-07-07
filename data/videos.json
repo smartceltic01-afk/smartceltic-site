@@ -1,7 +1,12 @@
 {
-  "updated": "2026-07-07T10:00:44+00:00",
+  "updated": "2026-07-07T15:15:15+00:00",
   "channel_id": "UC8wnNfHi1TprmMfVUuWjYNg",
   "videos": [
+    {
+      "id": "mOjyaRNS1lg",
+      "title": "Mortal Shell 2 : Les 3 systèmes qui changent TOUT (Sceaux, Rupture, Fossilithes)",
+      "published": "2026-07-07T14:00:06+00:00"
+    },
     {
       "id": "xkAllZB5_D8",
       "title": "Un Combat Honorable ? #shorts",
@@ -26,11 +31,6 @@
       "id": "Fdqbm6z67Qs",
       "title": "GOTHIC 1 REMAKE : après les Mages de Feu, c'est loin d'être fini",
       "published": "2026-07-01T14:00:07+00:00"
-    },
-    {
-      "id": "FC5Xgp4xryg",
-      "title": "Choisir le bon statut dans Gothic 1 : Conseils de build ! #shorts",
-      "published": "2026-06-29T16:31:04+00:00"
     }
   ]
 }
