@@ -1,7 +1,12 @@
 {
-  "updated": "2026-07-10T09:53:13+00:00",
+  "updated": "2026-07-10T15:01:38+00:00",
   "channel_id": "UC8wnNfHi1TprmMfVUuWjYNg",
   "videos": [
+    {
+      "id": "ABmWLw1n5go",
+      "title": "Of Ash and Steel : 8 astuces pour bien débuter (le RPG inspiré de Gothic)",
+      "published": "2026-07-10T14:00:14+00:00"
+    },
     {
       "id": "0FIds8OsqkM",
       "title": "Choisissez votre camp : Force ou Dextérité ? #shorts",
@@ -26,11 +31,6 @@
       "id": "JCUjF7VEKmM",
       "title": "Les meilleures armures de Gothic 1 Remake | Armure royale",
       "published": "2026-07-03T14:00:14+00:00"
-    },
-    {
-      "id": "YvUzClCZ_m0",
-      "title": "Witchfire Revelations change-t-il vraiment quelque chose ?",
-      "published": "2026-07-02T14:30:36+00:00"
     }
   ]
 }
