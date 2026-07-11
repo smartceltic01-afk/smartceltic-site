@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Quiz — Quel type de joueur RPG es-tu ? | Smartceltic</title>
+<meta name="description" content="Berserker, Druide, Rôdeur, Barde ou Stratège ? 8 questions pour découvrir quel type de joueur de RPG sommeille en toi — et quels jeux sont faits pour ta façon de jouer.">
+<meta name="keywords" content="quiz rpg, quel joueur rpg es-tu, test rpg, quiz jeu de rôle, archétype joueur rpg, quiz gaming français">
+<meta property="og:title" content="Quel type de joueur RPG es-tu ?">
+<meta property="og:description" content="Berserker, Druide, Rôdeur, Barde ou Stratège ? 8 questions pour le découvrir. Chaque décision a des conséquences. 🍀">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://smartceltic.fr/quiz/quel-joueur-rpg.html">
+<meta property="og:image" content="https://smartceltic.fr/assets/og-quiz-joueur-rpg.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" type="image/svg+xml" href="../assets/favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Oswald:wght@400;500&family=Alegreya+Sans:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/style.css">
+<style>
+.quiz { max-width: 680px; margin: 0 auto; padding: 3.5rem 1.25rem 5rem; }
+.quiz__progress { display: flex; gap: .55rem; justify-content: center; margin-bottom: 2.2rem; }
+.quiz__progress .tri { width: 16px; height: 15px; background: #2a241c; transition: background .25s; }
+.quiz__progress .tri.is-done { background: var(--or); }
+.quiz h1 {
+  font-family: var(--display); font-weight: 700; text-align: center;
+  font-size: clamp(1.5rem, 4.5vw, 2.1rem); letter-spacing: .06em; margin-bottom: .6rem;
+}
+.quiz__sub { text-align: center; color: var(--brume); margin-bottom: 2.5rem; }
+.quiz__q {
+  font-family: var(--display); font-size: clamp(1.1rem, 3vw, 1.35rem);
+  line-height: 1.45; margin-bottom: 1.6rem; min-height: 3.2em;
+}
+.quiz__answers { display: flex; flex-direction: column; gap: .8rem; }
+.quiz__answer {
+  text-align: left; font-family: var(--body); font-size: 1.05rem; line-height: 1.5;
+  background: var(--pierre); color: var(--parchemin);
+  border: 1px solid rgba(138,106,69,.35); border-radius: 3px;
+  padding: 1rem 1.2rem; cursor: pointer;
+  display: flex; gap: .9rem; align-items: baseline;
+  transition: background .15s, border-color .15s, transform .12s;
+}
+.quiz__answer:hover { background: var(--braise); border-color: var(--or); transform: translateX(4px); }
+.quiz__answer .tri { transform: translateY(1px); flex: none; }
+.resultat { display: none; text-align: center; }
+.resultat__label {
+  font-family: var(--label); font-size: .82rem; letter-spacing: .22em;
+  text-transform: uppercase; color: var(--brume); margin-bottom: .8rem;
+}
+.resultat h2 {
+  font-family: var(--display); font-weight: 700;
+  font-size: clamp(1.7rem, 5.5vw, 2.6rem); letter-spacing: .06em;
+  margin-bottom: 1.4rem;
+}
+.resultat__desc { max-width: 32rem; margin: 0 auto 1rem; font-size: 1.12rem; }
+.resultat__devise {
+  font-family: var(--display); color: var(--or); letter-spacing: .12em;
+  margin: 1.6rem 0 1.4rem; font-size: 1rem;
+}
+.resultat__jeux {
+  max-width: 32rem; margin: 0 auto 2rem; padding: 1rem 1.2rem;
+  background: var(--pierre); border-radius: 4px; text-align: left; font-size: 1rem;
+}
+.resultat__jeux strong { color: var(--or); display: block; margin-bottom: .4rem; font-family: var(--label); letter-spacing: .08em; font-size: .8rem; text-transform: uppercase; }
+.resultat__pour-toi {
+  max-width: 32rem; margin: 0 auto 2.2rem; padding: 1rem 1.2rem;
+  border: 1px solid var(--or); border-radius: 4px; background: rgba(212,165,116,.06);
+  text-align: left; font-size: 1rem;
+}
+.resultat__pour-toi strong { color: var(--or); display: block; margin-bottom: .5rem; font-family: var(--label); letter-spacing: .08em; font-size: .8rem; text-transform: uppercase; }
+.resultat__pour-toi a { color: var(--parchemin); }
+.resultat__pour-toi a:hover { color: var(--or); }
+.resultat__actions { display: flex; flex-direction: column; gap: .9rem; align-items: center; }
+.video-cta {
+  margin-top: 3rem; border: 1px solid var(--or-sombre); border-radius: 3px;
+  padding: 1.6rem; text-align: center;
+}
+.video-cta p { margin-bottom: 1rem; }
+.refaire { margin-top: 2.5rem; }
+.refaire button {
+  background: none; border: none; color: var(--brume); cursor: pointer;
+  font-family: var(--label); font-size: .8rem; letter-spacing: .14em; text-transform: uppercase;
+}
+.refaire button:hover { color: var(--or); }
+@media (prefers-reduced-motion: reduce) { .quiz__answer:hover { transform: none; } }
+</style>
+</head>
+<body data-racine="../">
+
+<nav class="nav" aria-label="Navigation principale">
+  <div class="nav__inner">
+    <a class="nav__brand" href="../"><span class="tri" aria-hidden="true"></span>SMARTCELTIC</a>
+    <div class="nav__links">
+      <a href="../#videos">Vidéos</a>
+      <a href="../#guides">Guides</a>
+      <a href="../news/">Actu RPG</a>
+      <a href="./quel-joueur-rpg.html" aria-current="page">Quiz</a>
+      <a href="../#soutenir">Soutenir</a>
+    </div>
+    <a class="live" id="live-nav" href="https://www.twitch.tv/smartceltic" target="_blank" rel="noopener">
+      <span class="live__dot" aria-hidden="true"></span><span class="live__txt">Twitch</span>
+    </a>
+  </div>
+</nav>
+
+<main class="quiz">
+  <div id="ecran-quiz">
+    <div class="quiz__progress" id="progress" aria-hidden="true"></div>
+    <h1>Quel type de joueur RPG es-tu ?</h1>
+    <p class="quiz__sub">8 questions · Berserker, Druide, Rôdeur, Barde ou Stratège ?<br>Chaque décision a des conséquences.</p>
+    <p class="quiz__q" id="question"></p>
+    <div class="quiz__answers" id="answers"></div>
+  </div>
+
+  <div class="resultat" id="ecran-resultat">
+    <p class="resultat__label">Ta nature profonde de joueur</p>
+    <h2 id="res-titre"></h2>
+    <p class="resultat__desc" id="res-desc"></p>
+    <p class="resultat__devise" id="res-devise"></p>
+
+    <div class="resultat__jeux">
+      <strong>Les jeux faits pour toi</strong>
+      <span id="res-jeux"></span>
+    </div>
+
+    <div class="resultat__pour-toi">
+      <strong>Sur le site, pour toi</strong>
+      <span id="res-liens"></span>
+    </div>
+
+    <div class="resultat__actions">
+      <a class="btn btn--rouge" id="btn-partage" href="#" target="_blank" rel="noopener">Partager mon archétype sur X</a>
+      <a class="btn btn--ligne" href="https://discord.gg/5AqFmeEDhJ" target="_blank" rel="noopener">Rejoindre le Clan sur Discord</a>
+    </div>
+
+    <div class="video-cta">
+      <p>🎬 <strong>Guides, builds et actu RPG en français — sans langue de bois.</strong><br>
+      Rejoins la bande de Celtes sur la chaîne :</p>
+      <a class="btn btn--rouge" href="https://www.youtube.com/@SmartCeltic01?sub_confirmation=1" target="_blank" rel="noopener">▶ Rejoindre la chaîne</a>
+    </div>
+
+    <div class="refaire"><button id="btn-refaire">↻ Refaire le test</button></div>
+  </div>
+</main>
+
+<footer class="footer">
+  <div class="footer__links">
+    <a href="https://www.youtube.com/@SmartCeltic01" target="_blank" rel="noopener">YouTube</a>
+    <a href="https://www.twitch.tv/smartceltic" target="_blank" rel="noopener">Twitch</a>
+    <a href="https://x.com/Smartceltic01" target="_blank" rel="noopener">X</a>
+    <a href="https://www.instagram.com/smartceltic01/" target="_blank" rel="noopener">Instagram</a>
+    <a href="https://www.tiktok.com/@smartceltic01" target="_blank" rel="noopener">TikTok</a>
+    <a href="https://discord.gg/5AqFmeEDhJ" target="_blank" rel="noopener">Discord</a>
+  </div>
+  <small>© 2026 Smartceltic — Ciao, bande de Celtes 🍀</small>
+</footer>
+
+<script>
+const QUESTIONS = [
+  { q: "Un nouveau RPG vient de sortir. Tu le lances. Première chose que tu fais ?",
+    a: [["ber", "Je fonce dans le premier ennemi venu. On verra bien ce que ça donne."],
+        ["dru", "J'ouvre l'arbre de compétences et j'étudie tout avant de placer un seul point."],
+        ["rod", "Je pars à l'opposé de l'objectif principal. Y'a forcément un truc caché par là."],
+        ["bar", "Je passe vingt minutes sur la création de personnage. Mon perso doit avoir une histoire."],
+        ["str", "Je regarde les stats, les résistances, les types de dégâts. Je veux comprendre le système."]] },
+
+  { q: "Un boss t'a tué douze fois de suite. Ton état d'esprit ?",
+    a: [["ber", "La treizième sera la bonne. Je ne change rien, j'y retourne."],
+        ["dru", "Je refais mon build. Il doit y avoir une combinaison qu'il ne supporte pas."],
+        ["rod", "Je vais explorer ailleurs, farmer un peu, et je reviendrai plus fort."],
+        ["bar", "Je relis ses dialogues. Ce boss a une histoire, et elle me dit quelque chose."],
+        ["str", "J'analyse ses patterns d'attaque. Chaque mouvement a une fenêtre de riposte."]] },
+
+  { q: "Ta relation au loot ?",
+    a: [["ber", "Je prends la plus grosse arme et je tape. Le reste, c'est du détail."],
+        ["dru", "Chaque objet est une variable de mon équation. Je compare les stats à la virgule près."],
+        ["rod", "Je ramasse TOUT. On ne sait jamais. Mon inventaire pèse trois tonnes."],
+        ["bar", "Je garde les objets qui ont une belle description, même s'ils sont nuls."],
+        ["str", "Je calcule le rapport dégâts/vitesse/poids. L'optimum, pas le clinquant."]] },
+
+  { q: "Un PNJ te propose un choix moral difficile. Tu…",
+    a: [["ber", "Je choisis l'option la plus violente. Ça ira plus vite."],
+        ["dru", "Je regarde laquelle donne la meilleure récompense mécanique."],
+        ["rod", "Je sauvegarde avant, pour tester les deux et voir ce que ça change."],
+        ["bar", "Je choisis ce que MON personnage choisirait. Je suis dedans, là."],
+        ["str", "J'évalue les conséquences à long terme sur mes alliances et mes options futures."]] },
+
+  { q: "Combien de temps avant de finir la quête principale ?",
+    a: [["ber", "Rapidement. Le contenu annexe, c'est du remplissage."],
+        ["dru", "Quand mon personnage sera enfin parfaitement optimisé pour la fin."],
+        ["rod", "Longtemps. Je n'ai pas encore vu les trois quarts de la carte."],
+        ["bar", "Après avoir bouclé toutes les quêtes de compagnons. Elles comptent plus."],
+        ["str", "Quand j'aurai maîtrisé tous les systèmes du jeu. La quête, c'est le prétexte."]] },
+
+  { q: "Le mot « difficulté », dans un menu d'options, ça t'évoque quoi ?",
+    a: [["ber", "Le cran le plus élevé, direct. Sinon où est le plaisir ?"],
+        ["dru", "Un paramètre à ajuster quand mon build sera au point."],
+        ["rod", "Peu importe, je veux surtout pouvoir explorer tranquillement."],
+        ["bar", "Le plus bas, si ça me laisse profiter de l'histoire sans frustration."],
+        ["str", "Un défi à décomposer. La difficulté, c'est juste un problème à résoudre."]] },
+
+  { q: "Ton pire cauchemar dans un RPG ?",
+    a: [["ber", "Une zone où on ne peut pas se battre."],
+        ["dru", "Découvrir à 40h de jeu que mon build est un piège et qu'il faut tout refaire."],
+        ["rod", "Un couloir. Un long couloir sans rien à fouiller."],
+        ["bar", "Des dialogues mal écrits et des personnages sans âme."],
+        ["str", "Un système de combat qui ne récompense pas la réflexion, juste les réflexes."]] },
+
+  { q: "Tu termines le jeu. Ta première pensée ?",
+    a: [["ber", "Je le refais en difficulté maximale."],
+        ["dru", "Je le refais avec une autre classe. J'ai déjà le build en tête."],
+        ["rod", "Il me manque encore trois succès et deux zones secrètes. Je n'ai pas fini."],
+        ["bar", "Je repense à la fin. Elle m'a marqué. Je vais y penser des jours."],
+        ["str", "Je regarde les runs des autres pour voir ce que j'aurais pu faire mieux."]] },
+];
+
+const RESULTATS = {
+  ber: {
+    titre: "LE BERSERKER", couleur: "#C8102E",
+    desc: "Tu ne lis pas les tutoriels. Tu ne regardes pas les builds. Tu fonces, tu meurs, tu recommences — et tu finis par gagner à l'usure. La difficulté n'est pas un obstacle, c'est le sel du jeu. Les autres optimisent : toi, tu encaisses.",
+    devise: "« La treizième tentative sera la bonne. »",
+    jeux: "Soulslike et action-RPG exigeants : Elden Ring, Lies of P, Mortal Shell, Gothic 1 Remake (en difficile, évidemment).",
+    liens: '<a href="../guides/gothic-1-remake-armure-garde-royale.html">L\'armure 48/48 gratuite de Gothic</a> — même les Berserkers ont besoin de tenir debout. Et l\'<a href="../news/">actu soulslike</a>, ton rayon.',
+    partage: "Le test est sans appel : je suis un BERSERKER ⚔️ Je fonce, je meurs, je recommence."
+  },
+  dru: {
+    titre: "LE DRUIDE", couleur: "#5BA873",
+    desc: "Avant de jouer, tu planifies. Tableur ouvert, arbre de compétences décortiqué, synergies calculées. Le vrai plaisir, pour toi, c'est le moment où la machine que tu as bâtie se met à tourner toute seule et pulvérise tout. Les autres jouent : toi, tu construis.",
+    devise: "« Un bon build gagne le combat avant qu'il commence. »",
+    jeux: "ARPG et RPG à systèmes profonds : Diablo IV, Path of Exile 2, Last Epoch, Baldur's Gate 3, les builds mages de Gothic.",
+    liens: 'La <a href="../guides/gothic-1-remake-build-mage-feu-early.html">trilogie du build Mage du Feu</a> (early · mid · end) — trois guides taillés pour toi.',
+    partage: "Le test est sans appel : je suis un DRUIDE 🌿 Mon build est une œuvre d'art."
+  },
+  rod: {
+    titre: "LE RÔDEUR", couleur: "#D4A574",
+    desc: "La quête principale attendra. Toi, tu vois une montagne à l'horizon et tu vas voir ce qu'il y a derrière. Chaque coffre, chaque grotte, chaque recoin — tu veux TOUT voir. Ta carte est couverte de marqueurs et ton inventaire pèse une tonne. Les autres avancent : toi, tu découvres.",
+    devise: "« Et si le vrai trésor était derrière cette montagne ? »",
+    jeux: "Mondes ouverts et jeux de survie : Elden Ring, Enshrouded, Palworld, Skyrim, Gothic — tous les jeux qui récompensent la curiosité.",
+    liens: 'La <a href="../guides/gothic-1-remake-chromanin-letranger.html">quête cachée de l\'Étranger</a> (6 livres, aucun marqueur) — c\'est littéralement ton test ultime.',
+    partage: "Le test est sans appel : je suis un RÔDEUR 🗺️ La quête principale attendra."
+  },
+  bar: {
+    titre: "LE BARDE", couleur: "#9B7FD4",
+    desc: "Pour toi, un RPG sans âme n'est qu'un jeu de chiffres. Ce que tu cherches, ce sont des personnages qu'on n'oublie pas, des dialogues qui font mouche, des choix qui pèsent. Tu passes une heure sur ta création de perso parce qu'il doit avoir une histoire. Les autres jouent un build : toi, tu incarnes quelqu'un.",
+    devise: "« Chaque décision a des conséquences. »",
+    jeux: "CRPG et RPG narratifs : Baldur's Gate 3, Disco Elysium, Clair Obscur, Metaphor: ReFantazio, les Dragon Age.",
+    liens: 'Notre <a href="../news/baldurs-gate-3-modathon-2026.html">dossier sur les mods BG3</a> — dont un qui rend Aylin et Isobel recrutables. Ça devrait te parler.',
+    partage: "Le test est sans appel : je suis un BARDE 🎭 Sans histoire, pas de jeu."
+  },
+  str: {
+    titre: "LE STRATÈGE", couleur: "#6BA3C8",
+    desc: "Un boss n'est pas un mur : c'est une énigme. Tu observes, tu décomposes les patterns, tu identifies la fenêtre de riposte. Tu ne bourrines jamais, tu résous. Là où le Berserker voit une épreuve de patience, toi tu vois un système à percer. Les autres subissent le combat : toi, tu le pilotes.",
+    devise: "« Tout boss est un problème. Tout problème a une solution. »",
+    jeux: "Tactical-RPG et soulslike techniques : Sekiro, Baldur's Gate 3 (en Honour Mode), Divinity: Original Sin 2, Metaphor, Monster Hunter.",
+    liens: 'Le <a href="../guides/gothic-1-remake-3-quetes-vieux-camp.html">guide des 3 quêtes qui bloquent tout le monde</a> — les pièges de dialogue, ça te parle.',
+    partage: "Le test est sans appel : je suis un STRATÈGE ♟️ Tout boss est une énigme."
+  },
+};
+
+const URL_QUIZ = "https://smartceltic.fr/quiz/quel-joueur-rpg.html";
+let etape = 0;
+const scores = { ber: 0, dru: 0, rod: 0, bar: 0, str: 0 };
+
+const elQ = document.getElementById("question");
+const elA = document.getElementById("answers");
+const elP = document.getElementById("progress");
+
+function rendreProgress() {
+  elP.innerHTML = QUESTIONS.map((_, i) =>
+    `<span class="tri ${i < etape ? "is-done" : ""}"></span>`).join("");
+}
+
+function melanger(arr) {
+  const a = [...arr];
+  for (let i = a.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [a[i], a[j]] = [a[j], a[i]];
+  }
+  return a;
+}
+
+function rendreQuestion() {
+  rendreProgress();
+  const { q, a } = QUESTIONS[etape];
+  elQ.textContent = (etape + 1) + ". " + q;
+  elA.innerHTML = "";
+  melanger(a).forEach(([type, texte]) => {
+    const btn = document.createElement("button");
+    btn.className = "quiz__answer";
+    btn.innerHTML = `<span class="tri" aria-hidden="true"></span><span>${texte}</span>`;
+    btn.addEventListener("click", () => {
+      scores[type]++;
+      etape++;
+      etape < QUESTIONS.length ? rendreQuestion() : rendreResultat();
+    });
+    elA.appendChild(btn);
+  });
+}
+
+function rendreResultat() {
+  const type = Object.keys(scores).reduce((a, b) => scores[a] >= scores[b] ? a : b);
+  const r = RESULTATS[type];
+  document.getElementById("ecran-quiz").style.display = "none";
+  const ecran = document.getElementById("ecran-resultat");
+  ecran.style.display = "block";
+  const titre = document.getElementById("res-titre");
+  titre.textContent = r.titre;
+  titre.style.color = r.couleur;
+  document.getElementById("res-desc").textContent = r.desc;
+  document.getElementById("res-devise").textContent = r.devise;
+  document.getElementById("res-jeux").textContent = r.jeux;
+  document.getElementById("res-liens").innerHTML = r.liens;
+  const texte = r.partage + "\n\nEt toi, quel joueur RPG es-tu ? Fais le test →\n" + URL_QUIZ + "\n\n#RPG #JeuxVideo";
+  document.getElementById("btn-partage").href =
+    "https://twitter.com/intent/tweet?text=" + encodeURIComponent(texte);
+  window.scrollTo({ top: 0 });
+}
+
+document.getElementById("btn-refaire").addEventListener("click", () => {
+  etape = 0;
+  for (const k in scores) scores[k] = 0;
+  document.getElementById("ecran-resultat").style.display = "none";
+  document.getElementById("ecran-quiz").style.display = "block";
+  rendreQuestion();
+});
+
+rendreQuestion();
+</script>
+<script src="../assets/app.js"></script>
+</body>
+</html>
