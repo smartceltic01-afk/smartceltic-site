@@ -1,7 +1,12 @@
 {
-  "updated": "2026-07-11T13:54:40+00:00",
+  "updated": "2026-07-11T19:32:11+00:00",
   "channel_id": "UC8wnNfHi1TprmMfVUuWjYNg",
   "videos": [
+    {
+      "id": "Ur53xIWl1WA",
+      "title": "Découverte de Steel : un RPG surprenant ! #shorts",
+      "published": "2026-07-11T16:00:30+00:00"
+    },
     {
       "id": "ABmWLw1n5go",
       "title": "Of Ash and Steel : 8 astuces pour bien débuter (le RPG inspiré de Gothic)",
@@ -26,11 +31,6 @@
       "id": "ZfHn4-BiqB4",
       "title": "La Dernière Confrontation ! 🔥⚔️ #shorts",
       "published": "2026-07-04T10:30:35+00:00"
-    },
-    {
-      "id": "JCUjF7VEKmM",
-      "title": "Les meilleures armures de Gothic 1 Remake | Armure royale",
-      "published": "2026-07-03T14:00:14+00:00"
     }
   ]
 }
