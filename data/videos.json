@@ -1,7 +1,12 @@
 {
-  "updated": "2026-07-14T14:14:19+00:00",
+  "updated": "2026-07-14T19:42:41+00:00",
   "channel_id": "UC8wnNfHi1TprmMfVUuWjYNg",
   "videos": [
+    {
+      "id": "sqRFEEcn2Vc",
+      "title": "Plongée dans l'Agriculture Médiévale 🌾 #shorts",
+      "published": "2026-07-14T16:30:31+00:00"
+    },
     {
       "id": "XnYGENkynqI",
       "title": "Of Ash and Steel : la build que vous NE POUVEZ PAS rattraper (pas de respec)",
@@ -26,11 +31,6 @@
       "id": "mOjyaRNS1lg",
       "title": "Mortal Shell 2 : Les 3 systèmes qui changent TOUT (Sceaux, Rupture, Fossilithes)",
       "published": "2026-07-07T14:00:06+00:00"
-    },
-    {
-      "id": "xkAllZB5_D8",
-      "title": "Un Combat Honorable ? #shorts",
-      "published": "2026-07-05T10:30:33+00:00"
     }
   ]
 }
