@@ -1,7 +1,12 @@
 {
-  "updated": "2026-07-17T08:28:30+00:00",
+  "updated": "2026-07-17T14:03:37+00:00",
   "channel_id": "UC8wnNfHi1TprmMfVUuWjYNg",
   "videos": [
+    {
+      "id": "DQU9vHZRL6Q",
+      "title": "Of Ash and Steel : factions, survie et le plan que j'aurais aimé avoir au début",
+      "published": "2026-07-17T14:00:34+00:00"
+    },
     {
       "id": "sqRFEEcn2Vc",
       "title": "Plongée dans l'Agriculture Médiévale 🌾 #shorts",
@@ -26,11 +31,6 @@
       "id": "0FIds8OsqkM",
       "title": "Choisissez votre camp : Force ou Dextérité ? #shorts",
       "published": "2026-07-09T16:30:39+00:00"
-    },
-    {
-      "id": "mOjyaRNS1lg",
-      "title": "Mortal Shell 2 : Les 3 systèmes qui changent TOUT (Sceaux, Rupture, Fossilithes)",
-      "published": "2026-07-07T14:00:06+00:00"
     }
   ]
 }
