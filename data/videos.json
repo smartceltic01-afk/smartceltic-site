@@ -1,7 +1,12 @@
 {
-  "updated": "2026-07-17T14:03:37+00:00",
+  "updated": "2026-07-17T19:32:53+00:00",
   "channel_id": "UC8wnNfHi1TprmMfVUuWjYNg",
   "videos": [
+    {
+      "id": "K34NaQDrlhQ",
+      "title": "Rejoindre les Sept ou la Rébellion ? #gaming #decision #shorts",
+      "published": "2026-07-17T16:00:06+00:00"
+    },
     {
       "id": "DQU9vHZRL6Q",
       "title": "Of Ash and Steel : factions, survie et le plan que j'aurais aimé avoir au début",
@@ -26,11 +31,6 @@
       "id": "ABmWLw1n5go",
       "title": "Of Ash and Steel : 8 astuces pour bien débuter (le RPG inspiré de Gothic)",
       "published": "2026-07-10T14:00:14+00:00"
-    },
-    {
-      "id": "0FIds8OsqkM",
-      "title": "Choisissez votre camp : Force ou Dextérité ? #shorts",
-      "published": "2026-07-09T16:30:39+00:00"
     }
   ]
 }
