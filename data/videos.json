@@ -1,7 +1,12 @@
 {
-  "updated": "2026-07-22T08:44:55+00:00",
+  "updated": "2026-07-22T14:22:18+00:00",
   "channel_id": "UC8wnNfHi1TprmMfVUuWjYNg",
   "videos": [
+    {
+      "id": "zGvyURLDVL0",
+      "title": "Warframe 2026 : La ROADMAP Complète du Débutant (Ordre Exact)",
+      "published": "2026-07-22T14:00:16+00:00"
+    },
     {
       "id": "EBOnKeexAjY",
       "title": "Beast of Reincarnation : le système de combat le plus original de l'année ?",
@@ -26,11 +31,6 @@
       "id": "sqRFEEcn2Vc",
       "title": "Plongée dans l'Agriculture Médiévale 🌾 #shorts",
       "published": "2026-07-14T16:30:31+00:00"
-    },
-    {
-      "id": "XnYGENkynqI",
-      "title": "Of Ash and Steel : la build que vous NE POUVEZ PAS rattraper (pas de respec)",
-      "published": "2026-07-14T14:00:02+00:00"
     }
   ]
 }
