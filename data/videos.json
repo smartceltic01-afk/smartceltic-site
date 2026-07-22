@@ -1,7 +1,12 @@
 {
-  "updated": "2026-07-22T14:22:18+00:00",
+  "updated": "2026-07-22T19:43:41+00:00",
   "channel_id": "UC8wnNfHi1TprmMfVUuWjYNg",
   "videos": [
+    {
+      "id": "tOAEi7t87D4",
+      "title": "Warframe confus? On décortique tout ça #warframe #guide",
+      "published": "2026-07-22T14:30:03+00:00"
+    },
     {
       "id": "zGvyURLDVL0",
       "title": "Warframe 2026 : La ROADMAP Complète du Débutant (Ordre Exact)",
@@ -26,11 +31,6 @@
       "id": "DQU9vHZRL6Q",
       "title": "Of Ash and Steel : factions, survie et le plan que j'aurais aimé avoir au début",
       "published": "2026-07-17T14:00:34+00:00"
-    },
-    {
-      "id": "sqRFEEcn2Vc",
-      "title": "Plongée dans l'Agriculture Médiévale 🌾 #shorts",
-      "published": "2026-07-14T16:30:31+00:00"
     }
   ]
 }
