@@ -1,7 +1,12 @@
 {
-  "updated": "2026-07-24T08:42:28+00:00",
+  "updated": "2026-07-24T14:12:52+00:00",
   "channel_id": "UC8wnNfHi1TprmMfVUuWjYNg",
   "videos": [
+    {
+      "id": "KRy7lxMAz0k",
+      "title": "VOIN : le hack and slash d'UN SEUL développeur qui explose sur Steam",
+      "published": "2026-07-24T14:00:06+00:00"
+    },
     {
       "id": "L5RGG8IwtY4",
       "title": "Comment débloquer la Route de l'Acier VRAIMENT #Warframe #GuideWarframe #SteelPath",
@@ -26,11 +31,6 @@
       "id": "K34NaQDrlhQ",
       "title": "Rejoindre les Sept ou la Rébellion ? #gaming #decision #shorts",
       "published": "2026-07-17T16:00:06+00:00"
-    },
-    {
-      "id": "DQU9vHZRL6Q",
-      "title": "Of Ash and Steel : factions, survie et le plan que j'aurais aimé avoir au début",
-      "published": "2026-07-17T14:00:34+00:00"
     }
   ]
 }
