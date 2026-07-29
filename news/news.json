@@ -1,6 +1,20 @@
 {
   "news": [
     {
+      "slug": "nioh-3-hell-rising-extension",
+      "titre": "Nioh 3 : la première extension « Hell Rising » débarque le 19 août, direction l'Edo de 1651",
+      "jeu": "Nioh 3",
+      "date": "2026-07-28",
+      "statut": "confirme"
+    },
+    {
+      "slug": "kingdom-come-salvation-depot-de-marque",
+      "titre": "Le prochain Kingdom Come s'appellerait « Salvation » — et pourrait bien tenter le multijoueur",
+      "jeu": "Kingdom Come",
+      "date": "2026-07-28",
+      "statut": "rumeur"
+    },
+    {
       "slug": "final-fantasy-xiv-switch-2-evercold",
       "titre": "Final Fantasy XIV débarque sur Switch 2 le 4 août — et l'extension Evercold s'offre un raid Final Fantasy VII",
       "jeu": "Final Fantasy XIV",
