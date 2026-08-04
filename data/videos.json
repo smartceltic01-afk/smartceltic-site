@@ -1,7 +1,12 @@
 {
-  "updated": "2026-08-04T14:39:37+00:00",
+  "updated": "2026-08-04T19:56:41+00:00",
   "channel_id": "UC8wnNfHi1TprmMfVUuWjYNg",
   "videos": [
+    {
+      "id": "V8HBFMM1VVY",
+      "title": "Beast of Reincarnation : 7 astuces pour bien débuter",
+      "published": "2026-08-04T17:00:35+00:00"
+    },
     {
       "id": "ZPcQa_aTVBM",
       "title": "Mercenaire vs Stryge de l'ombre : le vrai choix #Short",
@@ -26,11 +31,6 @@
       "id": "MDTvJeoRonY",
       "title": "Le Parchemin du Celte - Trois sorties RPG à ne pas louper",
       "published": "2026-07-28T14:00:28+00:00"
-    },
-    {
-      "id": "oI1NNTcTq1Y",
-      "title": "J-8 avant Beast of Reincarnation #shorts",
-      "published": "2026-07-28T14:00:14+00:00"
     }
   ]
 }
