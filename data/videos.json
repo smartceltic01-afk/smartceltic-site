@@ -1,7 +1,12 @@
 {
-  "updated": "2026-08-05T09:05:55+00:00",
+  "updated": "2026-08-05T14:33:37+00:00",
   "channel_id": "UC8wnNfHi1TprmMfVUuWjYNg",
   "videos": [
+    {
+      "id": "ox1_HozCI70",
+      "title": "Ce jeu a 1 rythme de combat avec 3 tempos #shorts",
+      "published": "2026-08-05T10:30:39+00:00"
+    },
     {
       "id": "V8HBFMM1VVY",
       "title": "Beast of Reincarnation : 7 astuces pour bien débuter",
@@ -26,11 +31,6 @@
       "id": "9MgJd6449x8",
       "title": "Beast of Reincarnation sort dans 4 jours : tout ce qu'il faut savoir",
       "published": "2026-07-31T14:00:02+00:00"
-    },
-    {
-      "id": "MDTvJeoRonY",
-      "title": "Le Parchemin du Celte - Trois sorties RPG à ne pas louper",
-      "published": "2026-07-28T14:00:28+00:00"
     }
   ]
 }
