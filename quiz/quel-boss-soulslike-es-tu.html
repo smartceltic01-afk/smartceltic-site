@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Quiz — Quel boss de soulslike serais-tu ? | Smartceltic</title>
+<meta name="description" content="Colosse, Spectre, Gardien, Invocateur ou Déchu ? 8 questions pour découvrir quel boss de soulslike sommeille en toi.">
+<meta name="keywords" content="quiz soulslike, quel boss serais-tu, test soulslike, quiz elden ring, quiz dark souls, quiz gaming français">
+<meta property="og:title" content="Quel boss de soulslike serais-tu ?">
+<meta property="og:description" content="Colosse, Spectre, Gardien, Invocateur ou Déchu ? 8 questions pour le découvrir. 🍀">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://smartceltic.fr/quiz/quel-boss-soulslike-es-tu.html">
+<meta property="og:image" content="https://smartceltic.fr/assets/og-quiz-boss-soulslike.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" type="image/svg+xml" href="../assets/favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Oswald:wght@400;500&family=Alegreya+Sans:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/style.css">
+<style>
+.quiz { max-width: 680px; margin: 0 auto; padding: 3.5rem 1.25rem 5rem; }
+.quiz__progress { display: flex; gap: .55rem; justify-content: center; margin-bottom: 2.2rem; }
+.quiz__progress .tri { width: 16px; height: 15px; background: #2a241c; transition: background .25s; }
+.quiz__progress .tri.is-done { background: var(--or); }
+.quiz h1 {
+  font-family: var(--display); font-weight: 700; text-align: center;
+  font-size: clamp(1.5rem, 4.5vw, 2.1rem); letter-spacing: .06em; margin-bottom: .6rem;
+}
+.quiz__sub { text-align: center; color: var(--brume); margin-bottom: 2.5rem; }
+.quiz__q {
+  font-family: var(--display); font-size: clamp(1.1rem, 3vw, 1.35rem);
+  line-height: 1.45; margin-bottom: 1.6rem; min-height: 3.2em;
+}
+.quiz__answers { display: flex; flex-direction: column; gap: .8rem; }
+.quiz__answer {
+  text-align: left; font-family: var(--body); font-size: 1.05rem; line-height: 1.5;
+  background: var(--pierre); color: var(--parchemin);
+  border: 1px solid rgba(138,106,69,.35); border-radius: 3px;
+  padding: 1rem 1.2rem; cursor: pointer;
+  display: flex; gap: .9rem; align-items: baseline;
+  transition: background .15s, border-color .15s, transform .12s;
+}
+.quiz__answer:hover { background: var(--braise); border-color: var(--or); transform: translateX(4px); }
+.quiz__answer .tri { transform: translateY(1px); flex: none; }
+.resultat { display: none; text-align: center; }
+.resultat__label {
+  font-family: var(--label); font-size: .82rem; letter-spacing: .22em;
+  text-transform: uppercase; color: var(--brume); margin-bottom: .8rem;
+}
+.resultat h2 {
+  font-family: var(--display); font-weight: 700;
+  font-size: clamp(1.7rem, 5.5vw, 2.6rem); letter-spacing: .06em;
+  margin-bottom: 1.4rem;
+}
+.resultat__desc { max-width: 32rem; margin: 0 auto 1rem; font-size: 1.12rem; }
+.resultat__devise {
+  font-family: var(--display); color: var(--or); letter-spacing: .12em;
+  margin: 1.6rem 0 1.4rem; font-size: 1rem;
+}
+.resultat__jeux {
+  max-width: 32rem; margin: 0 auto 2rem; padding: 1rem 1.2rem;
+  background: var(--pierre); border-radius: 4px; text-align: left; font-size: 1rem;
+}
+.resultat__jeux strong { color: var(--or); display: block; margin-bottom: .4rem; font-family: var(--label); letter-spacing: .08em; font-size: .8rem; text-transform: uppercase; }
+.resultat__pour-toi {
+  max-width: 32rem; margin: 0 auto 2.2rem; padding: 1rem 1.2rem;
+  border: 1px solid var(--or); border-radius: 4px; background: rgba(212,165,116,.06);
+  text-align: left; font-size: 1rem;
+}
+.resultat__pour-toi strong { color: var(--or); display: block; margin-bottom: .5rem; font-family: var(--label); letter-spacing: .08em; font-size: .8rem; text-transform: uppercase; }
+.resultat__pour-toi a { color: var(--parchemin); }
+.resultat__pour-toi a:hover { color: var(--or); }
+.resultat__actions { display: flex; flex-direction: column; gap: .9rem; align-items: center; }
+.video-cta {
+  margin-top: 3rem; border: 1px solid var(--or-sombre); border-radius: 3px;
+  padding: 1.6rem; text-align: center;
+}
+.video-cta p { margin-bottom: 1rem; }
+.refaire { margin-top: 2.5rem; }
+.refaire button {
+  background: none; border: none; color: var(--brume); cursor: pointer;
+  font-family: var(--label); font-size: .8rem; letter-spacing: .14em; text-transform: uppercase;
+}
+.refaire button:hover { color: var(--or); }
+@media (prefers-reduced-motion: reduce) { .quiz__answer:hover { transform: none; } }
+</style>
+</head>
+<body data-racine="../">
+
+<nav class="nav" aria-label="Navigation principale">
+  <div class="nav__inner">
+    <a class="nav__brand" href="../"><span class="tri" aria-hidden="true"></span>SMARTCELTIC</a>
+    <div class="nav__links">
+      <a href="../#videos">Vidéos</a>
+      <a href="../#guides">Guides</a>
+      <a href="../news/">Actu RPG</a>
+      <a href="./quel-joueur-rpg.html">Quiz</a>
+      <a href="../#soutenir">Soutenir</a>
+    </div>
+    <a class="live" id="live-nav" href="https://www.twitch.tv/smartceltic" target="_blank" rel="noopener">
+      <span class="live__dot" aria-hidden="true"></span><span class="live__txt">Twitch</span>
+    </a>
+  </div>
+</nav>
+
+<main class="quiz">
+  <div id="ecran-quiz">
+    <div class="quiz__progress" id="progress" aria-hidden="true"></div>
+    <h1>Quel boss de soulslike serais-tu ?</h1>
+    <p class="quiz__sub">8 questions · Colosse, Spectre, Gardien, Invocateur ou Déchu ?</p>
+    <p class="quiz__q" id="question"></p>
+    <div class="quiz__answers" id="answers"></div>
+  </div>
+
+  <div class="resultat" id="ecran-resultat">
+    <p class="resultat__label">Le boss qui sommeille en toi</p>
+    <h2 id="res-titre"></h2>
+    <p class="resultat__desc" id="res-desc"></p>
+    <p class="resultat__devise" id="res-devise"></p>
+
+    <div class="resultat__jeux">
+      <strong>Les boss qui vous ressemblent</strong>
+      <span id="res-jeux"></span>
+    </div>
+
+    <div class="resultat__pour-toi" id="bloc-liens" style="display:none;">
+      <strong>Sur le site, pour toi</strong>
+      <span id="res-liens"></span>
+    </div>
+
+    <div class="resultat__actions">
+      <a class="btn btn--rouge" id="btn-partage" href="#" target="_blank" rel="noopener">Partager mon boss sur X</a>
+      <a class="btn btn--ligne" href="https://discord.gg/5AqFmeEDhJ" target="_blank" rel="noopener">Rejoindre le Clan sur Discord</a>
+    </div>
+
+    <div class="video-cta">
+      <p>🎬 <strong>Guides, builds et actu RPG en français — sans langue de bois.</strong><br>
+      Rejoins la bande de Celtes sur la chaîne :</p>
+      <a class="btn btn--rouge" href="https://www.youtube.com/@SmartCeltic01?sub_confirmation=1" target="_blank" rel="noopener">▶ Rejoindre la chaîne</a>
+    </div>
+
+    <div class="refaire"><button id="btn-refaire">↻ Refaire le test</button></div>
+  </div>
+</main>
+
+<footer class="footer">
+  <div class="footer__links">
+    <a href="https://www.youtube.com/@SmartCeltic01" target="_blank" rel="noopener">YouTube</a>
+    <a href="https://www.twitch.tv/smartceltic" target="_blank" rel="noopener">Twitch</a>
+    <a href="https://x.com/Smartceltic01" target="_blank" rel="noopener">X</a>
+    <a href="https://www.instagram.com/smartceltic01/" target="_blank" rel="noopener">Instagram</a>
+    <a href="https://www.tiktok.com/@smartceltic01" target="_blank" rel="noopener">TikTok</a>
+    <a href="https://discord.gg/5AqFmeEDhJ" target="_blank" rel="noopener">Discord</a>
+  </div>
+  <small>© 2026 Smartceltic — Ciao, bande de Celtes 🍀</small>
+</footer>
+
+<script>
+const QUESTIONS = [
+  { q: "Un joueur entre dans votre arène. Votre première réaction ?",
+    a: [["col", "Je ne bouge pas. Qu'il vienne à moi."],
+        ["spe", "Je disparais aussitôt de son champ de vision."],
+        ["gar", "Je me place devant ce que je protège, et j'attends."],
+        ["inv", "Mes sbires sont déjà en position avant même qu'il entre."],
+        ["dec", "Un grognement sourd. Il ne sait pas encore ce qu'il vient de réveiller."]] },
+
+  { q: "Il vous inflige une bonne moitié de votre barre de vie d'un coup. Vous...",
+    a: [["col", "J'encaisse. Un coup de plus ne va pas m'arrêter."],
+        ["spe", "Je change immédiatement de position. Il ne recommencera pas."],
+        ["gar", "Je tiens ma garde. Céder du terrain n'est pas une option."],
+        ["inv", "J'invoque du renfort. Seul, oui, ça pique."],
+        ["dec", "Cette douleur réveille quelque chose de bien pire chez moi."]] },
+
+  { q: "Votre stratégie de combat, en un mot ?",
+    a: [["col", "Puissance."],
+        ["spe", "Vitesse."],
+        ["gar", "Discipline."],
+        ["inv", "Nombre."],
+        ["dec", "Instinct."]] },
+
+  { q: "Le joueur meurt face à vous pour la première fois. Qu'est-ce qui se passe dans votre tête ?",
+    a: [["col", "Rien. C'était couru d'avance."],
+        ["spe", "Un sourire invisible. Il n'a même pas vu d'où ça venait."],
+        ["gar", "Le devoir est accompli. Rien de personnel."],
+        ["inv", "Mes sbires ont fait leur travail. Comme toujours."],
+        ["dec", "Une pointe de tristesse, en fait. Il me rappelait quelqu'un."]] },
+
+  { q: "Si vous perdez, qu'est-ce qui vous manquera le plus ?",
+    a: [["col", "Le poids de mes coups. Rien ne pourra jamais être aussi lourd."],
+        ["spe", "La liberté de me déplacer où bon me semble."],
+        ["gar", "Ce que je protégeais. Tout le reste n'avait pas d'importance."],
+        ["inv", "Ceux qui combattaient à mes côtés."],
+        ["dec", "Ce que j'étais, avant tout ça."]] },
+
+  { q: "Votre arène idéale ?",
+    a: [["col", "Un espace vide et immense. Je n'ai besoin de rien d'autre que de place pour frapper."],
+        ["spe", "Des piliers, des recoins, de la verticalité. Je dois pouvoir disparaître."],
+        ["gar", "Un seuil, une porte, un pont. Un endroit qui a un sens à défendre."],
+        ["inv", "Un terrain ouvert où mes renforts peuvent affluer de partout."],
+        ["dec", "Un lieu chargé de souvenirs. Ce combat n'est jamais que pour moi."]] },
+
+  { q: "Un joueur revient vous voir après vous avoir vaincu, juste pour \"voir\". Votre réaction ?",
+    a: [["col", "Je me relève. On ne me bat qu'une fois, jamais deux."],
+        ["spe", "Je suis déjà ailleurs. Il ne me trouvera pas si facilement."],
+        ["gar", "Je le laisse passer, cette fois. Le serment est brisé, le rôle avec."],
+        ["inv", "Mes sbires reviennent en nombre. Une victoire n'épuise pas une armée."],
+        ["dec", "Je me souviens de lui. Et ça me fait quelque chose."]] },
+
+  { q: "Le joueur active enfin votre seconde phase. Que se passe-t-il ?",
+    a: [["col", "Je frappe plus fort. C'est tout ce que je sais faire, en mieux."],
+        ["spe", "Je deviens presque impossible à suivre."],
+        ["gar", "Je place ma dernière ligne de défense. Celle qui ne cède jamais."],
+        ["inv", "J'invoque tout ce qu'il me reste."],
+        ["dec", "Je perds tout contrôle. Ce n'est plus un combat, c'est un adieu."]] },
+];
+
+const RESULTATS = {
+  col: {
+    titre: "LE COLOSSE", couleur: "#C8102E",
+    desc: "Lent, écrasant, une seule erreur de votre part et c'est fini. Vous ne courez pas après le joueur : vous attendez qu'il vienne à vous, et il le regrettera. Votre force n'a jamais eu besoin de vitesse pour être terrifiante.",
+    devise: "« Je n'ai jamais eu besoin de vitesse. »",
+    jeux: "Les géants d'Elden Ring, Iudex Gundyr en phase 2, l'ours Gaping Dragon.",
+    liens: null,
+    partage: "Le test est sans appel : je suis LE COLOSSE 🗿 Je n'ai jamais eu besoin de vitesse."
+  },
+  spe: {
+    titre: "LE SPECTRE", couleur: "#9B7FD4",
+    desc: "Insaisissable, plusieurs phases, une vitesse qui rend toute lecture de pattern instable. On vous voit à peine avant l'impact. Le joueur ne combat pas un adversaire : il combat une intuition.",
+    devise: "« Le temps que vous me voyiez, il est déjà trop tard. »",
+    jeux: "Sister Friede, Malenia, Genichiro dans sa phase finale.",
+    liens: null,
+    partage: "Le test est sans appel : je suis LE SPECTRE 👻 Le temps que vous me voyiez, il est déjà trop tard."
+  },
+  gar: {
+    titre: "LE GARDIEN", couleur: "#D4A574",
+    desc: "Discipliné, loyal, défensif. Vous ne protégez pas un trésor, vous protégez un serment. Vos patterns sont justes, prévisibles — et implacables. On ne vous bat pas par la ruse, on vous bat par le respect de vos règles.",
+    devise: "« Je tiendrai cette porte jusqu'à mon dernier souffle. »",
+    jeux: "Artorias, Vordt de la Loi Sacrée, les Chevaliers Noirs.",
+    liens: 'L\'esprit des factions d\'<a href="../guides/of-ash-and-steel-partie3-factions-survie.html">Of Ash and Steel</a> — l\'Ordre des Sept en particulier — vous parlera sûrement.',
+    partage: "Le test est sans appel : je suis LE GARDIEN 🛡️ Je tiendrai cette porte jusqu'à mon dernier souffle."
+  },
+  inv: {
+    titre: "L'INVOCATEUR", couleur: "#5BA873",
+    desc: "Vous ne combattez jamais seul. Sbires, zones de statut, poison qui grignote lentement : vous gagnez par l'usure, pas par la force brute. Le joueur passe plus de temps à gérer la foule qu'à vous regarder.",
+    devise: "« Pourquoi me fatiguer, quand j'ai une armée ? »",
+    jeux: "La Reine des Épines, les invocations de Nashandra, tout raid Legion de Path of Exile.",
+    liens: null,
+    partage: "Le test est sans appel : je suis L'INVOCATEUR 🕸️ Pourquoi me fatiguer, quand j'ai une armée ?"
+  },
+  dec: {
+    titre: "LE DÉCHU", couleur: "#6BA3C8",
+    desc: "Une tragédie avant d'être un monstre. Calme en phase 1, dévasté et déchaîné en phase 2 — votre rage est la preuve de ce que vous avez perdu. Le joueur ne vainc pas un ennemi, il met fin à une souffrance.",
+    devise: "« Vous ne comprenez pas ce que vous m'avez pris. »",
+    jeux: "Le Roi sans Nom, Ludwig le Chasseur Sacré, Radahn.",
+    liens: null,
+    partage: "Le test est sans appel : je suis LE DÉCHU 🔥 Vous ne comprenez pas ce que vous m'avez pris."
+  },
+};
+
+const URL_QUIZ = "https://smartceltic.fr/quiz/quel-boss-soulslike-es-tu.html";
+let etape = 0;
+const scores = { col: 0, spe: 0, gar: 0, inv: 0, dec: 0 };
+
+const elQ = document.getElementById("question");
+const elA = document.getElementById("answers");
+const elP = document.getElementById("progress");
+
+function rendreProgress() {
+  elP.innerHTML = QUESTIONS.map((_, i) =>
+    `<span class="tri ${i < etape ? "is-done" : ""}"></span>`).join("");
+}
+
+function melanger(arr) {
+  const a = [...arr];
+  for (let i = a.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [a[i], a[j]] = [a[j], a[i]];
+  }
+  return a;
+}
+
+function rendreQuestion() {
+  rendreProgress();
+  const { q, a } = QUESTIONS[etape];
+  elQ.textContent = (etape + 1) + ". " + q;
+  elA.innerHTML = "";
+  melanger(a).forEach(([type, texte]) => {
+    const btn = document.createElement("button");
+    btn.className = "quiz__answer";
+    btn.innerHTML = `<span class="tri" aria-hidden="true"></span><span>${texte}</span>`;
+    btn.addEventListener("click", () => {
+      scores[type]++;
+      etape++;
+      etape < QUESTIONS.length ? rendreQuestion() : rendreResultat();
+    });
+    elA.appendChild(btn);
+  });
+}
+
+function rendreResultat() {
+  const type = Object.keys(scores).reduce((a, b) => scores[a] >= scores[b] ? a : b);
+  const r = RESULTATS[type];
+  document.getElementById("ecran-quiz").style.display = "none";
+  const ecran = document.getElementById("ecran-resultat");
+  ecran.style.display = "block";
+  const titre = document.getElementById("res-titre");
+  titre.textContent = r.titre;
+  titre.style.color = r.couleur;
+  document.getElementById("res-desc").textContent = r.desc;
+  document.getElementById("res-devise").textContent = r.devise;
+  document.getElementById("res-jeux").textContent = r.jeux;
+  const blocLiens = document.getElementById("bloc-liens");
+  if (r.liens) {
+    document.getElementById("res-liens").innerHTML = r.liens;
+    blocLiens.style.display = "block";
+  } else {
+    blocLiens.style.display = "none";
+  }
+  const texte = r.partage + "\n\nEt toi, quel boss de soulslike serais-tu ? Fais le test →\n" + URL_QUIZ + "\n\n#Soulslike #JeuxVideo";
+  document.getElementById("btn-partage").href =
+    "https://twitter.com/intent/tweet?text=" + encodeURIComponent(texte);
+  window.scrollTo({ top: 0 });
+}
+
+document.getElementById("btn-refaire").addEventListener("click", () => {
+  etape = 0;
+  for (const k in scores) scores[k] = 0;
+  document.getElementById("ecran-resultat").style.display = "none";
+  document.getElementById("ecran-quiz").style.display = "block";
+  rendreQuestion();
+});
+
+rendreQuestion();
+</script>
+<script src="../assets/app.js"></script>
+</body>
+</html>
