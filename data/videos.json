@@ -1,7 +1,17 @@
 {
-  "updated": "2026-08-12T13:47:34+00:00",
+  "updated": "2026-08-12T19:26:05+00:00",
   "channel_id": "UC8wnNfHi1TprmMfVUuWjYNg",
   "videos": [
+    {
+      "id": "qmd6ZRdIflM",
+      "title": "Beast of Reincarnation : ne mettez pas tout dans un seul attribut #Short",
+      "published": "2026-08-12T15:00:35+00:00"
+    },
+    {
+      "id": "_4X7OkfEmQ8",
+      "title": "Beast of Reincarnation : arbre de compétences, le guide complet",
+      "published": "2026-08-12T14:00:12+00:00"
+    },
     {
       "id": "J4ckS7vNKk8",
       "title": "Lacerta : ne fuyez pas son gaz toxique, tirez dedans #shorts",
@@ -21,16 +31,6 @@
       "id": "iRpYMimKrwM",
       "title": "Beast of Reincarnation : battre le Rangifer, les 2 combats expliqués",
       "published": "2026-08-07T14:00:30+00:00"
-    },
-    {
-      "id": "ox1_HozCI70",
-      "title": "Ce jeu a 1 rythme de combat avec 3 tempos #shorts",
-      "published": "2026-08-05T10:30:39+00:00"
-    },
-    {
-      "id": "V8HBFMM1VVY",
-      "title": "Beast of Reincarnation : 7 astuces pour bien débuter",
-      "published": "2026-08-04T17:00:35+00:00"
     }
   ]
 }
