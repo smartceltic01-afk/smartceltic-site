@@ -1,7 +1,12 @@
 {
-  "updated": "2026-08-23T13:02:09+00:00",
+  "updated": "2026-08-23T18:48:34+00:00",
   "channel_id": "UC8wnNfHi1TprmMfVUuWjYNg",
   "videos": [
+    {
+      "id": "ZmW9zQ0VDFA",
+      "title": "Mortal Shell 2 : le donjon secret du fort Medula",
+      "published": "2026-08-23T14:00:18+00:00"
+    },
     {
       "id": "_5y_9WWwzSM",
       "title": "Mortal Shell 2 : Genessa ne fonctionne pas comme les autres #shorts",
@@ -26,11 +31,6 @@
       "id": "enIYZAdplT8",
       "title": "Mortal Shell 2 : vous n'êtes pas bloqué sur vos SP #shorts",
       "published": "2026-08-19T15:00:21+00:00"
-    },
-    {
-      "id": "ZSsOqnUPHG4",
-      "title": "Les Meilleurs Conseils pour Démarrer Mortal Shell 2 comme un Pro",
-      "published": "2026-08-19T14:00:22+00:00"
     }
   ]
 }
