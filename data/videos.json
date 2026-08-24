@@ -1,7 +1,12 @@
 {
-  "updated": "2026-08-24T13:12:54+00:00",
+  "updated": "2026-08-24T18:59:11+00:00",
   "channel_id": "UC8wnNfHi1TprmMfVUuWjYNg",
   "videos": [
+    {
+      "id": "iu7RZPHRvgA",
+      "title": "Mortal Shell 2 : ces 2 armes viennent d'être boostées !",
+      "published": "2026-08-24T14:00:01+00:00"
+    },
     {
       "id": "ZmW9zQ0VDFA",
       "title": "Mortal Shell 2 : le donjon secret du fort Medula",
@@ -26,11 +31,6 @@
       "id": "Pelp_D9_YAU",
       "title": "Mortal Shell 2 : battre le Pâtre Corrompu et Magdalena, les 2 boss expliqués",
       "published": "2026-08-21T14:00:39+00:00"
-    },
-    {
-      "id": "enIYZAdplT8",
-      "title": "Mortal Shell 2 : vous n'êtes pas bloqué sur vos SP #shorts",
-      "published": "2026-08-19T15:00:21+00:00"
     }
   ]
 }
