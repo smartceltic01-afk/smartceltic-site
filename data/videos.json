@@ -1,7 +1,12 @@
 {
-  "updated": "2026-08-26T07:08:54+00:00",
+  "updated": "2026-08-26T13:16:35+00:00",
   "channel_id": "UC8wnNfHi1TprmMfVUuWjYNg",
   "videos": [
+    {
+      "id": "lO3iMD0ZBRs",
+      "title": "Le classement des RPG de la Gamescom 2026 🛡️ #rpg #gamescom #gaming",
+      "published": "2026-08-26T09:00:21+00:00"
+    },
     {
       "id": "iu7RZPHRvgA",
       "title": "Mortal Shell 2 : ces 2 armes viennent d'être boostées !",
@@ -26,11 +31,6 @@
       "id": "BMWT09YE7qE",
       "title": "Mortal Shell 2 : faites ça AVANT d'affronter Magdalena #shorts",
       "published": "2026-08-21T15:00:26+00:00"
-    },
-    {
-      "id": "Pelp_D9_YAU",
-      "title": "Mortal Shell 2 : battre le Pâtre Corrompu et Magdalena, les 2 boss expliqués",
-      "published": "2026-08-21T14:00:39+00:00"
     }
   ]
 }
