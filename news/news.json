@@ -1,6 +1,48 @@
 {
   "news": [
     {
+      "slug": "gamescom-2026-final-fantasy-vii-revelation",
+      "titre": "Gamescom 2026 : Final Fantasy VII Revelation dévoile enfin les Weapons, les gardiens géants de la planète",
+      "jeu": "Final Fantasy VII Revelation",
+      "date": "2026-08-26",
+      "statut": "confirme"
+    },
+    {
+      "slug": "gamescom-2026-witcher-3-remastered-songs-of-the-past",
+      "titre": "Gamescom 2026 : The Witcher 3 s'offre un remaster gratuit et une troisième extension, dix ans après Blood and Wine",
+      "jeu": "The Witcher 3: Wild Hunt",
+      "date": "2026-08-26",
+      "statut": "confirme"
+    },
+    {
+      "slug": "gamescom-2026-blood-of-dawnwalker-launch-trailer",
+      "titre": "Gamescom 2026 : The Blood of Dawnwalker dévoile son trailer de lancement avant sa sortie du 3 septembre",
+      "jeu": "The Blood of Dawnwalker",
+      "date": "2026-08-26",
+      "statut": "confirme"
+    },
+    {
+      "slug": "gamescom-2026-exodus-trailer-avril-2027",
+      "titre": "Gamescom 2026 : Exodus, le successeur spirituel de Mass Effect, se date au 7 avril 2027",
+      "jeu": "Exodus",
+      "date": "2026-08-26",
+      "statut": "confirme"
+    },
+    {
+      "slug": "gamescom-2026-crimson-desert-enhanced",
+      "titre": "Gamescom 2026 : Crimson Desert s'offre une version Enhanced gratuite et sa première remise sur toutes les plateformes",
+      "jeu": "Crimson Desert",
+      "date": "2026-08-26",
+      "statut": "confirme"
+    },
+    {
+      "slug": "gamescom-2026-zoopunk-trailer",
+      "titre": "Gamescom 2026 : Zoopunk, le préquel action-RPG de F.I.S.T., dévoile son premier vrai gameplay",
+      "jeu": "Zoopunk",
+      "date": "2026-08-26",
+      "statut": "confirme"
+    },
+    {
       "slug": "elden-ring-switch-2-tarnished-edition",
       "titre": "Elden Ring débarque enfin sur Switch 2 cette semaine — la première fois sur une console Nintendo",
       "jeu": "Elden Ring",
