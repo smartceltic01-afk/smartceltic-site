@@ -1,7 +1,12 @@
 {
-  "updated": "2026-08-27T09:50:10+00:00",
+  "updated": "2026-08-27T22:16:25+00:00",
   "channel_id": "UC8wnNfHi1TprmMfVUuWjYNg",
   "videos": [
+    {
+      "id": "f20NPGpSHrQ",
+      "title": "Mortal Shell 2 : 2 glitchs pour farmer sans limite",
+      "published": "2026-08-27T14:00:05+00:00"
+    },
     {
       "id": "bobyv3ID2Bc",
       "title": "Mortal Shell 2 : cette enveloppe est intouchable #shorts",
@@ -26,11 +31,6 @@
       "id": "ZmW9zQ0VDFA",
       "title": "Mortal Shell 2 : le donjon secret du fort Medula",
       "published": "2026-08-23T14:00:18+00:00"
-    },
-    {
-      "id": "_5y_9WWwzSM",
-      "title": "Mortal Shell 2 : Genessa ne fonctionne pas comme les autres #shorts",
-      "published": "2026-08-22T15:00:03+00:00"
     }
   ]
 }
