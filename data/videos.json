@@ -1,7 +1,12 @@
 {
-  "updated": "2026-08-28T11:24:35+00:00",
+  "updated": "2026-08-28T22:21:18+00:00",
   "channel_id": "UC8wnNfHi1TprmMfVUuWjYNg",
   "videos": [
+    {
+      "id": "F89LOk1Qyzg",
+      "title": "Le secret pour vaincre le boss final de Mortal Shell 2",
+      "published": "2026-08-28T14:00:05+00:00"
+    },
     {
       "id": "f20NPGpSHrQ",
       "title": "Mortal Shell 2 : 2 glitchs pour farmer sans limite",
@@ -26,11 +31,6 @@
       "id": "iu7RZPHRvgA",
       "title": "Mortal Shell 2 : ces 2 armes viennent d'être boostées !",
       "published": "2026-08-24T14:00:01+00:00"
-    },
-    {
-      "id": "ZmW9zQ0VDFA",
-      "title": "Mortal Shell 2 : le donjon secret du fort Medula",
-      "published": "2026-08-23T14:00:18+00:00"
     }
   ]
 }
