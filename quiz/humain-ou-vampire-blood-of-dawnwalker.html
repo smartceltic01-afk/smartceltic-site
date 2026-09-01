@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Quiz — Humain ou vampire : quelle voie choisirais-tu ? | Smartceltic</title>
+<meta name="description" content="L'Humain intact, le Pacte prudent, le Chasseur nocturne, le Dawnwalker déchaîné ou le Damné lucide ? 8 dilemmes pour découvrir quelle voie tu choisirais entre les 30 jours et les 30 nuits.">
+<meta name="keywords" content="quiz the blood of dawnwalker, quiz vampire, quel personnage serais-tu, test rpg français, blood of dawnwalker quiz">
+<meta property="og:title" content="Humain ou vampire : quelle voie choisirais-tu ?">
+<meta property="og:description" content="8 dilemmes. Un seul chemin. Découvre où tu te situerais entre les 30 jours et les 30 nuits. 🍀">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://smartceltic.fr/quiz/humain-ou-vampire-blood-of-dawnwalker.html">
+<meta property="og:image" content="https://smartceltic.fr/assets/og-quiz-dawnwalker.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" type="image/svg+xml" href="../assets/favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Oswald:wght@400;500&family=Alegreya+Sans:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/style.css">
+<style>
+.quiz { max-width: 680px; margin: 0 auto; padding: 3.5rem 1.25rem 5rem; }
+.quiz__progress { display: flex; gap: .55rem; justify-content: center; margin-bottom: 2.2rem; }
+.quiz__progress .tri { width: 16px; height: 15px; background: #2a241c; transition: background .25s; }
+.quiz__progress .tri.is-done { background: var(--or); }
+.quiz h1 {
+  font-family: var(--display); font-weight: 700; text-align: center;
+  font-size: clamp(1.5rem, 4.5vw, 2.1rem); letter-spacing: .06em; margin-bottom: .6rem;
+}
+.quiz__sub { text-align: center; color: var(--brume); margin-bottom: 2.5rem; }
+.quiz__q {
+  font-family: var(--display); font-size: clamp(1.1rem, 3vw, 1.35rem);
+  line-height: 1.45; margin-bottom: 1.6rem; min-height: 3.2em;
+}
+.quiz__answers { display: flex; flex-direction: column; gap: .8rem; }
+.quiz__answer {
+  text-align: left; font-family: var(--body); font-size: 1.05rem; line-height: 1.5;
+  background: var(--pierre); color: var(--parchemin);
+  border: 1px solid rgba(138,106,69,.35); border-radius: 3px;
+  padding: 1rem 1.2rem; cursor: pointer;
+  display: flex; gap: .9rem; align-items: baseline;
+  transition: background .15s, border-color .15s, transform .12s;
+}
+.quiz__answer:hover { background: var(--braise); border-color: var(--or); transform: translateX(4px); }
+.quiz__answer .tri { transform: translateY(1px); flex: none; }
+.resultat { display: none; text-align: center; }
+.resultat__label {
+  font-family: var(--label); font-size: .82rem; letter-spacing: .22em;
+  text-transform: uppercase; color: var(--brume); margin-bottom: .8rem;
+}
+.resultat h2 {
+  font-family: var(--display); font-weight: 700;
+  font-size: clamp(1.7rem, 5.5vw, 2.6rem); letter-spacing: .06em;
+  margin-bottom: 1.4rem;
+}
+.resultat__desc { max-width: 32rem; margin: 0 auto 1rem; font-size: 1.12rem; }
+.resultat__devise {
+  font-family: var(--display); color: var(--or); letter-spacing: .12em;
+  margin: 1.6rem 0 2.2rem; font-size: 1rem;
+}
+.resultat__actions { display: flex; flex-direction: column; gap: .9rem; align-items: center; }
+.video-cta {
+  margin-top: 3rem; border: 1px solid var(--or-sombre); border-radius: 3px;
+  padding: 1.6rem; text-align: center;
+}
+.video-cta p { margin-bottom: 1rem; }
+.refaire { margin-top: 2.5rem; }
+.refaire button {
+  background: none; border: none; color: var(--brume); cursor: pointer;
+  font-family: var(--label); font-size: .8rem; letter-spacing: .14em; text-transform: uppercase;
+}
+.refaire button:hover { color: var(--or); }
+@media (prefers-reduced-motion: reduce) { .quiz__answer:hover { transform: none; } }
+</style>
+</head>
+<body data-racine="../">
+
+<nav class="nav" aria-label="Navigation principale">
+  <div class="nav__inner">
+    <a class="nav__brand" href="../"><span class="tri" aria-hidden="true"></span>SMARTCELTIC</a>
+    <div class="nav__links">
+      <a href="../#videos">Vidéos</a>
+      <a href="../#guides">Guides</a>
+      <a href="../news/">Actu RPG</a>
+      <a href="./quel-joueur-rpg.html">Quiz</a>
+      <a href="../#soutenir">Soutenir</a>
+    </div>
+    <a class="live" id="live-nav" href="https://www.twitch.tv/smartceltic" target="_blank" rel="noopener">
+      <span class="live__dot" aria-hidden="true"></span><span class="live__txt">Twitch</span>
+    </a>
+  </div>
+</nav>
+
+<main class="quiz">
+  <div id="ecran-quiz">
+    <div class="quiz__progress" id="progress" aria-hidden="true"></div>
+    <h1>Humain ou vampire : quelle voie choisirais-tu ?</h1>
+    <p class="quiz__sub">8 dilemmes. Un seul chemin. Entre les 30 jours et les 30 nuits.</p>
+    <p class="quiz__q" id="question"></p>
+    <div class="quiz__answers" id="answers"></div>
+  </div>
+
+  <div class="resultat" id="ecran-resultat">
+    <p class="resultat__label">La voie que tu choisirais</p>
+    <h2 id="res-titre"></h2>
+    <p class="resultat__desc" id="res-desc"></p>
+    <p class="resultat__devise" id="res-devise"></p>
+
+    <div class="resultat__actions">
+      <a class="btn btn--rouge" id="btn-partage" href="#" target="_blank" rel="noopener">Partager ma voie sur X</a>
+      <a class="btn btn--ligne" href="https://discord.gg/5AqFmeEDhJ" target="_blank" rel="noopener">Rejoindre le Clan sur Discord</a>
+    </div>
+
+    <div class="video-cta">
+      <p>🎬 <strong>Guides, builds et actu RPG en français — sans langue de bois.</strong><br>
+      Rejoins la bande de Celtes sur la chaîne :</p>
+      <a class="btn btn--rouge" href="https://www.youtube.com/@SmartCeltic01?sub_confirmation=1" target="_blank" rel="noopener">▶ Rejoindre la chaîne</a>
+    </div>
+
+    <div class="refaire"><button id="btn-refaire">↻ Refaire le test</button></div>
+  </div>
+</main>
+
+<footer class="footer">
+  <div class="footer__links">
+    <a href="https://www.youtube.com/@SmartCeltic01" target="_blank" rel="noopener">YouTube</a>
+    <a href="https://www.twitch.tv/smartceltic" target="_blank" rel="noopener">Twitch</a>
+    <a href="https://x.com/Smartceltic01" target="_blank" rel="noopener">X</a>
+    <a href="https://www.instagram.com/smartceltic01/" target="_blank" rel="noopener">Instagram</a>
+    <a href="https://www.tiktok.com/@smartceltic01" target="_blank" rel="noopener">TikTok</a>
+    <a href="https://discord.gg/5AqFmeEDhJ" target="_blank" rel="noopener">Discord</a>
+  </div>
+  <small>© 2026 Smartceltic — Ciao, bande de Celtes 🍀</small>
+</footer>
+
+<script>
+const QUESTIONS = [
+  { q: "Tu croises un innocent blessé sur ta route, alors qu'un compte à rebours menace ta famille. Tu...",
+    a: [["humain", "T'arrêtes. Sauver quelqu'un, c'est ce qui me reste d'humain."],
+        ["pacte", "L'aides vite, sans t'attarder — le temps presse, mais je ne l'abandonne pas."],
+        ["chasseur", "Continues ta route. Ma famille passe avant un inconnu."],
+        ["dawnwalker", "Le regardes à peine. Sa douleur ne m'atteint plus vraiment."],
+        ["damne", "T'arrêtes, et détestes ce que tu ressens en hésitant à le faire."]] },
+
+  { q: "Ton pouvoir vampirique pourrait résoudre ce problème en un instant. Tu...",
+    a: [["humain", "Refuses. Il y a toujours une autre solution, même plus longue."],
+        ["pacte", "L'utilises, à contrecœur, uniquement parce qu'il n'y a pas d'autre issue."],
+        ["chasseur", "L'utilises sans hésiter. Un outil reste un outil."],
+        ["dawnwalker", "L'utilises avec une pointe de plaisir. Ça fait du bien d'être fort."],
+        ["damne", "L'utilises, et sens un peu plus de toi-même s'effacer."]] },
+
+  { q: "Un allié te trahit pour sauver sa propre peau. Ta réaction ?",
+    a: [["humain", "Tu es blessé, mais tu comprends. La peur fait faire n'importe quoi."],
+        ["pacte", "Tu prends note, froidement, et ajustes ta confiance en conséquence."],
+        ["chasseur", "Tu t'en souviens. Il paiera, le moment venu."],
+        ["dawnwalker", "Tu ne ressens presque rien. Les trahisons ne te touchent plus."],
+        ["damne", "Une rage disproportionnée monte en toi, et ça t'effraie toi-même."]] },
+
+  { q: "La nuit tombe. Qu'est-ce que ça représente pour toi ?",
+    a: [["humain", "Un danger à traverser, pas un territoire à habiter."],
+        ["pacte", "Un outil parmi d'autres, à utiliser avec discernement."],
+        ["chasseur", "Le moment où je deviens enfin efficace."],
+        ["dawnwalker", "Chez moi. Le jour, c'est le monde des autres."],
+        ["damne", "Un soulagement que je déteste ressentir."]] },
+
+  { q: "Si tu devais perdre quelque chose pour avancer, ce serait...",
+    a: [["humain", "Ma force. Je préfère rester faible et rester moi-même."],
+        ["pacte", "Mon confort. Je fais des sacrifices, mais je choisis lesquels."],
+        ["chasseur", "Mon repos. Je ne dors plus tant que ma famille n'est pas en sécurité."],
+        ["dawnwalker", "Mes scrupules. Ils ne m'ont jamais servi à rien."],
+        ["damne", "Mes souvenirs de qui j'étais. Et ça, ça me terrifie."]] },
+
+  { q: "Quelqu'un te demande si tu es toujours humain. Tu réponds...",
+    a: [["humain", "Oui. Absolument, sans hésiter."],
+        ["pacte", "Je crois. Certains jours plus que d'autres."],
+        ["chasseur", "Ça n'a plus d'importance, tant que j'obtiens ce qu'il me faut."],
+        ["dawnwalker", "Pourquoi cette question aurait-elle un sens pour moi ?"],
+        ["damne", "Silence. Tu ne sais plus quoi répondre."]] },
+
+  { q: "Face à un ennemi à ta merci, tu...",
+    a: [["humain", "L'épargnes. Tuer par nécessité, jamais par habitude."],
+        ["pacte", "Juges au cas par cas. Certains méritent une seconde chance."],
+        ["chasseur", "L'élimines si ça protège les tiens. Sans état d'âme."],
+        ["dawnwalker", "Savoures l'instant. Le pouvoir a ses plaisirs."],
+        ["damne", "Le tues, puis te demandes pourquoi ça t'a paru si facile."]] },
+
+  { q: "Trente jours et trente nuits pour sauver ta famille. Au bout du chemin, qu'espères-tu être encore ?",
+    a: [["humain", "Le même homme qu'au premier jour, coûte que coûte."],
+        ["pacte", "Quelqu'un qui a fait des choix difficiles, mais pas n'importe lesquels."],
+        ["chasseur", "Vivant, eux aussi vivants. Le reste est secondaire."],
+        ["dawnwalker", "Plus fort. Ce que j'étais avant ne me manquera pas."],
+        ["damne", "Je ne sais pas. Et c'est exactement ce qui m'effraie."]] },
+];
+
+const RESULTATS = {
+  humain: {
+    titre: "L'HUMAIN INTACT", couleur: "#D4A574",
+    desc: "Tu refuses tout pouvoir vampirique, quitte à rester plus faible. Pour toi, la rédemption passe avant la puissance — et tu préfères perdre un combat en restant toi-même que le gagner en devenant autre chose.",
+    devise: "« Je resterai moi-même, quoi qu'il m'en coûte. »",
+    partage: "Le test est sans appel : je suis L'HUMAIN INTACT 🕊️ Je resterai moi-même, quoi qu'il m'en coûte."
+  },
+  pacte: {
+    titre: "LE PACTE PRUDENT", couleur: "#9B7FD4",
+    desc: "Tu utilises tes pouvoirs seulement quand c'est nécessaire, jamais par plaisir ni par facilité. Chaque compromis est pesé, chaque sacrifice choisi. Tu avances sur un fil, et tu le sais.",
+    devise: "« Je fais des choix difficiles. Je ne fais pas n'importe lesquels. »",
+    partage: "Le test est sans appel : je suis LE PACTE PRUDENT ⚖️ Je fais des choix difficiles, pas n'importe lesquels."
+  },
+  chasseur: {
+    titre: "LE CHASSEUR NOCTURNE", couleur: "#5BA873",
+    desc: "Tu embrasses la nuit sans hésiter, tant que ça sert ceux que tu protèges. La fin justifie les moyens, et tu ne t'en excuses pas — trente jours, ce n'est pas le temps de tergiverser.",
+    devise: "« Ma famille passe avant mes scrupules. »",
+    partage: "Le test est sans appel : je suis LE CHASSEUR NOCTURNE 🌙 Ma famille passe avant mes scrupules."
+  },
+  dawnwalker: {
+    titre: "LE DAWNWALKER DÉCHAÎNÉ", couleur: "#C8102E",
+    desc: "Tu te perds volontairement dans la puissance vampirique, et tu y trouves quelque chose qui ressemble à du plaisir. Ce que tu étais avant ne te manque déjà plus vraiment.",
+    devise: "« Pourquoi résister à ce que je suis devenu ? »",
+    partage: "Le test est sans appel : je suis LE DAWNWALKER DÉCHAÎNÉ 🔥 Pourquoi résister à ce que je suis devenu ?"
+  },
+  damne: {
+    titre: "LE DAMNÉ LUCIDE", couleur: "#6BA3C8",
+    desc: "Tu sais exactement ce que tu perds à chaque pas, et tu continues quand même, les yeux grands ouverts. C'est le chemin le plus tragique des cinq — et peut-être le plus honnête.",
+    devise: "« Je sais ce que je deviens. C'est ça, le pire. »",
+    partage: "Le test est sans appel : je suis LE DAMNÉ LUCIDE 💀 Je sais ce que je deviens. C'est ça, le pire."
+  },
+};
+
+const URL_QUIZ = "https://smartceltic.fr/quiz/humain-ou-vampire-blood-of-dawnwalker.html";
+let etape = 0;
+const scores = { humain: 0, pacte: 0, chasseur: 0, dawnwalker: 0, damne: 0 };
+
+const elQ = document.getElementById("question");
+const elA = document.getElementById("answers");
+const elP = document.getElementById("progress");
+
+function rendreProgress() {
+  elP.innerHTML = QUESTIONS.map((_, i) =>
+    `<span class="tri ${i < etape ? "is-done" : ""}"></span>`).join("");
+}
+
+function melanger(arr) {
+  const a = [...arr];
+  for (let i = a.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [a[i], a[j]] = [a[j], a[i]];
+  }
+  return a;
+}
+
+function rendreQuestion() {
+  rendreProgress();
+  const { q, a } = QUESTIONS[etape];
+  elQ.textContent = (etape + 1) + ". " + q;
+  elA.innerHTML = "";
+  melanger(a).forEach(([type, texte]) => {
+    const btn = document.createElement("button");
+    btn.className = "quiz__answer";
+    btn.innerHTML = `<span class="tri" aria-hidden="true"></span><span>${texte}</span>`;
+    btn.addEventListener("click", () => {
+      scores[type]++;
+      etape++;
+      etape < QUESTIONS.length ? rendreQuestion() : rendreResultat();
+    });
+    elA.appendChild(btn);
+  });
+}
+
+function rendreResultat() {
+  const type = Object.keys(scores).reduce((a, b) => scores[a] >= scores[b] ? a : b);
+  const r = RESULTATS[type];
+  document.getElementById("ecran-quiz").style.display = "none";
+  const ecran = document.getElementById("ecran-resultat");
+  ecran.style.display = "block";
+  const titre = document.getElementById("res-titre");
+  titre.textContent = r.titre;
+  titre.style.color = r.couleur;
+  document.getElementById("res-desc").textContent = r.desc;
+  document.getElementById("res-devise").textContent = r.devise;
+  const texte = r.partage + "\n\nEt toi, quelle voie choisirais-tu ? Fais le test →\n" + URL_QUIZ + "\n\n#TheBloodOfDawnwalker #RPG";
+  document.getElementById("btn-partage").href =
+    "https://twitter.com/intent/tweet?text=" + encodeURIComponent(texte);
+  window.scrollTo({ top: 0 });
+}
+
+document.getElementById("btn-refaire").addEventListener("click", () => {
+  etape = 0;
+  for (const k in scores) scores[k] = 0;
+  document.getElementById("ecran-resultat").style.display = "none";
+  document.getElementById("ecran-quiz").style.display = "block";
+  rendreQuestion();
+});
+
+rendreQuestion();
+</script>
+<script src="../assets/app.js"></script>
+</body>
+</html>
