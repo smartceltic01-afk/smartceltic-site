@@ -1,7 +1,12 @@
 {
-  "updated": "2026-09-04T11:18:59+00:00",
+  "updated": "2026-09-04T16:22:08+00:00",
   "channel_id": "UC8wnNfHi1TprmMfVUuWjYNg",
   "videos": [
+    {
+      "id": "l_B5zb18gwE",
+      "title": "The Blood of Dawnwalker : les astuces qui comptent vraiment pour bien débuter",
+      "published": "2026-09-04T16:00:31+00:00"
+    },
     {
       "id": "NFHQUC8sr6Q",
       "title": "The Blood of Dawnwalker : ratez les 30 jours, et voilà ce qui arrive #shorts",
@@ -26,11 +31,6 @@
       "id": "bNJC4tpqdOY",
       "title": "MORTAL SHELL 2 : je tue Magdalena EN CHANTANT (New Game +) #shorts",
       "published": "2026-08-29T15:45:32+00:00"
-    },
-    {
-      "id": "F89LOk1Qyzg",
-      "title": "Le secret pour vaincre le boss final de Mortal Shell 2",
-      "published": "2026-08-28T14:00:05+00:00"
     }
   ]
 }
