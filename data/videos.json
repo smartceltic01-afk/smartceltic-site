@@ -1,7 +1,12 @@
 {
-  "updated": "2026-09-04T16:22:08+00:00",
+  "updated": "2026-09-04T20:46:08+00:00",
   "channel_id": "UC8wnNfHi1TprmMfVUuWjYNg",
   "videos": [
+    {
+      "id": "pfquHgYy_-Q",
+      "title": "The Blood of Dawnwalker : aucun respec, réfléchissez avant de dépenser vos points #shorts",
+      "published": "2026-09-04T17:00:06+00:00"
+    },
     {
       "id": "l_B5zb18gwE",
       "title": "The Blood of Dawnwalker : les astuces qui comptent vraiment pour bien débuter",
@@ -26,11 +31,6 @@
       "id": "aDP6IFvu90M",
       "title": "Mortal Shell 2 : mon build foudre end-game complet",
       "published": "2026-08-31T15:00:01+00:00"
-    },
-    {
-      "id": "bNJC4tpqdOY",
-      "title": "MORTAL SHELL 2 : je tue Magdalena EN CHANTANT (New Game +) #shorts",
-      "published": "2026-08-29T15:45:32+00:00"
     }
   ]
 }
