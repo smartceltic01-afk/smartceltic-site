@@ -1,6 +1,13 @@
 {
   "news": [
     {
+      "slug": "final-fantasy-vii-revelation-date-8-avril-2027",
+      "titre": "Final Fantasy VII Revelation confirme sa date : le 8 avril 2027",
+      "jeu": "Final Fantasy VII Revelation",
+      "date": "2026-09-05",
+      "statut": "confirme"
+    },
+    {
       "slug": "monster-hunter-wilds-ascendance-state-of-play",
       "titre": "Monster Hunter Wilds: Ascendance dévoile son extension au State of Play — nouveau territoire aérien et le retour de Lao-Shan Lung",
       "jeu": "Monster Hunter Wilds",
