@@ -1,6 +1,13 @@
 {
   "news": [
     {
+      "slug": "wo-long-2-wings-of-ember-date-demo-alpha",
+      "titre": "Wo Long 2: Wings of Ember confirme sa date, et une démo alpha jouable dès maintenant",
+      "jeu": "Wo Long 2: Wings of Ember",
+      "date": "2026-09-16",
+      "statut": "confirme"
+    },
+    {
       "slug": "wow-forever-classic-plus-blizzcon-2026",
       "titre": "BlizzCon 2026 : World of Warcraft Forever, le « Classic+ » réclamé depuis des années, sort le 4 novembre",
       "jeu": "World of Warcraft",
