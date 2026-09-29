@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Quiz : Si la résonance vous changeait, en quoi deviendriez-vous ? | Smartceltic</title>
+<meta name="description" content="L'Équilibriste, le Stratège, le Chasseur d'Aberrations, l'Étudiant du Mold ou le Sujet Instable ? 8 situations pour découvrir ce que Manhattan ferait de toi dans Control Resonant.">
+<meta name="keywords" content="quiz control resonant, quiz remedy, quel personnage serais tu, test rpg français, control resonant quiz">
+<meta property="og:title" content="Si la résonance vous changeait, en quoi deviendriez-vous ?">
+<meta property="og:description" content="8 situations. Un seul phénomène. Découvre ce que Manhattan ferait de toi.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://smartceltic.fr/quiz/control-resonant-quiz.html">
+<meta property="og:image" content="https://smartceltic.fr/assets/og-quiz-control.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" type="image/svg+xml" href="../assets/favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Oswald:wght@400;500&family=Alegreya+Sans:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/style.css">
+<style>
+.quiz { max-width: 680px; margin: 0 auto; padding: 3.5rem 1.25rem 5rem; }
+.quiz__progress { display: flex; gap: .55rem; justify-content: center; margin-bottom: 2.2rem; }
+.quiz__progress .tri { width: 16px; height: 15px; background: #2a241c; transition: background .25s; }
+.quiz__progress .tri.is-done { background: var(--or); }
+.quiz h1 {
+  font-family: var(--display); font-weight: 700; text-align: center;
+  font-size: clamp(1.5rem, 4.5vw, 2.1rem); letter-spacing: .06em; margin-bottom: .6rem;
+}
+.quiz__sub { text-align: center; color: var(--brume); margin-bottom: 2.5rem; }
+.quiz__q {
+  font-family: var(--display); font-size: clamp(1.1rem, 3vw, 1.35rem);
+  line-height: 1.45; margin-bottom: 1.6rem; min-height: 3.2em;
+}
+.quiz__answers { display: flex; flex-direction: column; gap: .8rem; }
+.quiz__answer {
+  text-align: left; font-family: var(--body); font-size: 1.05rem; line-height: 1.5;
+  background: var(--pierre); color: var(--parchemin);
+  border: 1px solid rgba(138,106,69,.35); border-radius: 3px;
+  padding: 1rem 1.2rem; cursor: pointer;
+  display: flex; gap: .9rem; align-items: baseline;
+  transition: background .15s, border-color .15s, transform .12s;
+}
+.quiz__answer:hover { background: var(--braise); border-color: var(--or); transform: translateX(4px); }
+.quiz__answer .tri { transform: translateY(1px); flex: none; }
+.resultat { display: none; text-align: center; }
+.resultat__label {
+  font-family: var(--label); font-size: .82rem; letter-spacing: .22em;
+  text-transform: uppercase; color: var(--brume); margin-bottom: .8rem;
+}
+.resultat h2 {
+  font-family: var(--display); font-weight: 700;
+  font-size: clamp(1.7rem, 5.5vw, 2.6rem); letter-spacing: .06em;
+  margin-bottom: 1.4rem;
+}
+.resultat__desc { max-width: 32rem; margin: 0 auto 1rem; font-size: 1.12rem; }
+.resultat__devise {
+  font-family: var(--display); color: var(--or); letter-spacing: .12em;
+  margin: 1.6rem 0 2.2rem; font-size: 1rem;
+}
+.resultat__actions { display: flex; flex-direction: column; gap: .9rem; align-items: center; }
+.video-cta {
+  margin-top: 3rem; border: 1px solid var(--or-sombre); border-radius: 3px;
+  padding: 1.6rem; text-align: center;
+}
+.video-cta p { margin-bottom: 1rem; }
+.refaire { margin-top: 2.5rem; }
+.refaire button {
+  background: none; border: none; color: var(--brume); cursor: pointer;
+  font-family: var(--label); font-size: .8rem; letter-spacing: .14em; text-transform: uppercase;
+}
+.refaire button:hover { color: var(--or); }
+@media (prefers-reduced-motion: reduce) { .quiz__answer:hover { transform: none; } }
+</style>
+</head>
+<body data-racine="../">
+
+<nav class="nav" aria-label="Navigation principale">
+  <div class="nav__inner">
+    <a class="nav__brand" href="../"><span class="tri" aria-hidden="true"></span>SMARTCELTIC</a>
+    <div class="nav__links">
+      <a href="../#videos">Vidéos</a>
+      <a href="../#guides">Guides</a>
+      <a href="../news/">Actu RPG</a>
+      <a href="./quel-joueur-rpg.html">Quiz</a>
+      <a href="../#soutenir">Soutenir</a>
+    </div>
+    <a class="live" id="live-nav" href="https://www.twitch.tv/smartceltic" target="_blank" rel="noopener">
+      <span class="live__dot" aria-hidden="true"></span><span class="live__txt">Twitch</span>
+    </a>
+  </div>
+</nav>
+
+<main class="quiz">
+  <div id="ecran-quiz">
+    <div class="quiz__progress" id="progress" aria-hidden="true"></div>
+    <h1>Si la résonance vous changeait, en quoi deviendriez-vous ?</h1>
+    <p class="quiz__sub">8 situations. Un seul phénomène. Découvre ce que Manhattan ferait de toi.</p>
+    <p class="quiz__q" id="question"></p>
+    <div class="quiz__answers" id="answers"></div>
+  </div>
+
+  <div class="resultat" id="ecran-resultat">
+    <p class="resultat__label">Ce que la résonance ferait de toi</p>
+    <h2 id="res-titre"></h2>
+    <p class="resultat__desc" id="res-desc"></p>
+    <p class="resultat__devise" id="res-devise"></p>
+
+    <div class="resultat__actions">
+      <a class="btn btn--rouge" id="btn-partage" href="#" target="_blank" rel="noopener">Partager mon résultat sur X</a>
+      <a class="btn btn--ligne" href="https://discord.gg/t9NB724quv" target="_blank" rel="noopener">Rejoindre le Clan sur Discord</a>
+    </div>
+
+    <div class="video-cta">
+      <p>🎬 Guides, builds et actu RPG en français, sans langue de bois.<br>
+      Rejoins la bande de Celtes sur la chaîne :</p>
+      <a class="btn btn--rouge" href="https://www.youtube.com/@SmartCeltic01?sub_confirmation=1" target="_blank" rel="noopener">▶ Rejoindre la chaîne</a>
+    </div>
+
+    <div class="refaire"><button id="btn-refaire">↻ Refaire le test</button></div>
+  </div>
+</main>
+
+<footer class="footer">
+  <div class="footer__links">
+    <a href="https://www.youtube.com/@SmartCeltic01" target="_blank" rel="noopener">YouTube</a>
+    <a href="https://www.twitch.tv/smartceltic" target="_blank" rel="noopener">Twitch</a>
+    <a href="https://x.com/Smartceltic01" target="_blank" rel="noopener">X</a>
+    <a href="https://www.instagram.com/smartceltic01/" target="_blank" rel="noopener">Instagram</a>
+    <a href="https://www.tiktok.com/@smartceltic01" target="_blank" rel="noopener">TikTok</a>
+    <a href="https://discord.gg/t9NB724quv" target="_blank" rel="noopener">Discord</a>
+  </div>
+  <small>© 2026 Smartceltic. Ciao, bande de Celtes 🍀</small>
+</footer>
+
+<script>
+const QUESTIONS = [
+  { q: "Tu trouves un objet de pouvoir abandonné, encore chaud d'énergie résiduelle. Tu...",
+    a: [["equilibriste", "L'examines calmement, puis décides s'il mérite d'être emporté."],
+        ["strategiste", "Le cataloguer immédiatement, avant même d'y toucher."],
+        ["chasseur", "Le ramasses sans hésiter. Le pouvoir se prend, il ne se demande pas."],
+        ["etudiant", "T'accroupis pendant de longues minutes pour comprendre comment il fonctionne."],
+        ["instable", "Le tiens dans ta main, et sens déjà que tu ne veux plus le lâcher."]] },
+
+  { q: "Une pièce entière de Manhattan se met à se plier sur elle même, défiant toute logique. Ta réaction ?",
+    a: [["equilibriste", "Tu ajustes ta respiration et avances, un pas après l'autre."],
+        ["strategiste", "Tu établis un itinéraire alternatif avant même que le sol ne finisse de bouger."],
+        ["chasseur", "Tu fonces directement dedans. Le danger, ça se traverse, pas ça se contourne."],
+        ["etudiant", "Tu t'arrêtes pour observer le phénomène, fasciné plutôt qu'effrayé."],
+        ["instable", "Ton cœur s'emballe, et une partie de toi trouve ça presque beau."]] },
+
+  { q: "Un allié commence à parler à voix basse, les yeux vides, en pleine conversation. Le Hiss.",
+    a: [["equilibriste", "Tu l'isoles calmement, sans céder à la panique."],
+        ["strategiste", "Tu appliques immédiatement la procédure de confinement."],
+        ["chasseur", "Tu interviens de front, quitte à devoir le neutraliser toi même."],
+        ["etudiant", "Tu essaies de comprendre ce qu'il perçoit, avant d'agir."],
+        ["instable", "Tu hésites une seconde de trop, en te demandant ce que ça ferait d'entendre la même chose."]] },
+
+  { q: "Une Aberration surgit sans prévenir, seule contre toi. Tu...",
+    a: [["equilibriste", "Évalues, esquives, puis frappes au bon moment."],
+        ["strategiste", "Analyses son schéma d'attaque avant le premier coup."],
+        ["chasseur", "Chargez immédiatement, sans chercher à comprendre son fonctionnement."],
+        ["etudiant", "Observes sa façon de se déplacer, presque plus intéressé que menacé."],
+        ["instable", "Ressens une montée d'adrénaline qui frôle le plaisir."]] },
+
+  { q: "On te propose de traverser l'Intervalle, une zone où plus rien n'obéit aux lois normales. Tu...",
+    a: [["equilibriste", "Acceptes, en gardant ton calme comme seule boussole."],
+        ["strategiste", "Demandes d'abord un maximum d'informations avant de t'engager."],
+        ["chasseur", "Y vas sans réfléchir. Le doute ralentit, l'action avance."],
+        ["etudiant", "Sautes sur l'occasion, purement par curiosité scientifique."],
+        ["instable", "Ressens un vertige étrange, comme un appel plus qu'un danger."]] },
+
+  { q: "Ta Puissance grandit à chaque combat, mais ta Faiblesse aussi. Comment gères-tu cet équilibre ?",
+    a: [["equilibriste", "Tu doses consciemment les deux, sans jamais pencher trop loin d'un côté."],
+        ["strategiste", "Tu optimises rigoureusement chaque montée en puissance, chiffres à l'appui."],
+        ["chasseur", "Tu pousses la Puissance au maximum, tant pis pour le reste."],
+        ["etudiant", "Tu observes comment les deux évoluent, plus intéressé par le mécanisme que par le résultat."],
+        ["instable", "Tu sens que tu perds un peu le fil de cet équilibre, sans vraiment chercher à le reprendre."]] },
+
+  { q: "Le Bureau te confie une mission dont l'objectif reste flou, presque contradictoire. Tu...",
+    a: [["equilibriste", "L'acceptes en gardant ton jugement propre, quoi qu'il arrive."],
+        ["strategiste", "Exiges des clarifications avant d'avancer d'un pas."],
+        ["chasseur", "Fonces, l'objectif se clarifiera en cours de route de toute façon."],
+        ["etudiant", "Cherches à comprendre pourquoi l'objectif est si flou, presque plus que la mission elle-même."],
+        ["instable", "Acceptes sans poser de question, même si quelque chose sonne faux."]] },
+
+  { q: "Au bout du chemin, si la résonance devait vraiment te changer, qu'espères-tu rester ?",
+    a: [["equilibriste", "Moi-même, ni dominé ni consumé par ce que je suis devenu."],
+        ["strategiste", "Quelqu'un qui garde le contrôle, même quand tout autour dérape."],
+        ["chasseur", "Plus fort qu'avant, peu importe ce que ça implique."],
+        ["etudiant", "Curieux. Comprendre vaut plus que dominer."],
+        ["instable", "Je ne sais pas. Et c'est exactement ce qui m'inquiète."]] },
+];
+
+const RESULTATS = {
+  equilibriste: {
+    titre: "L'ÉQUILIBRISTE", couleur: "#D4A574",
+    desc: "Tu doses la Puissance et la Faiblesse avec une constance rare. Ni dominé par le pouvoir, ni écrasé par lui, tu avances dans le chaos de Manhattan en gardant ton jugement intact.",
+    devise: "Je maîtrise ce que je deviens.",
+    partage: "Le test est sans appel : je suis L'ÉQUILIBRISTE 🌀 Je maîtrise ce que je deviens."
+  },
+  strategiste: {
+    titre: "LE STRATÈGE", couleur: "#6BA3C8",
+    desc: "Rien n'est laissé au hasard. Chaque objet de pouvoir est catalogué, chaque menace analysée avant d'agir. Le contrôle rigoureux est ta vraie arme, bien avant n'importe quelle Aberration.",
+    devise: "Je comprends avant d'agir, jamais l'inverse.",
+    partage: "Le test est sans appel : je suis LE STRATÈGE 📋 Je comprends avant d'agir, jamais l'inverse."
+  },
+  chasseur: {
+    titre: "LE CHASSEUR D'ABERRATIONS", couleur: "#C8102E",
+    desc: "Tu fonces. Le danger se traverse, pas se contourne, et le doute ne fait que ralentir. Ton rapport au pouvoir est direct, presque brutal, mais terriblement efficace.",
+    devise: "Le pouvoir se prend, il ne se demande pas.",
+    partage: "Le test est sans appel : je suis LE CHASSEUR D'ABERRATIONS 🔥 Le pouvoir se prend, il ne se demande pas."
+  },
+  etudiant: {
+    titre: "L'ÉTUDIANT DU MOLD", couleur: "#5BA873",
+    desc: "Ce qui t'intéresse, ce n'est pas de dominer le phénomène, c'est de le comprendre. Chaque distorsion, chaque Aberration devient une question à explorer plutôt qu'un danger à éliminer.",
+    devise: "Comprendre vaut plus que dominer.",
+    partage: "Le test est sans appel : je suis L'ÉTUDIANT DU MOLD 🔬 Comprendre vaut plus que dominer."
+  },
+  instable: {
+    titre: "LE SUJET INSTABLE", couleur: "#9B7FD4",
+    desc: "Tu sens le pouvoir te traverser, et une part de toi ne veut plus le lâcher. C'est le chemin le plus fragile des cinq, celui où la ligne entre contrôle et corruption s'efface un peu plus à chaque choix.",
+    devise: "Je ne sais plus où s'arrête la résonance, et où je commence.",
+    partage: "Le test est sans appel : je suis LE SUJET INSTABLE 🌪️ Je ne sais plus où s'arrête la résonance, et où je commence."
+  },
+};
+
+const URL_QUIZ = "https://smartceltic.fr/quiz/control-resonant-quiz.html";
+let etape = 0;
+const scores = { equilibriste: 0, strategiste: 0, chasseur: 0, etudiant: 0, instable: 0 };
+
+const elQ = document.getElementById("question");
+const elA = document.getElementById("answers");
+const elP = document.getElementById("progress");
+
+function rendreProgress() {
+  elP.innerHTML = QUESTIONS.map((_, i) =>
+    `<span class="tri ${i < etape ? "is-done" : ""}"></span>`).join("");
+}
+
+function melanger(arr) {
+  const a = [...arr];
+  for (let i = a.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [a[i], a[j]] = [a[j], a[i]];
+  }
+  return a;
+}
+
+function rendreQuestion() {
+  rendreProgress();
+  const { q, a } = QUESTIONS[etape];
+  elQ.textContent = (etape + 1) + ". " + q;
+  elA.innerHTML = "";
+  melanger(a).forEach(([type, texte]) => {
+    const btn = document.createElement("button");
+    btn.className = "quiz__answer";
+    btn.innerHTML = `<span class="tri" aria-hidden="true"></span><span>${texte}</span>`;
+    btn.addEventListener("click", () => {
+      scores[type]++;
+      etape++;
+      etape < QUESTIONS.length ? rendreQuestion() : rendreResultat();
+    });
+    elA.appendChild(btn);
+  });
+}
+
+function rendreResultat() {
+  const type = Object.keys(scores).reduce((a, b) => scores[a] >= scores[b] ? a : b);
+  const r = RESULTATS[type];
+  document.getElementById("ecran-quiz").style.display = "none";
+  const ecran = document.getElementById("ecran-resultat");
+  ecran.style.display = "block";
+  const titre = document.getElementById("res-titre");
+  titre.textContent = r.titre;
+  titre.style.color = r.couleur;
+  document.getElementById("res-desc").textContent = r.desc;
+  document.getElementById("res-devise").textContent = r.devise;
+  const texte = r.partage + "\n\nEt toi, en quoi la résonance te changerait ? Fais le test :\n" + URL_QUIZ + "\n\n#ControlResonant #RPG";
+  document.getElementById("btn-partage").href =
+    "https://twitter.com/intent/tweet?text=" + encodeURIComponent(texte);
+  window.scrollTo({ top: 0 });
+}
+
+document.getElementById("btn-refaire").addEventListener("click", () => {
+  etape = 0;
+  for (const k in scores) scores[k] = 0;
+  document.getElementById("ecran-resultat").style.display = "none";
+  document.getElementById("ecran-quiz").style.display = "block";
+  rendreQuestion();
+});
+
+rendreQuestion();
+</script>
+<script src="../assets/app.js"></script>
+</body>
+</html>
