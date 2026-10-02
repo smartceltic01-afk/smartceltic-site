@@ -1,6 +1,13 @@
 {
   "news": [
     {
+      "slug": "entropy-permadeath-interview-james-wragg",
+      "titre": "Entropy : comment intégrer la permadeath dans un RPG de groupe, le pari du développeur de Dread Delusion",
+      "jeu": "Entropy",
+      "date": "2026-10-02",
+      "statut": "confirme"
+    },
+    {
       "slug": "octopath-traveler-1-2-switch-2-sortie",
       "titre": "Octopath Traveler et Octopath Traveler II débarquent enfin sur Nintendo Switch 2, sans transfert de sauvegarde",
       "jeu": "Octopath Traveler",
