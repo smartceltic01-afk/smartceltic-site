@@ -1,6 +1,13 @@
 {
   "news": [
     {
+      "slug": "aion-2-sortie-mondiale-5-octobre",
+      "titre": "AION 2 sort aujourd'hui en version mondiale, gratuit sur PC avec des serveurs européens",
+      "jeu": "AION 2",
+      "date": "2026-10-05",
+      "statut": "confirme"
+    },
+    {
       "slug": "entropy-permadeath-interview-james-wragg",
       "titre": "Entropy : comment intégrer la permadeath dans un RPG de groupe, le pari du développeur de Dread Delusion",
       "jeu": "Entropy",
