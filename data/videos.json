@@ -1,7 +1,12 @@
 {
-  "updated": "2026-10-11T21:58:40+00:00",
+  "updated": "2026-10-12T15:27:28+00:00",
   "channel_id": "UC8wnNfHi1TprmMfVUuWjYNg",
   "videos": [
+    {
+      "id": "J7NC55ZLFnU",
+      "title": "IA et RPG : Un contrat entre les studios et les joueurs qui évolue",
+      "published": "2026-10-12T15:00:03+00:00"
+    },
     {
       "id": "Ha4cfgkC-G0",
       "title": "Control Resonant : un jeu qui ne vous prend pas pour des idiots #Shorts",
@@ -26,11 +31,6 @@
       "id": "kzNr65JDp-0",
       "title": "Dragon's Dogma 2 a changé sans que vous ayez besoin de payer un euro #Shorts",
       "published": "2026-10-05T16:00:18+00:00"
-    },
-    {
-      "id": "KM4zi0rIhbU",
-      "title": "Dragon's Dogma 2 : faut-il reprendre le jeu avant Dark Arisen ?",
-      "published": "2026-10-05T15:00:30+00:00"
     }
   ]
 }
