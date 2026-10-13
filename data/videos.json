@@ -1,7 +1,12 @@
 {
-  "updated": "2026-10-12T15:27:28+00:00",
+  "updated": "2026-10-13T14:13:04+00:00",
   "channel_id": "UC8wnNfHi1TprmMfVUuWjYNg",
   "videos": [
+    {
+      "id": "J1RvYjWPdrI",
+      "title": "Votre RPG vous a fait une promesse. L'IA la respecte-t-elle ? #shorts",
+      "published": "2026-10-12T16:00:20+00:00"
+    },
     {
       "id": "J7NC55ZLFnU",
       "title": "IA et RPG : Un contrat entre les studios et les joueurs qui évolue",
@@ -26,11 +31,6 @@
       "id": "oi0RWoUzZcw",
       "title": "Enshrouded 1.0 : les vraies différences avec la 0.8 (mages, archers, boss final, etc.)",
       "published": "2026-10-07T15:00:26+00:00"
-    },
-    {
-      "id": "kzNr65JDp-0",
-      "title": "Dragon's Dogma 2 a changé sans que vous ayez besoin de payer un euro #Shorts",
-      "published": "2026-10-05T16:00:18+00:00"
     }
   ]
 }
