@@ -1,7 +1,12 @@
 {
-  "updated": "2026-10-15T11:30:39+00:00",
+  "updated": "2026-10-15T17:02:05+00:00",
   "channel_id": "UC8wnNfHi1TprmMfVUuWjYNg",
   "videos": [
+    {
+      "id": "79TN4EZTWOM",
+      "title": "Enshrouded 1.0 : votre arbre de compétences est réinitialisé #shorts",
+      "published": "2026-10-15T15:15:09+00:00"
+    },
     {
       "id": "tbtzgZ544g8",
       "title": "Enshrouded 1.0 : comment préparer votre aventure pour réussir ?",
@@ -26,11 +31,6 @@
       "id": "J7NC55ZLFnU",
       "title": "IA et RPG : Un contrat entre les studios et les joueurs qui évolue",
       "published": "2026-10-12T15:00:03+00:00"
-    },
-    {
-      "id": "Ha4cfgkC-G0",
-      "title": "Control Resonant : un jeu qui ne vous prend pas pour des idiots #Shorts",
-      "published": "2026-10-09T16:00:26+00:00"
     }
   ]
 }
