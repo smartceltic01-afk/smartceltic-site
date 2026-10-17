@@ -1,6 +1,13 @@
 {
   "news": [
     {
+      "slug": "enshrouded-1-0-lancement-64000-joueurs-sauvegardes-fonctionnent",
+      "titre": "Enshrouded 1.0 : plus de 64 000 joueurs en simultané sur Steam, et les anciennes sauvegardes fonctionnent",
+      "jeu": "Enshrouded",
+      "date": "2026-10-17",
+      "statut": "confirme"
+    },
+    {
       "slug": "enshrouded-1-0-sortie-ce-soir-17h-sauvegardes-conservees",
       "titre": "Enshrouded 1.0 sort ce soir à 17 h : vos sauvegardes sont conservées, pas de cross-play au lancement",
       "jeu": "Enshrouded",
