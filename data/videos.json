@@ -1,7 +1,17 @@
 {
-  "updated": "2026-10-19T13:17:53+00:00",
+  "updated": "2026-10-19T22:21:45+00:00",
   "channel_id": "UC8wnNfHi1TprmMfVUuWjYNg",
   "videos": [
+    {
+      "id": "gAfhiBMBNXY",
+      "title": "Enshrouded 1.0 : fouillez vos premiers coffres, ils ont changé #Shorts",
+      "published": "2026-10-19T16:00:21+00:00"
+    },
+    {
+      "id": "6oGeJFcgqv8",
+      "title": "Enshrouded 1.0 : 7 astuces pour bien démarrer (nouveau monde)",
+      "published": "2026-10-19T15:00:29+00:00"
+    },
     {
       "id": "fn6KjOtvTe4",
       "title": "Dark Arisen : échangez votre butin contre des cristaux de faille #shorts",
@@ -21,16 +31,6 @@
       "id": "tbtzgZ544g8",
       "title": "Enshrouded 1.0 : comment préparer votre aventure pour réussir ?",
       "published": "2026-10-15T10:30:36+00:00"
-    },
-    {
-      "id": "rgpjcGtPmCc",
-      "title": "Enshrouded Sparkworks : quels ennemis pouvez-vous faire apparaître ? #shorts",
-      "published": "2026-10-14T16:00:12+00:00"
-    },
-    {
-      "id": "WeY3zdwP73g",
-      "title": "Sparkworks vs Partage d'aventures : ce qui change vraiment",
-      "published": "2026-10-14T15:00:10+00:00"
     }
   ]
 }
