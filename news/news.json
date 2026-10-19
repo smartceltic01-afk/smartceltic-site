@@ -1,6 +1,13 @@
 {
   "news": [
     {
+      "slug": "star-wars-zero-company-patch-1-2-modificateurs-campagne",
+      "titre": "Star Wars Zero Company : le patch 1.2 ajoute des modificateurs de campagne et réduit le coût des améliorations",
+      "jeu": "Star Wars Zero Company",
+      "date": "2026-10-19",
+      "statut": "confirme"
+    },
+    {
       "slug": "enshrouded-1-0-lancement-64000-joueurs-sauvegardes-fonctionnent",
       "titre": "Enshrouded 1.0 : plus de 64 000 joueurs en simultané sur Steam, et les anciennes sauvegardes fonctionnent",
       "jeu": "Enshrouded",
