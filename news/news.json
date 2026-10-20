@@ -1,6 +1,13 @@
 {
   "news": [
     {
+      "slug": "final-fantasy-resonance-premiers-tests-famitsu-gamespot",
+      "titre": "Final Fantasy Resonance : 36/40 chez Famitsu et 7/10 chez GameSpot, la presse salue le combat mais pas le rythme",
+      "jeu": "Final Fantasy Resonance",
+      "date": "2026-10-20",
+      "statut": "confirme"
+    },
+    {
       "slug": "star-wars-zero-company-patch-1-2-modificateurs-campagne",
       "titre": "Star Wars Zero Company : le patch 1.2 ajoute des modificateurs de campagne et réduit le coût des améliorations",
       "jeu": "Star Wars Zero Company",
