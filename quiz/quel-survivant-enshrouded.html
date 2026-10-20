@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Quiz : Quel survivant d'Enshrouded êtes-vous ? | Smartceltic</title>
+<meta name="description" content="Mage, archer, guerrier ou bâtisseur ? 6 questions pour savoir quel survivant d'Enshrouded se cache en vous, avec un conseil pour la 1.0.">
+<meta name="keywords" content="quiz enshrouded, enshrouded quel survivant, enshrouded mage archer guerrier, test enshrouded, quiz rpg français">
+<meta property="og:title" content="Quel survivant d'Enshrouded êtes-vous ?">
+<meta property="og:description" content="Mage, archer, guerrier ou bâtisseur ? 6 questions pour le découvrir. 🍀">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://smartceltic.fr/quiz/quel-survivant-enshrouded.html">
+<meta name="twitter:card" content="summary">
+<link rel="icon" type="image/svg+xml" href="../assets/favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Oswald:wght@400;500&family=Alegreya+Sans:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/style.css">
+<style>
+.quiz { max-width: 680px; margin: 0 auto; padding: 3.5rem 1.25rem 5rem; }
+.quiz__progress { display: flex; gap: .55rem; justify-content: center; margin-bottom: 2.2rem; }
+.quiz__progress .tri { width: 16px; height: 15px; background: #2a241c; transition: background .25s; }
+.quiz__progress .tri.is-done { background: var(--or); }
+.quiz h1 {
+  font-family: var(--display); font-weight: 700; text-align: center;
+  font-size: clamp(1.5rem, 4.5vw, 2.1rem); letter-spacing: .06em; margin-bottom: .6rem;
+}
+.quiz__sub { text-align: center; color: var(--brume); margin-bottom: 2.5rem; }
+.quiz__q {
+  font-family: var(--display); font-size: clamp(1.1rem, 3vw, 1.35rem);
+  line-height: 1.45; margin-bottom: 1.6rem; min-height: 3.2em;
+}
+.quiz__answers { display: flex; flex-direction: column; gap: .8rem; }
+.quiz__answer {
+  text-align: left; font-family: var(--body); font-size: 1.05rem; line-height: 1.5;
+  background: var(--pierre); color: var(--parchemin);
+  border: 1px solid rgba(138,106,69,.35); border-radius: 3px;
+  padding: 1rem 1.2rem; cursor: pointer;
+  display: flex; gap: .9rem; align-items: baseline;
+  transition: background .15s, border-color .15s, transform .12s;
+}
+.quiz__answer:hover { background: var(--braise); border-color: var(--or); transform: translateX(4px); }
+.quiz__answer .tri { transform: translateY(1px); flex: none; }
+.resultat { display: none; text-align: center; }
+.resultat__label {
+  font-family: var(--label); font-size: .82rem; letter-spacing: .22em;
+  text-transform: uppercase; color: var(--brume); margin-bottom: .8rem;
+}
+.resultat h2 {
+  font-family: var(--display); font-weight: 700;
+  font-size: clamp(1.7rem, 5.5vw, 2.6rem); letter-spacing: .06em;
+  margin-bottom: 1.4rem;
+}
+.resultat__desc { max-width: 32rem; margin: 0 auto 1rem; font-size: 1.12rem; }
+.resultat__devise {
+  font-family: var(--display); color: var(--or); letter-spacing: .12em;
+  margin: 1.6rem 0 2.2rem; font-size: 1rem;
+}
+.resultat__pour-toi {
+  max-width: 32rem; margin: 1.8rem auto 2.2rem; padding: 1rem 1.2rem;
+  border: 1px solid var(--or); border-radius: 4px; background: rgba(212,165,116,.06);
+  text-align: left; font-size: 1rem;
+}
+.resultat__pour-toi strong { color: var(--or); display: block; margin-bottom: .5rem; font-family: var(--label); letter-spacing: .08em; font-size: .8rem; text-transform: uppercase; }
+.resultat__pour-toi a { color: var(--parchemin); }
+.resultat__pour-toi a:hover { color: var(--or); }
+.resultat__fin { max-width: 32rem; margin: 0 auto 2rem; }
+.resultat__actions { display: flex; flex-direction: column; gap: .9rem; align-items: center; }
+.video-cta {
+  margin-top: 3rem; border: 1px solid var(--or-sombre); border-radius: 3px;
+  padding: 1.6rem; text-align: center;
+}
+.video-cta p { margin-bottom: 1rem; }
+.refaire { margin-top: 2.5rem; }
+.refaire button {
+  background: none; border: none; color: var(--brume); cursor: pointer;
+  font-family: var(--label); font-size: .8rem; letter-spacing: .14em; text-transform: uppercase;
+}
+.refaire button:hover { color: var(--or); }
+@media (prefers-reduced-motion: reduce) { .quiz__answer:hover { transform: none; } }
+</style>
+</head>
+<body data-racine="../">
+
+<nav class="nav" aria-label="Navigation principale">
+  <div class="nav__inner">
+    <a class="nav__brand" href="../"><span class="tri" aria-hidden="true"></span>SMARTCELTIC</a>
+    <div class="nav__links">
+      <a href="../#videos">Vidéos</a>
+      <a href="../#guides">Guides</a>
+      <a href="../news/">Actu RPG</a>
+      <a href="./quel-joueur-rpg.html">Quiz</a>
+      <a href="../#soutenir">Soutenir</a>
+    </div>
+    <a class="live" id="live-nav" href="https://www.twitch.tv/smartceltic" target="_blank" rel="noopener">
+      <span class="live__dot" aria-hidden="true"></span><span class="live__txt">Twitch</span>
+    </a>
+  </div>
+</nav>
+
+<main class="quiz">
+  <div id="ecran-quiz">
+    <div class="quiz__progress" id="progress" aria-hidden="true"></div>
+    <h1>Quel survivant d'Enshrouded êtes-vous ?</h1>
+    <p class="quiz__sub">Mage fragile, archer insaisissable, guerrier têtu ou bâtisseur compulsif : six questions pour savoir quel survivant se cache en vous. Sans spoiler, sans prise de tête, et sans risque de tomber dans la Brume.</p>
+    <p class="quiz__q" id="question"></p>
+    <div class="quiz__answers" id="answers"></div>
+  </div>
+
+  <div class="resultat" id="ecran-resultat">
+    <p class="resultat__label">Le survivant qui se cache en vous</p>
+    <h2 id="res-titre"></h2>
+    <p class="resultat__desc" id="res-desc"></p>
+
+    <div class="resultat__pour-toi">
+      <strong>Votre conseil</strong>
+      <span id="res-conseil"></span>
+    </div>
+
+    <p class="resultat__fin">Quel est votre résultat ? Dites-le moi en commentaire sur YouTube, et partagez ce quiz à un ami qui joue à Enshrouded.</p>
+
+    <div class="resultat__actions">
+      <a class="btn btn--rouge" id="btn-partage" href="#" target="_blank" rel="noopener">Partager mon résultat sur X</a>
+      <a class="btn btn--ligne" href="https://discord.gg/t9NB724quv" target="_blank" rel="noopener">Rejoindre le Clan sur Discord</a>
+    </div>
+
+    <div class="video-cta">
+      <p>🎬 Guides, builds et actu RPG en français, sans langue de bois.<br>
+      Rejoignez la bande de Celtes sur la chaîne :</p>
+      <a class="btn btn--rouge" href="https://www.youtube.com/@SmartCeltic01?sub_confirmation=1" target="_blank" rel="noopener">▶ Rejoindre la chaîne</a>
+    </div>
+
+    <div class="refaire"><button id="btn-refaire">↻ Refaire le test</button></div>
+  </div>
+</main>
+
+<footer class="footer">
+  <div class="footer__links">
+    <a href="https://www.youtube.com/@SmartCeltic01" target="_blank" rel="noopener">YouTube</a>
+    <a href="https://www.twitch.tv/smartceltic" target="_blank" rel="noopener">Twitch</a>
+    <a href="https://x.com/Smartceltic01" target="_blank" rel="noopener">X</a>
+    <a href="https://www.instagram.com/smartceltic01/" target="_blank" rel="noopener">Instagram</a>
+    <a href="https://www.tiktok.com/@smartceltic01" target="_blank" rel="noopener">TikTok</a>
+    <a href="https://discord.gg/t9NB724quv" target="_blank" rel="noopener">Discord</a>
+  </div>
+  <small>© 2026 Smartceltic. Ciao, bande de Celtes 🍀</small>
+</footer>
+
+<script>
+const QUESTIONS = [
+  { q: "Un camp d'ennemis bloque la route. Vous :",
+    a: [["mage", "Préparez un sort et espérez que votre mana tienne."],
+        ["archer", "Trouvez un perchoir et les comptez un par un."],
+        ["guerrier", "Foncez. Vous verrez après."],
+        ["batisseur", "Contournez, en vous demandant où construire ici."]] },
+
+  { q: "Votre inventaire est plein. Il contient surtout :",
+    a: [["mage", "Des potions de mana et des ingrédients rares."],
+        ["archer", "Des flèches, encore des flèches."],
+        ["guerrier", "Trois armures de rechange et un bouclier."],
+        ["batisseur", "Du bois, de la pierre, et vingt trucs « pour plus tard »."]] },
+
+  { q: "Vous ratez votre planeur et tombez dans le vide. Votre réaction :",
+    a: [["mage", "« C'était prévu, je testais la gravité. »"],
+        ["archer", "« Je savais que cette plateforme était trop loin. »"],
+        ["guerrier", "« C'est la falaise qui a commencé. »"],
+        ["batisseur", "« Pas grave, ma maison est juste à côté. »"]] },
+
+  { q: "Votre soirée idéale dans Enshrouded :",
+    a: [["mage", "Tester un nouveau sort jusqu'à l'aube."],
+        ["archer", "Réussir un tir parfait à l'autre bout de la carte."],
+        ["guerrier", "Un boss, une arme, zéro potion."],
+        ["batisseur", "Placer enfin cette fenêtre au bon endroit."]] },
+
+  { q: "Un boss se dresse devant vous. Vous :",
+    a: [["mage", "Restez à distance et lancez tout ce que vous avez."],
+        ["archer", "Tirez, reculez, tirez, reculez."],
+        ["guerrier", "Allez au corps à corps, évidemment."],
+        ["batisseur", "Revenez quand votre base sera mieux équipée."]] },
+
+  { q: "Votre base, c'est :",
+    a: [["mage", "Une tour avec un laboratoire d'alchimie."],
+        ["archer", "Un poste d'observation avec une vue imprenable."],
+        ["guerrier", "Une forteresse, avec des murs épais."],
+        ["batisseur", "Un château. Évidemment, un château."]] }
+];
+
+const RESULTATS = {
+  mage: {
+    titre: "LE MAGE BRILLANT (ET UN PEU FRAGILE)", couleur: "#9B7FD4",
+    desc: "Vous préférez régler les problèmes à distance, avec style. Votre force, ce sont les sorts et les combinaisons. Votre point faible : l'armure en papier quand quelqu'un arrive au corps à corps, et la jauge de mana qui fond trop vite.",
+    conseil: "Travaillez la boucle baguette et bâton. Dans la 1.0, après un coup critique à la baguette, votre prochaine attaque au bâton dans les 10 secondes gagne 50 % de dégâts de base grâce à Lancer et tirer, et les sorts éternels ne consomment pas de munitions. <a href=\"../guides/enshrouded-1-0-7-astuces-bien-demarrer.html#a5\">Voir l'astuce 5 du guide</a>.",
+    partage: "Le test est sans appel : je suis le Mage Brillant (et un peu fragile) 🔮"
+  },
+  archer: {
+    titre: "L'ARCHER INSAISISSABLE", couleur: "#5BA873",
+    desc: "Vous gardez vos distances, vous repérez avant de frapper, et vous détestez qu'un ennemi vous touche. Votre force, c'est la précision. Votre point faible : les ennemis qui arrivent de trois côtés à la fois.",
+    conseil: "Explorez bien les premières zones, il y a plus de coffres en 1.0, et l'archer a gagné de nouvelles compétences et des flèches éternelles. <a href=\"../guides/enshrouded-1-0-7-astuces-bien-demarrer.html#a4\">Voir l'astuce 4 du guide</a>.",
+    partage: "Le test est sans appel : je suis l'Archer Insaisissable 🏹"
+  },
+  guerrier: {
+    titre: "LE GUERRIER TÊTU", couleur: "#C8102E",
+    desc: "Votre plan est simple : avancer, frapper, voir pour la suite. Votre force, c'est la résistance. Votre point faible : l'habitude de ne pas préparer les potions avant de foncer.",
+    conseil: "Améliorez votre équipement dès le début de partie, ça compte plus que n'importe quel détail, et pensez à faire fabriquer vos potions chez l'Alchimiste. <a href=\"../guides/enshrouded-1-0-7-astuces-bien-demarrer.html#a6\">Voir l'astuce 6 du guide</a>.",
+    partage: "Le test est sans appel : je suis le Guerrier Têtu ⚔️"
+  },
+  batisseur: {
+    titre: "LE BÂTISSEUR COMPULSIF", couleur: "#D4A574",
+    desc: "Pour vous, la vraie aventure, c'est la base. Vous contournez les combats pour trouver l'emplacement parfait, et votre inventaire est plein de matériaux « pour plus tard ». Votre point faible : les combats que vous évitez et le temps passé à décorer.",
+    conseil: "Libérez la Fermière et plantez des semis dans la Pépinière, ça vous donnera facilement les ingrédients de vos potions. <a href=\"../guides/enshrouded-1-0-7-astuces-bien-demarrer.html#a3\">Voir l'astuce 3 du guide</a>.",
+    partage: "Le test est sans appel : je suis le Bâtisseur Compulsif 🏰"
+  }
+};
+
+const URL_QUIZ = "https://smartceltic.fr/quiz/quel-survivant-enshrouded.html";
+let etape = 0;
+const scores = { mage: 0, archer: 0, guerrier: 0, batisseur: 0 };
+let historique = [];
+
+const elQ = document.getElementById("question");
+const elA = document.getElementById("answers");
+const elP = document.getElementById("progress");
+
+function rendreProgress() {
+  elP.innerHTML = QUESTIONS.map((_, i) =>
+    `<span class="tri ${i < etape ? "is-done" : ""}"></span>`).join("");
+}
+
+function melanger(arr) {
+  const a = [...arr];
+  for (let i = a.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [a[i], a[j]] = [a[j], a[i]];
+  }
+  return a;
+}
+
+function rendreQuestion() {
+  rendreProgress();
+  const { q, a } = QUESTIONS[etape];
+  elQ.textContent = (etape + 1) + ". " + q;
+  elA.innerHTML = "";
+  melanger(a).forEach(([type, texte]) => {
+    const btn = document.createElement("button");
+    btn.className = "quiz__answer";
+    btn.innerHTML = `<span class="tri" aria-hidden="true"></span><span>${texte}</span>`;
+    btn.addEventListener("click", () => {
+      scores[type]++;
+      historique.push(type);
+      etape++;
+      etape < QUESTIONS.length ? rendreQuestion() : rendreResultat();
+    });
+    elA.appendChild(btn);
+  });
+}
+
+function profilGagnant() {
+  const max = Math.max(...Object.values(scores));
+  const ex = Object.keys(scores).filter(k => scores[k] === max);
+  // égalité : le profil choisi en dernier l'emporte
+  return ex.reduce((a, b) => historique.lastIndexOf(a) > historique.lastIndexOf(b) ? a : b);
+}
+
+function rendreResultat() {
+  const type = profilGagnant();
+  const r = RESULTATS[type];
+  document.getElementById("ecran-quiz").style.display = "none";
+  const ecran = document.getElementById("ecran-resultat");
+  ecran.style.display = "block";
+  const titre = document.getElementById("res-titre");
+  titre.textContent = r.titre;
+  titre.style.color = r.couleur;
+  document.getElementById("res-desc").textContent = r.desc;
+  document.getElementById("res-conseil").innerHTML = r.conseil;
+  const texte = r.partage + "\n\nEt vous, quel survivant d'Enshrouded êtes-vous ? Faites le test :\n" + URL_QUIZ + "\n\n#Enshrouded #RPG #JeuVideo";
+  document.getElementById("btn-partage").href =
+    "https://twitter.com/intent/tweet?text=" + encodeURIComponent(texte);
+  window.scrollTo({ top: 0 });
+}
+
+document.getElementById("btn-refaire").addEventListener("click", () => {
+  etape = 0;
+  historique = [];
+  for (const k in scores) scores[k] = 0;
+  document.getElementById("ecran-resultat").style.display = "none";
+  document.getElementById("ecran-quiz").style.display = "block";
+  rendreQuestion();
+});
+
+rendreQuestion();
+</script>
+<script src="../assets/app.js"></script>
+</body>
+</html>
