@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Quiz : Quel combattant de Phantom Blade Zero êtes-vous ? | Smartceltic</title>
+<meta name="description" content="Maître de la parade, chasseur de boss, explorateur ou collectionneur d'armes ? 6 questions pour savoir quel combattant de Phantom Blade Zero se cache en vous.">
+<meta name="keywords" content="quiz phantom blade zero, phantom blade zero quel combattant, test phantom blade zero, quiz action rpg, quiz rpg français">
+<meta property="og:title" content="Quel combattant de Phantom Blade Zero êtes-vous ?">
+<meta property="og:description" content="Parade, boss, exploration ou armes ? 6 questions pour le découvrir. 🍀">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://smartceltic.fr/quiz/quel-combattant-phantom-blade-zero.html">
+<meta name="twitter:card" content="summary">
+<link rel="icon" type="image/svg+xml" href="../assets/favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Oswald:wght@400;500&family=Alegreya+Sans:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/style.css">
+<style>
+.quiz { max-width: 680px; margin: 0 auto; padding: 3.5rem 1.25rem 5rem; }
+.quiz__progress { display: flex; gap: .55rem; justify-content: center; margin-bottom: 2.2rem; }
+.quiz__progress .tri { width: 16px; height: 15px; background: #2a241c; transition: background .25s; }
+.quiz__progress .tri.is-done { background: var(--or); }
+.quiz h1 {
+  font-family: var(--display); font-weight: 700; text-align: center;
+  font-size: clamp(1.5rem, 4.5vw, 2.1rem); letter-spacing: .06em; margin-bottom: .6rem;
+}
+.quiz__sub { text-align: center; color: var(--brume); margin-bottom: 2.5rem; }
+.quiz__q {
+  font-family: var(--display); font-size: clamp(1.1rem, 3vw, 1.35rem);
+  line-height: 1.45; margin-bottom: 1.6rem; min-height: 3.2em;
+}
+.quiz__answers { display: flex; flex-direction: column; gap: .8rem; }
+.quiz__answer {
+  text-align: left; font-family: var(--body); font-size: 1.05rem; line-height: 1.5;
+  background: var(--pierre); color: var(--parchemin);
+  border: 1px solid rgba(138,106,69,.35); border-radius: 3px;
+  padding: 1rem 1.2rem; cursor: pointer;
+  display: flex; gap: .9rem; align-items: baseline;
+  transition: background .15s, border-color .15s, transform .12s;
+}
+.quiz__answer:hover { background: var(--braise); border-color: var(--or); transform: translateX(4px); }
+.quiz__answer .tri { transform: translateY(1px); flex: none; }
+.resultat { display: none; text-align: center; }
+.resultat__label {
+  font-family: var(--label); font-size: .82rem; letter-spacing: .22em;
+  text-transform: uppercase; color: var(--brume); margin-bottom: .8rem;
+}
+.resultat h2 {
+  font-family: var(--display); font-weight: 700;
+  font-size: clamp(1.7rem, 5.5vw, 2.6rem); letter-spacing: .06em;
+  margin-bottom: 1.4rem;
+}
+.resultat__desc { max-width: 32rem; margin: 0 auto 1rem; font-size: 1.12rem; }
+.resultat__devise {
+  font-family: var(--display); color: var(--or); letter-spacing: .12em;
+  margin: 1.6rem 0 2.2rem; font-size: 1rem;
+}
+.resultat__pour-toi {
+  max-width: 32rem; margin: 1.8rem auto 2.2rem; padding: 1rem 1.2rem;
+  border: 1px solid var(--or); border-radius: 4px; background: rgba(212,165,116,.06);
+  text-align: left; font-size: 1rem;
+}
+.resultat__pour-toi strong { color: var(--or); display: block; margin-bottom: .5rem; font-family: var(--label); letter-spacing: .08em; font-size: .8rem; text-transform: uppercase; }
+.resultat__pour-toi a { color: var(--parchemin); }
+.resultat__pour-toi a:hover { color: var(--or); }
+.resultat__fin { max-width: 32rem; margin: 0 auto 2rem; }
+.resultat__actions { display: flex; flex-direction: column; gap: .9rem; align-items: center; }
+.video-cta {
+  margin-top: 3rem; border: 1px solid var(--or-sombre); border-radius: 3px;
+  padding: 1.6rem; text-align: center;
+}
+.video-cta p { margin-bottom: 1rem; }
+.refaire { margin-top: 2.5rem; }
+.refaire button {
+  background: none; border: none; color: var(--brume); cursor: pointer;
+  font-family: var(--label); font-size: .8rem; letter-spacing: .14em; text-transform: uppercase;
+}
+.refaire button:hover { color: var(--or); }
+@media (prefers-reduced-motion: reduce) { .quiz__answer:hover { transform: none; } }
+</style>
+</head>
+<body data-racine="../">
+
+<nav class="nav" aria-label="Navigation principale">
+  <div class="nav__inner">
+    <a class="nav__brand" href="../"><span class="tri" aria-hidden="true"></span>SMARTCELTIC</a>
+    <div class="nav__links">
+      <a href="../#videos">Vidéos</a>
+      <a href="../#guides">Guides</a>
+      <a href="../news/">Actu RPG</a>
+      <a href="./quel-joueur-rpg.html">Quiz</a>
+      <a href="../#soutenir">Soutenir</a>
+    </div>
+    <a class="live" id="live-nav" href="https://www.twitch.tv/smartceltic" target="_blank" rel="noopener">
+      <span class="live__dot" aria-hidden="true"></span><span class="live__txt">Twitch</span>
+    </a>
+  </div>
+</nav>
+
+<main class="quiz">
+  <div id="ecran-quiz">
+    <div class="quiz__progress" id="progress" aria-hidden="true"></div>
+    <h1>Quel combattant de Phantom Blade Zero êtes-vous ?</h1>
+    <p class="quiz__sub">Parade millimétrée, boss à phases, exploration ou arsenal : six questions pour savoir quel combattant se cache en vous. Sans spoiler et sans prise de tête.</p>
+    <p class="quiz__q" id="question"></p>
+    <div class="quiz__answers" id="answers"></div>
+  </div>
+
+  <div class="resultat" id="ecran-resultat">
+    <p class="resultat__label">Le combattant qui se cache en vous</p>
+    <h2 id="res-titre"></h2>
+    <p class="resultat__desc" id="res-desc"></p>
+
+    <div class="resultat__pour-toi">
+      <strong>Votre conseil</strong>
+      <span id="res-conseil"></span>
+    </div>
+
+    <p class="resultat__fin">Quel est votre résultat ? Dites-le moi en commentaire sur YouTube, et partagez ce quiz à un ami qui attend Phantom Blade Zero.</p>
+
+    <div class="resultat__actions">
+      <a class="btn btn--rouge" id="btn-partage" href="#" target="_blank" rel="noopener">Partager mon résultat sur X</a>
+      <a class="btn btn--ligne" href="https://discord.gg/t9NB724quv" target="_blank" rel="noopener">Rejoindre le Clan sur Discord</a>
+    </div>
+
+    <div class="video-cta">
+      <p>🎬 Guides, builds et actu RPG en français, sans langue de bois.<br>
+      Rejoignez la bande de Celtes sur la chaîne :</p>
+      <a class="btn btn--rouge" href="https://www.youtube.com/@SmartCeltic01?sub_confirmation=1" target="_blank" rel="noopener">▶ Rejoindre la chaîne</a>
+    </div>
+
+    <div class="refaire"><button id="btn-refaire">↻ Refaire le test</button></div>
+  </div>
+</main>
+
+<footer class="footer">
+  <div class="footer__links">
+    <a href="https://www.youtube.com/@SmartCeltic01" target="_blank" rel="noopener">YouTube</a>
+    <a href="https://www.twitch.tv/smartceltic" target="_blank" rel="noopener">Twitch</a>
+    <a href="https://x.com/Smartceltic01" target="_blank" rel="noopener">X</a>
+    <a href="https://www.instagram.com/smartceltic01/" target="_blank" rel="noopener">Instagram</a>
+    <a href="https://www.tiktok.com/@smartceltic01" target="_blank" rel="noopener">TikTok</a>
+    <a href="https://discord.gg/t9NB724quv" target="_blank" rel="noopener">Discord</a>
+  </div>
+  <small>© 2026 Smartceltic. Ciao, bande de Celtes 🍀</small>
+</footer>
+
+<script>
+const QUESTIONS = [
+  { q: "Un ennemi lève son arme. Quel est votre réflexe ?",
+    a: [["parade", "J'attends le bon moment pour parer, puis je renvoie le coup."],
+        ["boss", "J'observe ses mouvements pour apprendre son schéma."],
+        ["explo", "Je regarde derrière lui : il y a peut-être un coffre."],
+        ["armes", "Je change d'arme, juste pour voir."]] },
+
+  { q: "Un boss vous a battu dix fois de suite. Quelle est votre réaction ?",
+    a: [["parade", "Je me dis que ma parade était trop tôt."],
+        ["boss", "Je souris : enfin un adversaire à ma hauteur."],
+        ["explo", "Je pars explorer, il y a sûrement de l'aide."],
+        ["armes", "Je change d'arme, c'est forcément l'arme."]] },
+
+  { q: "Quelle est votre idée d'une bonne soirée de jeu ?",
+    a: [["parade", "Enchaîner dix parades parfaites d'affilée."],
+        ["boss", "Finir un boss en plusieurs phases, de justesse."],
+        ["explo", "Trouver un passage secret que personne ne cherchait."],
+        ["armes", "Tester trois armes différentes dans la même soirée."]] },
+
+  { q: "Le décor est magnifique. Que faites-vous ?",
+    a: [["parade", "J'admire trois secondes, puis je retourne au combat."],
+        ["boss", "J'admire, mais seulement quand le boss est tombé."],
+        ["explo", "Je prends une capture d'écran, puis je cherche le chemin caché."],
+        ["armes", "J'admire, une nouvelle arme à la main."]] },
+
+  { q: "Le jeu sort à 3h du matin. Quel est votre plan ?",
+    a: [["parade", "Je mets un réveil à 2h45, manette chargée, parade prête."],
+        ["boss", "Je dors d'abord : les boss se méritent frais."],
+        ["explo", "Je dors, puis je pars en exploration dans la matinée."],
+        ["armes", "Je lance le jeu et je teste toutes les armes avant l'aube."]] },
+
+  { q: "Quelle est votre devise de combattant ?",
+    a: [["parade", "Mieux vaut parer que fuir."],
+        ["boss", "Un boss, une victoire."],
+        ["explo", "Chaque recoin cache quelque chose."],
+        ["armes", "Une arme pour chaque occasion."]] }
+];
+
+const RESULTATS = {
+  parade: {
+    titre: "LE MAÎTRE DE LA PARADE", couleur: "#C8102E",
+    desc: "Vous n'esquivez pas, vous répondez. Chaque attaque est une invitation à renvoyer la politesse. Votre force : le sang-froid. Votre point faible : la parade ratée d'un dixième de seconde, et le cri qui suit.",
+    conseil: "Le combat repose sur la parade et la contre-attaque, sans barre d'endurance. C'est votre terrain de jeu. <a href=\"../news/phantom-blade-zero-tests-metacritic-88-opencritic-91-sortie-29-octobre.html\">Voir ma news sur les tests</a>.",
+    partage: "Le test est sans appel : je suis le Maître de la parade ⚔️"
+  },
+  boss: {
+    titre: "LE CHASSEUR DE BOSS", couleur: "#9B7FD4",
+    desc: "Pour vous, un jeu se mérite au bout du combat. Vous étudiez, vous apprenez, vous recommencez. Votre force : la patience. Votre point faible : le boss en plusieurs phases, quand vous croyiez avoir fini.",
+    conseil: "Les boss en plusieurs phases, avec des points de contrôle, sont un des piliers du jeu. Vous allez vous régaler. <a href=\"../news/phantom-blade-zero-tests-metacritic-88-opencritic-91-sortie-29-octobre.html\">Voir ma news sur les tests</a>.",
+    partage: "Le test est sans appel : je suis le Chasseur de boss 👹"
+  },
+  explo: {
+    titre: "L'EXPLORATEUR CURIEUX", couleur: "#5BA873",
+    desc: "Le chemin principal, c'est pour les autres. Vous cherchez le recoin, le passage, le détail. Votre force : la curiosité. Votre point faible : vous oubliez parfois où était l'histoire.",
+    conseil: "Les ennemis ne réapparaissent pas, et la direction artistique Kungfupunk mérite le coup d'œil. Prenez le temps de regarder autour de vous. <a href=\"../news/phantom-blade-zero-tests-metacritic-88-opencritic-91-sortie-29-octobre.html\">Voir ma news sur les tests</a>.",
+    partage: "Le test est sans appel : je suis l'Explorateur curieux 🧭"
+  },
+  armes: {
+    titre: "LE COLLECTIONNEUR D'ARMES", couleur: "#D4A574",
+    desc: "Une arme, c'est un style, et vous aimez en changer. Votre force : l'adaptabilité. Votre point faible : vous ne savez jamais laquelle garder.",
+    conseil: "Le jeu propose une grande variété d'armes, de quoi essayer plusieurs styles. <a href=\"../news/phantom-blade-zero-tests-metacritic-88-opencritic-91-sortie-29-octobre.html\">Voir ma news sur les tests</a>.",
+    partage: "Le test est sans appel : je suis le Collectionneur d'armes 🗡️"
+  }
+};
+
+const URL_QUIZ = "https://smartceltic.fr/quiz/quel-combattant-phantom-blade-zero.html";
+let etape = 0;
+const scores = { parade: 0, boss: 0, explo: 0, armes: 0 };
+let historique = [];
+
+const elQ = document.getElementById("question");
+const elA = document.getElementById("answers");
+const elP = document.getElementById("progress");
+
+function rendreProgress() {
+  elP.innerHTML = QUESTIONS.map((_, i) =>
+    `<span class="tri ${i < etape ? "is-done" : ""}"></span>`).join("");
+}
+
+function melanger(arr) {
+  const a = [...arr];
+  for (let i = a.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [a[i], a[j]] = [a[j], a[i]];
+  }
+  return a;
+}
+
+function rendreQuestion() {
+  rendreProgress();
+  const { q, a } = QUESTIONS[etape];
+  elQ.textContent = (etape + 1) + ". " + q;
+  elA.innerHTML = "";
+  melanger(a).forEach(([type, texte]) => {
+    const btn = document.createElement("button");
+    btn.className = "quiz__answer";
+    btn.innerHTML = `<span class="tri" aria-hidden="true"></span><span>${texte}</span>`;
+    btn.addEventListener("click", () => {
+      scores[type]++;
+      historique.push(type);
+      etape++;
+      etape < QUESTIONS.length ? rendreQuestion() : rendreResultat();
+    });
+    elA.appendChild(btn);
+  });
+}
+
+function profilGagnant() {
+  const max = Math.max(...Object.values(scores));
+  const ex = Object.keys(scores).filter(k => scores[k] === max);
+  // égalité : le profil choisi en dernier l'emporte
+  return ex.reduce((a, b) => historique.lastIndexOf(a) > historique.lastIndexOf(b) ? a : b);
+}
+
+function rendreResultat() {
+  const type = profilGagnant();
+  const r = RESULTATS[type];
+  document.getElementById("ecran-quiz").style.display = "none";
+  const ecran = document.getElementById("ecran-resultat");
+  ecran.style.display = "block";
+  const titre = document.getElementById("res-titre");
+  titre.textContent = r.titre;
+  titre.style.color = r.couleur;
+  document.getElementById("res-desc").textContent = r.desc;
+  document.getElementById("res-conseil").innerHTML = r.conseil;
+  const texte = r.partage + "\n\nEt vous, quel combattant de Phantom Blade Zero êtes-vous ? Faites le test :\n" + URL_QUIZ + "\n\n#PhantomBladeZero #RPG #JeuVideo";
+  document.getElementById("btn-partage").href =
+    "https://twitter.com/intent/tweet?text=" + encodeURIComponent(texte);
+  window.scrollTo({ top: 0 });
+}
+
+document.getElementById("btn-refaire").addEventListener("click", () => {
+  etape = 0;
+  historique = [];
+  for (const k in scores) scores[k] = 0;
+  document.getElementById("ecran-resultat").style.display = "none";
+  document.getElementById("ecran-quiz").style.display = "block";
+  rendreQuestion();
+});
+
+rendreQuestion();
+</script>
+<script src="../assets/app.js"></script>
+</body>
+</html>
