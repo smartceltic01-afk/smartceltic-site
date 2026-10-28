@@ -1,7 +1,12 @@
 {
-  "updated": "2026-10-27T22:14:46+00:00",
+  "updated": "2026-10-28T12:56:10+00:00",
   "channel_id": "UC8wnNfHi1TprmMfVUuWjYNg",
   "videos": [
+    {
+      "id": "bRF2jFLEC3w",
+      "title": "Enshrouded 1.0 : tuer le dragon, la méthode à distance (et au CAC)",
+      "published": "2026-10-28T11:00:30+00:00"
+    },
     {
       "id": "L_CEUwhO5H4",
       "title": "Donnie Yen est derrière les combats de Phantom Blade Zero #shorts",
@@ -26,11 +31,6 @@
       "id": "IX-GE8c35Do",
       "title": "Enshrouded 1.0 : le build mage qui exploite Lancer et tirer #shorts",
       "published": "2026-10-21T16:00:07+00:00"
-    },
-    {
-      "id": "4xHgTJ7NMLI",
-      "title": "Enshrouded 1.0 : build mage starter (early et mid game)",
-      "published": "2026-10-21T15:00:19+00:00"
     }
   ]
 }
