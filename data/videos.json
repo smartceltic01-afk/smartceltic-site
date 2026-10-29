@@ -1,7 +1,12 @@
 {
-  "updated": "2026-10-28T12:56:10+00:00",
+  "updated": "2026-10-29T13:02:41+00:00",
   "channel_id": "UC8wnNfHi1TprmMfVUuWjYNg",
   "videos": [
+    {
+      "id": "__Jhr_aEJNc",
+      "title": "Enshrouded 1.0 : la vie du dragon se régénère vite après votre mort #shorts",
+      "published": "2026-10-28T16:00:23+00:00"
+    },
     {
       "id": "bRF2jFLEC3w",
       "title": "Enshrouded 1.0 : tuer le dragon, la méthode à distance (et au CAC)",
@@ -26,11 +31,6 @@
       "id": "KUncdo3NYo0",
       "title": "Enshrouded 1.0 : trouver du légendaire dès le début (coffres dorés)",
       "published": "2026-10-23T15:00:17+00:00"
-    },
-    {
-      "id": "IX-GE8c35Do",
-      "title": "Enshrouded 1.0 : le build mage qui exploite Lancer et tirer #shorts",
-      "published": "2026-10-21T16:00:07+00:00"
     }
   ]
 }
