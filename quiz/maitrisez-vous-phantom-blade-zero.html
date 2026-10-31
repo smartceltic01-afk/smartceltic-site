@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Quiz : Maîtrisez-vous les bases de Phantom Blade Zero ? | Smartceltic</title>
+<meta name="description" content="Quiz Phantom Blade Zero : 7 questions pour tester vos connaissances sur le Ghost Step, la parade, la jauge de Sha-Chi, les armes et la poussière résiduelle.">
+<meta name="keywords" content="quiz phantom blade zero, test connaissances phantom blade zero, phantom blade zero ghost step, phantom blade zero astuces, quiz action rpg">
+<meta property="og:title" content="Maîtrisez-vous les bases de Phantom Blade Zero ?">
+<meta property="og:description" content="7 questions sur le Ghost Step, la parade et le Sha-Chi. Quel sera votre score ? 🍀">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://smartceltic.fr/quiz/maitrisez-vous-phantom-blade-zero.html">
+<meta name="twitter:card" content="summary">
+<link rel="icon" type="image/svg+xml" href="../assets/favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Oswald:wght@400;500&family=Alegreya+Sans:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/style.css">
+<style>
+.quiz { max-width: 680px; margin: 0 auto; padding: 3.5rem 1.25rem 5rem; }
+.quiz__progress { display: flex; gap: .55rem; justify-content: center; margin-bottom: 2.2rem; }
+.quiz__progress .tri { width: 16px; height: 15px; background: #2a241c; transition: background .25s; }
+.quiz__progress .tri.is-done { background: var(--or); }
+.quiz h1 {
+  font-family: var(--display); font-weight: 700; text-align: center;
+  font-size: clamp(1.5rem, 4.5vw, 2.1rem); letter-spacing: .06em; margin-bottom: .6rem;
+}
+.quiz__sub { text-align: center; color: var(--brume); margin-bottom: 2.5rem; }
+.quiz__q {
+  font-family: var(--display); font-size: clamp(1.1rem, 3vw, 1.35rem);
+  line-height: 1.45; margin-bottom: 1.6rem; min-height: 3.2em;
+}
+.quiz__answers { display: flex; flex-direction: column; gap: .8rem; }
+.quiz__answer {
+  text-align: left; font-family: var(--body); font-size: 1.05rem; line-height: 1.5;
+  background: var(--pierre); color: var(--parchemin);
+  border: 1px solid rgba(138,106,69,.35); border-radius: 3px;
+  padding: 1rem 1.2rem; cursor: pointer;
+  display: flex; gap: .9rem; align-items: baseline;
+  transition: background .15s, border-color .15s, transform .12s;
+}
+.quiz__answer:hover { background: var(--braise); border-color: var(--or); transform: translateX(4px); }
+.quiz__answer .tri { transform: translateY(1px); flex: none; }
+.quiz__answer.is-ok { background: rgba(91,168,115,.16); border-color: #5BA873; transform: none; }
+.quiz__answer.is-ko { background: rgba(200,16,46,.16); border-color: #C8102E; transform: none; }
+.quiz__answer:disabled { cursor: default; }
+.quiz__answer:disabled:hover { transform: none; }
+.quiz__feedback { margin-top: 1.6rem; padding: 1rem 1.2rem; border: 1px solid var(--or); border-radius: 4px; background: rgba(212,165,116,.06); }
+.quiz__feedback[hidden] { display: none; }
+.quiz__feedback #fb-verdict { font-family: var(--display); letter-spacing: .06em; margin-bottom: .5rem; }
+.quiz__feedback #fb-expl { margin-bottom: 1rem; }
+.resultat { display: none; text-align: center; }
+.resultat__label {
+  font-family: var(--label); font-size: .82rem; letter-spacing: .22em;
+  text-transform: uppercase; color: var(--brume); margin-bottom: .8rem;
+}
+.resultat h2 {
+  font-family: var(--display); font-weight: 700;
+  font-size: clamp(1.7rem, 5.5vw, 2.6rem); letter-spacing: .06em;
+  margin-bottom: 1.4rem;
+}
+.resultat__desc { max-width: 32rem; margin: 0 auto 1rem; font-size: 1.12rem; }
+.resultat__devise {
+  font-family: var(--display); color: var(--or); letter-spacing: .12em;
+  margin: 1.6rem 0 2.2rem; font-size: 1rem;
+}
+.resultat__pour-toi {
+  max-width: 32rem; margin: 1.8rem auto 2.2rem; padding: 1rem 1.2rem;
+  border: 1px solid var(--or); border-radius: 4px; background: rgba(212,165,116,.06);
+  text-align: left; font-size: 1rem;
+}
+.resultat__pour-toi strong { color: var(--or); display: block; margin-bottom: .5rem; font-family: var(--label); letter-spacing: .08em; font-size: .8rem; text-transform: uppercase; }
+.resultat__pour-toi a { color: var(--parchemin); }
+.resultat__pour-toi a:hover { color: var(--or); }
+.resultat__fin { max-width: 32rem; margin: 0 auto 2rem; }
+.resultat__actions { display: flex; flex-direction: column; gap: .9rem; align-items: center; }
+.video-cta {
+  margin-top: 3rem; border: 1px solid var(--or-sombre); border-radius: 3px;
+  padding: 1.6rem; text-align: center;
+}
+.video-cta p { margin-bottom: 1rem; }
+.refaire { margin-top: 2.5rem; }
+.refaire button {
+  background: none; border: none; color: var(--brume); cursor: pointer;
+  font-family: var(--label); font-size: .8rem; letter-spacing: .14em; text-transform: uppercase;
+}
+.refaire button:hover { color: var(--or); }
+@media (prefers-reduced-motion: reduce) { .quiz__answer:hover { transform: none; } }
+</style>
+</head>
+<body data-racine="../">
+
+<nav class="nav" aria-label="Navigation principale">
+  <div class="nav__inner">
+    <a class="nav__brand" href="../"><span class="tri" aria-hidden="true"></span>SMARTCELTIC</a>
+    <div class="nav__links">
+      <a href="../#videos">Vidéos</a>
+      <a href="../#guides">Guides</a>
+      <a href="../news/">Actu RPG</a>
+      <a href="./quel-joueur-rpg.html">Quiz</a>
+      <a href="../#soutenir">Soutenir</a>
+    </div>
+    <a class="live" id="live-nav" href="https://www.twitch.tv/smartceltic" target="_blank" rel="noopener">
+      <span class="live__dot" aria-hidden="true"></span><span class="live__txt">Twitch</span>
+    </a>
+  </div>
+</nav>
+
+<main class="quiz">
+  <div id="ecran-quiz">
+    <div class="quiz__progress" id="progress" aria-hidden="true"></div>
+    <h1>Maîtrisez-vous les bases de Phantom Blade Zero ?</h1>
+    <p class="quiz__sub">Ghost Step, parade, Sha-Chi, poussière résiduelle : sept questions pour savoir si vous avez compris les mécaniques du jeu. Sans spoiler sur l'histoire.</p>
+    <p class="quiz__q" id="question"></p>
+    <div class="quiz__answers" id="answers"></div>
+    <div class="quiz__feedback" id="feedback" hidden>
+      <p id="fb-verdict"></p>
+      <p id="fb-expl"></p>
+      <button class="btn btn--ligne" id="btn-suite" type="button">Question suivante</button>
+    </div>
+  </div>
+
+  <div class="resultat" id="ecran-resultat">
+    <p class="resultat__label" id="res-score"></p>
+    <h2 id="res-titre"></h2>
+    <p class="resultat__desc" id="res-desc"></p>
+
+    <div class="resultat__pour-toi">
+      <strong>Pour progresser</strong>
+      <span id="res-conseil"></span>
+    </div>
+
+    <p class="resultat__fin">Quel est votre score ? Dites-le moi en commentaire sur YouTube, et défiez un ami qui joue à Phantom Blade Zero.</p>
+
+    <div class="resultat__actions">
+      <a class="btn btn--rouge" id="btn-partage" href="#" target="_blank" rel="noopener">Partager mon résultat sur X</a>
+      <a class="btn btn--ligne" href="https://discord.gg/t9NB724quv" target="_blank" rel="noopener">Rejoindre le Clan sur Discord</a>
+    </div>
+
+    <div class="video-cta">
+      <p>🎬 Guides, builds et actu RPG en français, sans langue de bois.<br>
+      Rejoignez la bande de Celtes sur la chaîne :</p>
+      <a class="btn btn--rouge" href="https://www.youtube.com/@SmartCeltic01?sub_confirmation=1" target="_blank" rel="noopener">▶ Rejoindre la chaîne</a>
+    </div>
+
+    <div class="refaire"><button id="btn-refaire">↻ Refaire le quiz</button></div>
+  </div>
+</main>
+
+<footer class="footer">
+  <div class="footer__links">
+    <a href="https://www.youtube.com/@SmartCeltic01" target="_blank" rel="noopener">YouTube</a>
+    <a href="https://www.twitch.tv/smartceltic" target="_blank" rel="noopener">Twitch</a>
+    <a href="https://x.com/Smartceltic01" target="_blank" rel="noopener">X</a>
+    <a href="https://www.instagram.com/smartceltic01/" target="_blank" rel="noopener">Instagram</a>
+    <a href="https://www.tiktok.com/@smartceltic01" target="_blank" rel="noopener">TikTok</a>
+    <a href="https://discord.gg/t9NB724quv" target="_blank" rel="noopener">Discord</a>
+  </div>
+  <small>© 2026 Smartceltic. Ciao, bande de Celtes 🍀</small>
+</footer>
+
+<script>
+const QUESTIONS = [
+  { q: "Une attaque ennemie s'illumine en rouge. Que faites-vous ?",
+    a: ["Je la pare au dernier moment.", "J'esquive au dernier moment.", "Je maintiens la garde pour la bloquer.", "Je change d'arme."],
+    ok: 1,
+    expl: "Rouge, c'est un Killer Move : impossible de le bloquer ou de le parer. Il faut l'esquiver au dernier moment. Les attaques bleues (Brutal Move), elles, se parent." },
+  { q: "Que se passe-t-il après une parade ou une esquive parfaite ?",
+    a: ["Soul récupère toute sa vie.", "L'ennemi est vaincu sur le coup.", "Soul est téléportée derrière l'ennemi : c'est le Ghost Step.", "Rien de spécial, c'est juste une animation."],
+    ok: 2,
+    expl: "C'est le Ghost Step : Soul passe dans le dos de l'ennemi, avec une fenêtre d'attaque aux dégâts augmentés, et récupère une partie de son Sha-Chi." },
+  { q: "Un ennemi vous envoie une rafale de coups rapides. Combien de parades faut-il, en général ?",
+    a: ["Une par coup, sans exception.", "Une seule peut dévier toute la rafale.", "Aucune : seule l'esquive fonctionne.", "Trois, à chaque fois."],
+    ok: 1,
+    expl: "Un seul appui peut dévier toute une rafale. Attention tout de même : certains ennemis enchaînent deux rafales, et il faut alors parer une seconde fois." },
+  { q: "Que faut-il viser en priorité chez un ennemi ?",
+    a: ["Sa barre de vie.", "Sa jauge de Sha-Chi, pour briser sa garde.", "Son arme, pour la détruire.", "Rien : il faut attendre qu'il attaque."],
+    ok: 1,
+    expl: "Tant que la jauge de Sha-Chi n'est pas vidée, vos attaques sont en grande partie bloquées ou déviées. À zéro, l'ennemi est ouvert pour un gros combo." },
+  { q: "À quoi sert le changement d'arme ?",
+    a: ["À recharger votre Sha-Chi et à construire une attaque combinée.", "Uniquement à changer de style visuel.", "À réparer vos armes.", "À récupérer de la poussière résiduelle."],
+    ok: 0,
+    expl: "Changer d'arme recharge votre Sha-Chi, et permuter entre vos deux armes équipées construit une attaque combinée qui peut étourdir un ennemi même si sa jauge est pleine." },
+  { q: "Vous avez vaincu tous les ennemis d'une zone, puis vous vous reposez à une cloche. Que se passe-t-il ?",
+    a: ["Les ennemis réapparaissent.", "Les ennemis réapparaissent si vous changez de zone.", "Les ennemis ne réapparaissent pas : il n'y a pas de farm possible.", "Les ennemis réapparaissent seulement la nuit."],
+    ok: 2,
+    expl: "Se reposer à une cloche ne fait pas revenir les ennemis, et changer de zone non plus. Votre progression vient de l'exploration, des quêtes et des boss." },
+  { q: "Une arme de niveau 8 ne vous convient plus. Que pouvez-vous faire ?",
+    a: ["Rien, la poussière dépensée est perdue.", "La remettre à son niveau initial et récupérer gratuitement poussière et matériaux.", "La vendre à la cloche.", "Il faut obligatoirement un talisman."],
+    ok: 1,
+    expl: "Jusqu'au niveau 10, la remise à zéro est gratuite et rend la poussière et les matériaux. Au-delà, il faut un talisman de régression." }
+];
+const PALIERS = [
+  { min: 0, max: 2, titre: "LE NOVICE AU DOS OUVERT", couleur: "#C8102E", desc: "Vous découvrez le jeu, et il vous l'a fait savoir. Bonne nouvelle : tout s'apprend, et les ennemis ne réapparaissent pas, donc vous ne repartirez pas de zéro.", conseil: "Mon guide des 7 astuces vous remet sur de bons rails.", partage: "Je suis un Novice au dos ouvert 😅" },
+  { min: 3, max: 4, titre: "LA LAME EN APPRENTISSAGE", couleur: "#D4A574", desc: "Vous tenez la base, avec quelques trous. Un détail ici, une mécanique là : vous êtes à une ou deux astuces d'un vrai changement de niveau.", conseil: "Il vous manque peut-être une ou deux mécaniques. Mon guide des 7 astuces les récapitule.", partage: "Je suis une Lame en apprentissage ⚔️" },
+  { min: 5, max: 6, titre: "LE MAÎTRE DU GHOST STEP", couleur: "#9B7FD4", desc: "Vous lisez les couleurs, vous brisez les gardes et vous gérez votre poussière. Il ne vous manque presque rien.", conseil: "Presque parfait. Voyez dans mon guide ce qui vous a échappé.", partage: "Je suis un Maître du Ghost Step 👻" },
+  { min: 7, max: 7, titre: "LE FANTÔME PARFAIT", couleur: "#5BA873", desc: "Sans faute. Les ennemis ne vous voient même plus passer dans leur dos. Vous pouvez aider les autres joueurs dans les commentaires.", conseil: "Sans faute ! Mon guide des 7 astuces est là si vous voulez comparer vos réflexes.", partage: "Je suis un Fantôme parfait, 7 sur 7 🏆" }
+];
+const URL_QUIZ = "https://smartceltic.fr/quiz/maitrisez-vous-phantom-blade-zero.html";
+const LIEN_GUIDE = "../guides/phantom-blade-zero-7-astuces-cachees-mieux-jouer-debut.html";
+let etape = 0, score = 0, repondu = false;
+
+const elQ = document.getElementById("question");
+const elA = document.getElementById("answers");
+const elP = document.getElementById("progress");
+const elF = document.getElementById("feedback");
+
+function rendreProgress() {
+  elP.innerHTML = QUESTIONS.map((_, i) =>
+    `<span class="tri ${i < etape ? "is-done" : ""}"></span>`).join("");
+}
+
+function melanger(arr) {
+  const a = [...arr];
+  for (let i = a.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [a[i], a[j]] = [a[j], a[i]];
+  }
+  return a;
+}
+
+function rendreQuestion() {
+  rendreProgress();
+  repondu = false;
+  elF.hidden = true;
+  const { q, a, ok } = QUESTIONS[etape];
+  elQ.textContent = (etape + 1) + ". " + q;
+  elA.innerHTML = "";
+  melanger(a.map((texte, i) => [i, texte])).forEach(([i, texte]) => {
+    const btn = document.createElement("button");
+    btn.className = "quiz__answer";
+    btn.dataset.ok = i === ok ? "1" : "0";
+    btn.innerHTML = `<span class="tri" aria-hidden="true"></span><span>${texte}</span>`;
+    btn.addEventListener("click", () => repondre(btn, i === ok));
+    elA.appendChild(btn);
+  });
+}
+
+function repondre(btn, juste) {
+  if (repondu) return;
+  repondu = true;
+  if (juste) score++;
+  elA.querySelectorAll(".quiz__answer").forEach(b => {
+    b.disabled = true;
+    if (b.dataset.ok === "1") b.classList.add("is-ok");
+  });
+  if (!juste) btn.classList.add("is-ko");
+  document.getElementById("fb-verdict").textContent = juste ? "Bien joué." : "Raté, mais vous le saurez la prochaine fois.";
+  document.getElementById("fb-expl").textContent = QUESTIONS[etape].expl;
+  document.getElementById("btn-suite").textContent = etape + 1 < QUESTIONS.length ? "Question suivante" : "Voir mon score";
+  elF.hidden = false;
+}
+
+document.getElementById("btn-suite").addEventListener("click", () => {
+  etape++;
+  etape < QUESTIONS.length ? rendreQuestion() : rendreResultat();
+});
+
+function rendreResultat() {
+  const r = PALIERS.find(p => score >= p.min && score <= p.max);
+  document.getElementById("ecran-quiz").style.display = "none";
+  const ecran = document.getElementById("ecran-resultat");
+  ecran.style.display = "block";
+  document.getElementById("res-score").textContent = "Votre score : " + score + " sur " + QUESTIONS.length;
+  const titre = document.getElementById("res-titre");
+  titre.textContent = r.titre;
+  titre.style.color = r.couleur;
+  document.getElementById("res-desc").textContent = r.desc;
+  document.getElementById("res-conseil").innerHTML = r.conseil + ' <a href="' + LIEN_GUIDE + '">Lire le guide</a>.';
+  const texte = "J'ai fait " + score + "/" + QUESTIONS.length + " au quiz Phantom Blade Zero. " + r.partage + "\n\nEt vous, maîtrisez-vous les bases du jeu ? Faites le test :\n" + URL_QUIZ + "\n\n#PhantomBladeZero #RPG #JeuVideo";
+  document.getElementById("btn-partage").href =
+    "https://twitter.com/intent/tweet?text=" + encodeURIComponent(texte);
+  window.scrollTo({ top: 0 });
+}
+
+document.getElementById("btn-refaire").addEventListener("click", () => {
+  etape = 0; score = 0;
+  document.getElementById("ecran-resultat").style.display = "none";
+  document.getElementById("ecran-quiz").style.display = "block";
+  rendreQuestion();
+});
+
+rendreQuestion();
+</script>
+<script src="../assets/app.js"></script>
+</body>
+</html>
