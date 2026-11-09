@@ -1,7 +1,17 @@
 {
-  "updated": "2026-11-09T06:31:34+00:00",
+  "updated": "2026-11-09T22:22:29+00:00",
   "channel_id": "UC8wnNfHi1TprmMfVUuWjYNg",
   "videos": [
+    {
+      "id": "0vynsHSTzOI",
+      "title": "Le jeu de l'année 2025 est un JRPG, et il est français #shorts",
+      "published": "2026-11-09T17:00:08+00:00"
+    },
+    {
+      "id": "7wbU56VTzlU",
+      "title": "C'est quoi un JRPG ? Le guide pour bien comprendre le genre",
+      "published": "2026-11-09T16:00:06+00:00"
+    },
     {
       "id": "_bKUGfiZQGI",
       "title": "Phantom Blade Zero : comment faire fondre le Sha-Chi de plusieurs ennemis #Shorts",
@@ -21,16 +31,6 @@
       "id": "2R018VK-3l8",
       "title": "Phantom Blade Zero : attention aux quêtes et aux armes ratables",
       "published": "2026-11-04T16:00:20+00:00"
-    },
-    {
-      "id": "6PbwIm6vSDQ",
-      "title": "Phantom Blade Zero : 2 armes, 1 build early game #shorts",
-      "published": "2026-11-02T17:00:11+00:00"
-    },
-    {
-      "id": "lgoArlwUmBM",
-      "title": "Phantom Blade Zero : mon build early game (armes, lames spectrales, soutiens)",
-      "published": "2026-11-02T16:00:15+00:00"
     }
   ]
 }
