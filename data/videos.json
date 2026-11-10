@@ -1,7 +1,22 @@
 {
-  "updated": "2026-11-09T22:22:29+00:00",
+  "updated": "2026-11-10T19:44:11+00:00",
   "channel_id": "UC8wnNfHi1TprmMfVUuWjYNg",
   "videos": [
+    {
+      "id": "h9RiEs9oX6I",
+      "title": "Enshrouded 1.0 : live coop en direct (FR)",
+      "published": "2026-11-10T09:01:23+00:00"
+    },
+    {
+      "id": "xeDs8NDKk1Y",
+      "title": "Phantom Blade Zero : suite de l'aventure, combats et boss en direct (FR)",
+      "published": "2026-11-10T08:59:48+00:00"
+    },
+    {
+      "id": "yp_fC4iaXtE",
+      "title": "Queen's Domain : découverte en direct de l'action-RPG façon King's Field (FR)",
+      "published": "2026-11-10T08:56:35+00:00"
+    },
     {
       "id": "0vynsHSTzOI",
       "title": "Le jeu de l'année 2025 est un JRPG, et il est français #shorts",
@@ -16,21 +31,6 @@
       "id": "_bKUGfiZQGI",
       "title": "Phantom Blade Zero : comment faire fondre le Sha-Chi de plusieurs ennemis #Shorts",
       "published": "2026-11-06T17:00:08+00:00"
-    },
-    {
-      "id": "Q9PcHh-gXUk",
-      "title": "Phantom Blade Zero : le build mid game polyvalent (Scies démoniaques + Lame fantôme)",
-      "published": "2026-11-06T16:00:26+00:00"
-    },
-    {
-      "id": "jVGLwUAwUVw",
-      "title": "Phantom Blade Zero : 3 points de non-retour à connaître #shorts",
-      "published": "2026-11-04T17:00:23+00:00"
-    },
-    {
-      "id": "2R018VK-3l8",
-      "title": "Phantom Blade Zero : attention aux quêtes et aux armes ratables",
-      "published": "2026-11-04T16:00:20+00:00"
     }
   ]
 }
