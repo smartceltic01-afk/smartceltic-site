@@ -1,11 +1,16 @@
 {
-  "updated": "2026-11-11T19:36:26+00:00",
+  "updated": "2026-11-12T19:54:57+00:00",
   "channel_id": "UC8wnNfHi1TprmMfVUuWjYNg",
   "videos": [
     {
+      "id": "OiwflIsYHyk",
+      "title": "Queen's Domain : le grimoire caché de la plage de départ #shorts",
+      "published": "2026-11-12T16:00:10+00:00"
+    },
+    {
       "id": "yp_fC4iaXtE",
       "title": "Queen's Domain : découverte en direct de l'action-RPG façon King's Field (FR)",
-      "published": "2026-11-10T08:56:35+00:00"
+      "published": "2026-11-11T20:06:47+00:00"
     },
     {
       "id": "Hym1fuyJqWU",
@@ -26,11 +31,6 @@
       "id": "xeDs8NDKk1Y",
       "title": "Phantom Blade Zero : suite de l'aventure, combats et boss en direct (FR)",
       "published": "2026-11-10T08:59:48+00:00"
-    },
-    {
-      "id": "0vynsHSTzOI",
-      "title": "Le jeu de l'année 2025 est un JRPG, et il est français #shorts",
-      "published": "2026-11-09T17:00:08+00:00"
     }
   ]
 }
