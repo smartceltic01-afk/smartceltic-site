@@ -50,7 +50,7 @@ statut live Twitch, commentaires Cusdis, liens Tipeee / Boutique / réseaux.
    rien ne s'affiche sans ton approbation.
 
 ### f) Le lien Discord
-Remplace `https://discord.gg/5AqFmeEDhJ` (présent dans `index.html`, `news/index.html`,
+Remplace `https://discord.gg/t9NB724quv` (présent dans `index.html`, `news/index.html`,
 `news/_gabarit.html` et les pages news) par ton invitation permanente
 (Discord → nom du serveur → Inviter des gens → Modifier le lien → expiration **Jamais**).
 
