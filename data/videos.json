@@ -1,7 +1,22 @@
 {
-  "updated": "2026-11-25T08:35:57+00:00",
+  "updated": "2026-11-25T21:42:36+00:00",
   "channel_id": "UC8wnNfHi1TprmMfVUuWjYNg",
   "videos": [
+    {
+      "id": "rGNnQRw-2gA",
+      "title": "Warframe : les mods expliqués simplement pour débutant, on apprend ensemble (live FR)",
+      "published": "2026-11-25T19:48:35+00:00"
+    },
+    {
+      "id": "uQ6Z2Xlzn-c",
+      "title": "Phantom Blade Zero : 5 nominations aux Game Awards 2026, méritées ? #shorts",
+      "published": "2026-11-25T18:00:30+00:00"
+    },
+    {
+      "id": "KIKRxt-e2ic",
+      "title": "Game Awards 2026 : j'ai joué à 3 des nommés, voici mon vote",
+      "published": "2026-11-25T17:00:14+00:00"
+    },
     {
       "id": "hq65-a85iJw",
       "title": "Enshrouded : construire un château médiéval, jour 2 (live FR)",
@@ -16,21 +31,6 @@
       "id": "nLyf2097bB0",
       "title": "J'ai commencé un château inspiré de Castelnaud dans Enshrouded 1.0",
       "published": "2026-11-23T17:00:33+00:00"
-    },
-    {
-      "id": "OsDDWmPS4qw",
-      "title": "🔴 Enshrouded 1.0 : Projet Château, la construction en direct | SmartCeltic",
-      "published": "2026-11-22T19:59:04+00:00"
-    },
-    {
-      "id": "hQ9W6pBK_Es",
-      "title": "Enshrouded : une base confortable dès le début, puis le Projet Château, épisode 3 (live FR)",
-      "published": "2026-11-22T14:28:06+00:00"
-    },
-    {
-      "id": "MIbM6JhDbwk",
-      "title": "Warframe : farmer des crédits et de l'Endo avant Tau (live FR)",
-      "published": "2026-11-22T14:26:09+00:00"
     }
   ]
 }
