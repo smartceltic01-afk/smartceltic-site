@@ -1,16 +1,26 @@
 {
-  "updated": "2026-11-27T08:35:15+00:00",
+  "updated": "2026-11-27T21:18:00+00:00",
   "channel_id": "UC8wnNfHi1TprmMfVUuWjYNg",
   "videos": [
-    {
-      "id": "MIbM6JhDbwk",
-      "title": "Warframe : farmer des crédits et de l'Endo avant Tau (live FR)",
-      "published": "2026-11-22T14:26:09+00:00"
-    },
     {
       "id": "FW3CmQrYGi4",
       "title": "Warframe Tau : on regarde le Devstream 199 ensemble (live FR)",
       "published": "2026-11-26T16:26:07+00:00"
+    },
+    {
+      "id": "R_7vrWv5t6A",
+      "title": "Warframe : ce mod double les dégâts de votre fusil (Dentelure) #shorts",
+      "published": "2026-11-27T18:00:01+00:00"
+    },
+    {
+      "id": "uGqHVxAQurc",
+      "title": "Warframe : le modding expliqué simplement",
+      "published": "2026-11-27T17:00:38+00:00"
+    },
+    {
+      "id": "MIbM6JhDbwk",
+      "title": "Warframe : farmer des crédits et de l'Endo avant Tau (live FR)",
+      "published": "2026-11-27T14:56:09+00:00"
     },
     {
       "id": "fvKCiE5wrKw",
@@ -21,16 +31,6 @@
       "id": "rGNnQRw-2gA",
       "title": "Warframe : les mods expliqués simplement pour débutant, on apprend ensemble (live FR)",
       "published": "2026-11-25T19:48:35+00:00"
-    },
-    {
-      "id": "uQ6Z2Xlzn-c",
-      "title": "Phantom Blade Zero : 5 nominations aux Game Awards 2026, méritées ? #shorts",
-      "published": "2026-11-25T18:00:30+00:00"
-    },
-    {
-      "id": "KIKRxt-e2ic",
-      "title": "Game Awards 2026 : j'ai joué à 3 des nommés, voici mon vote",
-      "published": "2026-11-25T17:00:14+00:00"
     }
   ]
 }
